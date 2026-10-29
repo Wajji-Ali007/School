@@ -19,6 +19,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@500;600;700;800;900&display=swap" rel="stylesheet">
     
+    <!-- Tailwind Configuration -->
     <script>
         tailwind.config = {
             darkMode: 'class',
@@ -59,7 +60,6 @@
                 <span class="hidden sm:flex items-center gap-1.5 text-red-100"><i class="fa-solid fa-location-dot text-red-200"></i> Main City Campus</span>
             </div>
             <div class="flex items-center gap-3">
-                <!-- Portal Login Trigger in Topbar -->
                 <button onclick="openPortalModal()" class="bg-white/15 hover:bg-white text-white hover:text-red-700 font-bold px-2.5 py-0.5 rounded text-[11px] transition flex items-center gap-1">
                     <i class="fa-solid fa-user-lock text-[10px]"></i> Portal Login
                 </button>
@@ -94,8 +94,9 @@
                         <span>Wings</span> <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
                     </a>
                     <a href="#structure" class="px-2.5 py-1.5 rounded-lg hover:text-red-600 hover:bg-slate-100 dark:hover:bg-white/5 transition">Fee & Timings</a>
+                    <a href="#events" class="px-2.5 py-1.5 rounded-lg hover:text-red-600 hover:bg-slate-100 dark:hover:bg-white/5 transition">Events</a>
+                    <a href="#faculty" class="px-2.5 py-1.5 rounded-lg hover:text-red-600 hover:bg-slate-100 dark:hover:bg-white/5 transition">Faculty</a>
                     <a href="#gallery" class="px-2.5 py-1.5 rounded-lg hover:text-red-600 hover:bg-slate-100 dark:hover:bg-white/5 transition">Campus</a>
-                    <a href="#map" class="px-2.5 py-1.5 rounded-lg hover:text-red-600 hover:bg-slate-100 dark:hover:bg-white/5 transition">Location</a>
                     <a href="#faqs" class="px-2.5 py-1.5 rounded-lg hover:text-red-600 hover:bg-slate-100 dark:hover:bg-white/5 transition">FAQs</a>
                 </nav>
 
@@ -133,7 +134,6 @@
                 <i class="fa-solid fa-chevron-right text-[10px] text-red-500"></i>
             </a>
 
-            <!-- Mobile Portal Login Action -->
             <button onclick="closeMobileDrawer(); openPortalModal();" class="w-full mobile-tab-item flex items-center justify-between p-3 rounded-xl bg-slate-50 dark:bg-[#111722] border border-slate-200/80 dark:border-white/10">
                 <div class="flex items-center gap-3">
                     <div class="w-8 h-8 rounded-lg bg-slate-100 dark:bg-white/5 text-red-600 flex items-center justify-center text-xs">
@@ -149,27 +149,27 @@
                     <div class="w-8 h-8 rounded-lg bg-slate-100 dark:bg-white/5 text-red-600 flex items-center justify-center text-xs">
                         <i class="fa-solid fa-layer-group"></i>
                     </div>
-                    <span class="font-bold text-xs text-slate-800 dark:text-slate-200">Academic Wings & Details</span>
+                    <span class="font-bold text-xs text-slate-800 dark:text-slate-200">Academic Wings</span>
                 </div>
                 <i class="fa-solid fa-chevron-right text-[10px] text-slate-400"></i>
             </a>
 
-            <a href="#structure" class="mobile-nav-link mobile-tab-item flex items-center justify-between p-3 rounded-xl bg-slate-50 dark:bg-[#111722] border border-slate-200/80 dark:border-white/10">
+            <a href="#events" class="mobile-nav-link mobile-tab-item flex items-center justify-between p-3 rounded-xl bg-slate-50 dark:bg-[#111722] border border-slate-200/80 dark:border-white/10">
                 <div class="flex items-center gap-3">
                     <div class="w-8 h-8 rounded-lg bg-slate-100 dark:bg-white/5 text-red-600 flex items-center justify-center text-xs">
-                        <i class="fa-solid fa-clock"></i>
+                        <i class="fa-solid fa-calendar-check"></i>
                     </div>
-                    <span class="font-bold text-xs text-slate-800 dark:text-slate-200">Fee & Timings</span>
+                    <span class="font-bold text-xs text-slate-800 dark:text-slate-200">Events & Countdown</span>
                 </div>
                 <i class="fa-solid fa-chevron-right text-[10px] text-slate-400"></i>
             </a>
 
-            <a href="#map" class="mobile-nav-link mobile-tab-item flex items-center justify-between p-3 rounded-xl bg-slate-50 dark:bg-[#111722] border border-slate-200/80 dark:border-white/10">
+            <a href="#faculty" class="mobile-nav-link mobile-tab-item flex items-center justify-between p-3 rounded-xl bg-slate-50 dark:bg-[#111722] border border-slate-200/80 dark:border-white/10">
                 <div class="flex items-center gap-3">
                     <div class="w-8 h-8 rounded-lg bg-slate-100 dark:bg-white/5 text-red-600 flex items-center justify-center text-xs">
-                        <i class="fa-solid fa-map-location-dot"></i>
+                        <i class="fa-solid fa-chalkboard-user"></i>
                     </div>
-                    <span class="font-bold text-xs text-slate-800 dark:text-slate-200">Campus Location Map</span>
+                    <span class="font-bold text-xs text-slate-800 dark:text-slate-200">Faculty Mentors</span>
                 </div>
                 <i class="fa-solid fa-chevron-right text-[10px] text-slate-400"></i>
             </a>
@@ -187,12 +187,12 @@
                 <i class="fa-solid fa-bell"></i> Admissions Open
             </span>
             <marquee behavior="scroll" direction="left" onmouseover="this.stop();" onmouseout="this.start();" class="text-slate-700 dark:text-slate-200 font-medium">
-                Admissions actively open for Academic Session 2026-2027! | Scholarships available for merit achievers. | Schedule your personalized campus visit today.
+                Admissions actively open for Academic Session 2026-2027! | Scholarships available for merit achievers. | Schedule your campus visit today.
             </marquee>
         </div>
     </div>
 
-    <!-- Hero Section with Video Tour Trigger Button -->
+    <!-- Hero Section -->
     <section class="hsja-hero-bg py-12 lg:py-20 relative overflow-hidden w-full">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 relative z-10 w-full">
             <div class="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center w-full">
@@ -212,7 +212,6 @@
                         Apex International Academy pairs world-class academic frameworks and modern STEM education with profound moral character building and leadership skills.
                     </p>
 
-                    <!-- CTAs with Video Tour Modal Trigger -->
                     <div class="flex flex-wrap items-center justify-center lg:justify-start gap-3 pt-2">
                         <a href="#admission" class="bg-gradient-to-r from-red-600 via-red-500 to-rose-600 hover:from-red-700 hover:to-rose-700 text-white font-extrabold px-6 sm:px-7 py-3.5 rounded-xl shadow-lg shadow-red-600/30 hover:scale-105 transition duration-300 flex items-center gap-2.5 text-sm">
                             <i class="fa-solid fa-paper-plane text-xs"></i>
@@ -246,8 +245,47 @@
         </div>
     </section>
 
+    <!-- FEATURE 1: LIVE COUNTDOWN & UPCOMING EVENTS -->
+    <section id="events" class="py-12 bg-white dark:bg-[#0B0F17] border-y border-slate-200 dark:border-white/5 transition-colors w-full">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+            <div class="straight-card bg-gradient-to-br from-red-600 via-rose-600 to-red-800 text-white rounded-3xl p-6 sm:p-10 shadow-xl" data-aos="fade-up">
+                <div class="grid lg:grid-cols-12 gap-8 items-center">
+                    <div class="lg:col-span-7 space-y-3 text-center lg:text-left">
+                        <span class="bg-white/20 text-white text-xs font-black uppercase tracking-wider px-3 py-1 rounded-full inline-block">
+                            <i class="fa-solid fa-trophy mr-1"></i> Major Upcoming Event
+                        </span>
+                        <h3 class="text-2xl sm:text-4xl font-black font-heading">Annual Athletics & Sports Gala 2026</h3>
+                        <p class="text-xs sm:text-sm text-red-100 max-w-xl">
+                            Join us for 3 days of track athletics, football championships, gymnastics demonstrations, and trophies.
+                        </p>
+                    </div>
+
+                    <!-- Live Running JS Countdown Timer -->
+                    <div class="lg:col-span-5 flex justify-center lg:justify-end gap-3 sm:gap-4 text-center">
+                        <div class="bg-white/10 backdrop-blur-md border border-white/20 p-3 sm:p-4 rounded-2xl min-w-[65px] sm:min-w-[80px]">
+                            <span id="cdDays" class="text-2xl sm:text-4xl font-black block font-heading">14</span>
+                            <span class="text-[10px] sm:text-xs font-bold uppercase text-red-200">Days</span>
+                        </div>
+                        <div class="bg-white/10 backdrop-blur-md border border-white/20 p-3 sm:p-4 rounded-2xl min-w-[65px] sm:min-w-[80px]">
+                            <span id="cdHours" class="text-2xl sm:text-4xl font-black block font-heading">08</span>
+                            <span class="text-[10px] sm:text-xs font-bold uppercase text-red-200">Hours</span>
+                        </div>
+                        <div class="bg-white/10 backdrop-blur-md border border-white/20 p-3 sm:p-4 rounded-2xl min-w-[65px] sm:min-w-[80px]">
+                            <span id="cdMins" class="text-2xl sm:text-4xl font-black block font-heading">42</span>
+                            <span class="text-[10px] sm:text-xs font-bold uppercase text-red-200">Mins</span>
+                        </div>
+                        <div class="bg-white/10 backdrop-blur-md border border-white/20 p-3 sm:p-4 rounded-2xl min-w-[65px] sm:min-w-[80px]">
+                            <span id="cdSecs" class="text-2xl sm:text-4xl font-black block font-heading text-yellow-300">19</span>
+                            <span class="text-[10px] sm:text-xs font-bold uppercase text-red-200">Secs</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Stats Ribbon -->
-    <section class="relative -mt-6 z-20 max-w-6xl mx-auto px-4 w-full" data-aos="fade-up">
+    <section class="py-12 max-w-6xl mx-auto px-4 w-full" data-aos="fade-up">
         <div class="straight-card bg-white dark:bg-[#111722] rounded-2xl border border-slate-200 dark:border-white/10 p-5 sm:p-7 grid grid-cols-2 lg:grid-cols-4 gap-4 text-center divide-y sm:divide-y-0 sm:divide-x divide-slate-100 dark:divide-white/10 shadow-lg w-full">
             <div class="pt-2 sm:pt-0">
                 <span class="text-3xl sm:text-4xl font-black text-red-600 font-heading">25+</span>
@@ -268,162 +306,168 @@
         </div>
     </section>
 
-    <!-- Academic Wings Grid -->
-    <section id="programs" class="py-20 bg-slate-100 dark:bg-[#0B0F17] border-y border-slate-200 dark:border-white/5 transition-colors w-full overflow-hidden">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 w-full">
-            <div class="text-center max-w-2xl mx-auto mb-12" data-aos="fade-up">
-                <span class="text-xs font-bold uppercase tracking-widest text-red-600 dark:text-red-400 bg-red-100 dark:bg-red-950/40 border border-red-300 dark:border-red-500/30 px-3.5 py-1 rounded-full shadow-sm">
-                    Our Programs
+    <!-- FEATURE 2: PRIDE OF ACADEMY (HIGH ACHIEVERS) -->
+    <section class="py-16 bg-slate-100 dark:bg-[#0B0F17] border-y border-slate-200 dark:border-white/5 transition-colors w-full overflow-hidden" data-aos="fade-up">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <span class="text-xs font-bold uppercase tracking-widest text-red-600 dark:text-red-400 bg-red-100 dark:bg-red-950/40 border border-red-300 dark:border-red-500/30 px-3.5 py-1 rounded-full">
+                    Hall of Fame
                 </span>
-                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white font-heading mt-3">Future-Ready Academic Wings</h2>
-                <p class="text-slate-600 dark:text-slate-400 text-sm mt-2">Click any card below to view complete syllabus and program details on our dedicated page.</p>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white font-heading mt-3">Pride of Apex Academy</h2>
+                <p class="text-slate-600 dark:text-slate-400 text-sm mt-2">Celebrating our outstanding distinction holders and national board position achievers.</p>
             </div>
 
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
-                <!-- Program Cards linking to programs.html -->
-                <a href="programs.html#early-years" class="straight-card group bg-white dark:bg-[#111722] rounded-2xl border border-slate-200 dark:border-white/10 p-6 shadow-md hover:border-red-500 hover:shadow-xl transition-all flex flex-col justify-between w-full" data-aos="fade-up" data-aos-delay="100">
-                    <div>
-                        <div class="w-12 h-12 rounded-xl bg-red-50 dark:bg-red-600/20 border border-red-200 dark:border-red-500/40 text-red-600 dark:text-red-400 flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition duration-300">
-                            <i class="fa-solid fa-shapes"></i>
-                        </div>
-                        <span class="text-[11px] font-bold text-red-600 uppercase tracking-wider">Early Childhood</span>
-                        <h3 class="text-xl font-bold text-slate-900 dark:text-white font-heading mt-1 group-hover:text-red-600 transition">Pre-School / Montessori</h3>
-                        <p class="text-xs text-slate-600 dark:text-slate-400 mt-2.5 leading-relaxed">
-                            Playful, sensory-rich learning environments designed to build language articulation, motor development, and social confidence.
-                        </p>
-                    </div>
-                    <div class="pt-5 border-t border-slate-100 dark:border-white/10 mt-5 flex items-center justify-between text-xs font-bold text-red-600">
-                        <span class="flex items-center gap-1.5"><i class="fa-solid fa-arrow-up-right-from-square text-[11px]"></i> Read Full Syllabus & Details</span>
-                        <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition"></i>
-                    </div>
-                </a>
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- Achiever 1 -->
+                <div class="straight-card bg-white dark:bg-[#111722] rounded-2xl border border-slate-200 dark:border-white/10 p-6 text-center shadow-md relative overflow-hidden">
+                    <span class="absolute top-4 right-4 bg-amber-400 text-slate-900 text-[10px] font-black uppercase px-2 py-0.5 rounded shadow">Gold Medal</span>
+                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=80" alt="Student Topper" class="w-20 h-20 rounded-full mx-auto object-cover border-4 border-red-600 mb-4 shadow">
+                    <h4 class="font-black text-base text-slate-900 dark:text-white font-heading">Ayesha Malik</h4>
+                    <p class="text-xs text-red-600 font-bold">1st Position - High School Board</p>
+                    <p class="text-2xl font-black text-slate-900 dark:text-white font-heading mt-2">98.6%</p>
+                    <p class="text-[11px] text-slate-500 mt-1">Pre-Medical Distinction Award</p>
+                </div>
 
-                <a href="programs.html#primary" class="straight-card group bg-white dark:bg-[#111722] rounded-2xl border border-slate-200 dark:border-white/10 p-6 shadow-md hover:border-red-500 hover:shadow-xl transition-all flex flex-col justify-between w-full" data-aos="fade-up" data-aos-delay="200">
-                    <div>
-                        <div class="w-12 h-12 rounded-xl bg-red-50 dark:bg-red-600/20 border border-red-200 dark:border-red-500/40 text-red-600 dark:text-red-400 flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition duration-300">
-                            <i class="fa-solid fa-book-open"></i>
-                        </div>
-                        <span class="text-[11px] font-bold text-red-600 uppercase tracking-wider">Grades 1 to 5</span>
-                        <h3 class="text-xl font-bold text-slate-900 dark:text-white font-heading mt-1 group-hover:text-red-600 transition">Primary School</h3>
-                        <p class="text-xs text-slate-600 dark:text-slate-400 mt-2.5 leading-relaxed">
-                            Core STEM subjects, linguistic fluency, social studies, and active computer practical training with continuous evaluations.
-                        </p>
-                    </div>
-                    <div class="pt-5 border-t border-slate-100 dark:border-white/10 mt-5 flex items-center justify-between text-xs font-bold text-red-600">
-                        <span class="flex items-center gap-1.5"><i class="fa-solid fa-arrow-up-right-from-square text-[11px]"></i> Read Full Syllabus & Details</span>
-                        <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition"></i>
-                    </div>
-                </a>
+                <!-- Achiever 2 -->
+                <div class="straight-card bg-white dark:bg-[#111722] rounded-2xl border border-slate-200 dark:border-white/10 p-6 text-center shadow-md relative overflow-hidden">
+                    <span class="absolute top-4 right-4 bg-amber-400 text-slate-900 text-[10px] font-black uppercase px-2 py-0.5 rounded shadow">8 A* Stars</span>
+                    <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=300&q=80" alt="Student Topper" class="w-20 h-20 rounded-full mx-auto object-cover border-4 border-red-600 mb-4 shadow">
+                    <h4 class="font-black text-base text-slate-900 dark:text-white font-heading">Hamza Tariq</h4>
+                    <p class="text-xs text-red-600 font-bold">Top Cambridge O-Levels Performer</p>
+                    <p class="text-2xl font-black text-slate-900 dark:text-white font-heading mt-2">Straight A*</p>
+                    <p class="text-ces text-[11px] text-slate-500 mt-1">Global Chemistry & Math Distinction</p>
+                </div>
 
-                <a href="programs.html#middle" class="straight-card group bg-white dark:bg-[#111722] rounded-2xl border border-slate-200 dark:border-white/10 p-6 shadow-md hover:border-red-500 hover:shadow-xl transition-all flex flex-col justify-between w-full" data-aos="fade-up" data-aos-delay="300">
-                    <div>
-                        <div class="w-12 h-12 rounded-xl bg-rose-50 dark:bg-rose-600/20 border border-rose-200 dark:border-rose-500/40 text-rose-600 dark:text-rose-400 flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition duration-300">
-                            <i class="fa-solid fa-graduation-cap"></i>
-                        </div>
-                        <span class="text-[11px] font-bold text-rose-600 uppercase tracking-wider">Grades 6 to 8</span>
-                        <h3 class="text-xl font-bold text-slate-900 dark:text-white font-heading mt-1 group-hover:text-red-600 transition">Middle School</h3>
-                        <p class="text-xs text-slate-600 dark:text-slate-400 mt-2.5 leading-relaxed">
-                            Conceptual science, advanced mathematics, analytical writing, and debate sessions preparing students for higher streams.
-                        </p>
-                    </div>
-                    <div class="pt-5 border-t border-slate-100 dark:border-white/10 mt-5 flex items-center justify-between text-xs font-bold text-red-600">
-                        <span class="flex items-center gap-1.5"><i class="fa-solid fa-arrow-up-right-from-square text-[11px]"></i> Read Full Syllabus & Details</span>
-                        <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition"></i>
-                    </div>
-                </a>
+                <!-- Achiever 3 -->
+                <div class="straight-card bg-white dark:bg-[#111722] rounded-2xl border border-slate-200 dark:border-white/10 p-6 text-center shadow-md relative overflow-hidden">
+                    <span class="absolute top-4 right-4 bg-amber-400 text-slate-900 text-[10px] font-black uppercase px-2 py-0.5 rounded shadow">Champion</span>
+                    <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=300&q=80" alt="Student Topper" class="w-20 h-20 rounded-full mx-auto object-cover border-4 border-red-600 mb-4 shadow">
+                    <h4 class="font-black text-base text-slate-900 dark:text-white font-heading">Zainab Fatima</h4>
+                    <p class="text-xs text-red-600 font-bold">National Robotics Olympiad 2026</p>
+                    <p class="text-2xl font-black text-slate-900 dark:text-white font-heading mt-2">1st Place</p>
+                    <p class="text-[11px] text-slate-500 mt-1">Autonomous Rover Project Lead</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Fee & Timings + Interactive Live Calculator -->
-    <section id="structure" class="py-20 max-w-6xl mx-auto px-4 sm:px-6 w-full overflow-hidden" data-aos="fade-up">
-        <div class="text-center max-w-2xl mx-auto mb-12">
+    <!-- FEATURE 3: FACULTY / TEACHERS SHOWCASE -->
+    <section id="faculty" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 w-full" data-aos="fade-up">
+        <div class="text-center max-w-2xl mx-auto mb-14">
             <span class="text-xs font-bold uppercase tracking-widest text-red-600 dark:text-red-400 bg-red-100 dark:bg-red-950/40 border border-red-300 dark:border-red-500/30 px-3.5 py-1 rounded-full">
-                Transparent Info
+                Our Educators
             </span>
-            <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white font-heading mt-3">Tuition & Fee Schedule</h2>
-            <p class="text-slate-600 dark:text-slate-400 text-sm mt-2">Explore timetable overviews or calculate your monthly estimate in real time below.</p>
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white font-heading mt-3">Learn from Certified Mentors</h2>
+            <p class="text-slate-600 dark:text-slate-400 text-sm mt-2">Passionate educators dedicated to bringing out the absolute best in every student.</p>
         </div>
 
-        <!-- NEW FEATURE: Interactive Live Tuition Calculator Widget -->
-        <div class="straight-card bg-gradient-to-br from-red-600/10 via-white to-slate-50 dark:from-red-950/30 dark:via-[#111722] dark:to-[#0B0F17] p-6 sm:p-8 rounded-3xl border border-red-500/30 shadow-xl mb-10">
-            <div class="max-w-3xl mx-auto space-y-6">
-                <div class="flex items-center gap-3 border-b border-slate-200 dark:border-white/10 pb-4">
-                    <div class="w-10 h-10 rounded-xl bg-red-600 text-white flex items-center justify-center text-lg">
-                        <i class="fa-solid fa-calculator"></i>
-                    </div>
-                    <div>
-                        <h3 class="text-lg font-black text-slate-900 dark:text-white font-heading">Live Tuition & Transport Calculator</h3>
-                        <p class="text-xs text-slate-600 dark:text-slate-400">Select options to see instant estimated monthly tuition.</p>
-                    </div>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Teacher 1 -->
+            <div class="straight-card bg-white dark:bg-[#111722] rounded-2xl border border-slate-200 dark:border-white/10 overflow-hidden shadow-md">
+                <img src="https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=400&q=80" alt="Teacher" class="w-full h-48 object-cover">
+                <div class="p-5 text-center space-y-1">
+                    <h4 class="font-bold text-sm text-slate-900 dark:text-white">Dr. Sarah Jenkins</h4>
+                    <p class="text-xs text-red-600 font-semibold">Head of Sciences</p>
+                    <p class="text-[11px] text-slate-500">Ph.D. Physics | 14+ Years Exp</p>
                 </div>
+            </div>
 
-                <div class="grid sm:grid-cols-2 gap-4">
-                    <div>
-                        <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1.5">Select Academic Grade</label>
-                        <select id="calcGrade" onchange="calculateTuition()" class="w-full px-3.5 py-2.5 rounded-xl bg-white dark:bg-[#161F2E] border border-slate-300 dark:border-white/10 text-slate-900 dark:text-white text-xs font-semibold focus:outline-none focus:border-red-600">
-                            <option value="3500">Pre-School / Montessori (Rs. 3,500/mo)</option>
-                            <option value="4200">Primary Wing - Grades 1 to 5 (Rs. 4,200/mo)</option>
-                            <option value="5000">Middle School - Grades 6 to 8 (Rs. 5,000/mo)</option>
-                            <option value="6000">Secondary / High School (Rs. 6,000/mo)</option>
-                            <option value="7500">Cambridge O-Levels Track (Rs. 7,500/mo)</option>
-                        </select>
-                    </div>
-
-                    <div>
-                        <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1.5">Transport Service</label>
-                        <select id="calcTransport" onchange="calculateTuition()" class="w-full px-3.5 py-2.5 rounded-xl bg-white dark:bg-[#161F2E] border border-slate-300 dark:border-white/10 text-slate-900 dark:text-white text-xs font-semibold focus:outline-none focus:border-red-600">
-                            <option value="0">No Transport (Self Drop/Pickup)</option>
-                            <option value="1500">Zone A: 1 to 5 km (+ Rs. 1,500/mo)</option>
-                            <option value="2500">Zone B: 5 to 10 km (+ Rs. 2,500/mo)</option>
-                        </select>
-                    </div>
+            <!-- Teacher 2 -->
+            <div class="straight-card bg-white dark:bg-[#111722] rounded-2xl border border-slate-200 dark:border-white/10 overflow-hidden shadow-md">
+                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=400&q=80" alt="Teacher" class="w-full h-48 object-cover">
+                <div class="p-5 text-center space-y-1">
+                    <h4 class="font-bold text-sm text-slate-900 dark:text-white">David Vance</h4>
+                    <p class="text-xs text-red-600 font-semibold">Senior Math Specialist</p>
+                    <p class="text-[11px] text-slate-500">M.Sc. Pure Math | 11+ Years Exp</p>
                 </div>
+            </div>
 
-                <div class="flex items-center gap-2 pt-1">
-                    <input type="checkbox" id="calcSibling" onchange="calculateTuition()" class="w-4 h-4 text-red-600 rounded border-slate-300 focus:ring-red-500">
-                    <label for="calcSibling" class="text-xs font-medium text-slate-700 dark:text-slate-300 cursor-pointer">
-                        Apply Sibling Discount (10% waiver on tuition for 2nd/3rd child)
-                    </label>
+            <!-- Teacher 3 -->
+            <div class="straight-card bg-white dark:bg-[#111722] rounded-2xl border border-slate-200 dark:border-white/10 overflow-hidden shadow-md">
+                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80" alt="Teacher" class="w-full h-48 object-cover">
+                <div class="p-5 text-center space-y-1">
+                    <h4 class="font-bold text-sm text-slate-900 dark:text-white">Elena Rostova</h4>
+                    <p class="text-xs text-red-600 font-semibold">Cambridge Coordinator</p>
+                    <p class="text-[11px] text-slate-500">M.Ed. Linguistics | 9+ Years Exp</p>
                 </div>
+            </div>
 
-                <div class="pt-4 border-t border-slate-200 dark:border-white/10 flex flex-wrap items-center justify-between gap-3">
-                    <span class="text-xs font-bold text-slate-600 dark:text-slate-400 uppercase tracking-wider">Estimated Total Tuition:</span>
-                    <span id="calcTotalDisplay" class="text-2xl font-black text-red-600 font-heading">Rs. 3,500 / month</span>
+            <!-- Teacher 4 -->
+            <div class="straight-card bg-white dark:bg-[#111722] rounded-2xl border border-slate-200 dark:border-white/10 overflow-hidden shadow-md">
+                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=400&q=80" alt="Teacher" class="w-full h-48 object-cover">
+                <div class="p-5 text-center space-y-1">
+                    <h4 class="font-bold text-sm text-slate-900 dark:text-white">Marcus Thorne</h4>
+                    <p class="text-xs text-red-600 font-semibold">Robotics & AI Lead</p>
+                    <p class="text-[11px] text-slate-500">B.Sc. Computer Eng | 8+ Years Exp</p>
                 </div>
             </div>
         </div>
+    </section>
 
-        <!-- Downloadable Documents Card -->
-        <div class="grid sm:grid-cols-2 gap-4 mb-8">
-            <div class="p-5 rounded-2xl bg-white dark:bg-[#111722] border border-slate-200 dark:border-white/10 flex items-center justify-between shadow-sm">
-                <div class="flex items-center gap-3">
-                    <div class="w-10 h-10 rounded-xl bg-red-100 dark:bg-red-950/60 text-red-600 flex items-center justify-center text-lg">
-                        <i class="fa-solid fa-file-pdf"></i>
-                    </div>
-                    <div>
-                        <h4 class="font-bold text-xs text-slate-900 dark:text-white">Official Prospectus 2026-2027</h4>
-                        <p class="text-[10px] text-slate-500">Includes admission criteria & code of conduct (PDF).</p>
-                    </div>
-                </div>
-                <button onclick="alert('Download simulated: Prospectus PDF will download in production.')" class="px-3 py-1.5 rounded-lg bg-red-50 dark:bg-red-950/40 text-red-600 font-bold text-xs hover:bg-red-600 hover:text-white transition">
-                    Download
-                </button>
+    <!-- FEATURE 4: FILTERABLE PHOTO GALLERY WITH LIGHTBOX -->
+    <section id="gallery" class="py-20 bg-slate-100 dark:bg-[#0B0F17] border-y border-slate-200 dark:border-white/5 transition-colors w-full overflow-hidden" data-aos="fade-up">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 w-full">
+            <div class="text-center max-w-2xl mx-auto mb-10">
+                <span class="text-xs font-bold uppercase tracking-widest text-red-600 dark:text-red-400 bg-red-100 dark:bg-red-950/40 border border-red-300 dark:border-red-500/30 px-3.5 py-1 rounded-full">
+                    Campus Tour
+                </span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white font-heading mt-3">Interactive Campus Gallery</h2>
+                <p class="text-slate-600 dark:text-slate-400 text-sm mt-2">Filter activities and tap any image for high-resolution fullscreen preview.</p>
             </div>
 
-            <div class="p-5 rounded-2xl bg-white dark:bg-[#111722] border border-slate-200 dark:border-white/10 flex items-center justify-between shadow-sm">
-                <div class="flex items-center gap-3">
-                    <div class="w-10 h-10 rounded-xl bg-red-100 dark:bg-red-950/60 text-red-600 flex items-center justify-center text-lg">
-                        <i class="fa-solid fa-calendar-days"></i>
-                    </div>
-                    <div>
-                        <h4 class="font-bold text-xs text-slate-900 dark:text-white">Annual Academic Calendar</h4>
-                        <p class="text-[10px] text-slate-500">Exam schedules, holiday breaks & sports weeks.</p>
+            <!-- Gallery Filter Buttons -->
+            <div class="flex flex-wrap justify-center gap-2 mb-8">
+                <button onclick="filterGallery('all')" id="gallery-filter-all" class="gallery-filter-btn px-4 py-2 rounded-xl text-xs font-bold bg-red-600 text-white shadow-md transition">All Photos</button>
+                <button onclick="filterGallery('campus')" id="gallery-filter-campus" class="gallery-filter-btn px-4 py-2 rounded-xl text-xs font-bold bg-white dark:bg-white/5 text-slate-700 dark:text-slate-300 hover:bg-red-50 dark:hover:bg-white/10 transition border border-slate-200 dark:border-white/10">Campus</button>
+                <button onclick="filterGallery('stem')" id="gallery-filter-stem" class="gallery-filter-btn px-4 py-2 rounded-xl text-xs font-bold bg-white dark:bg-white/5 text-slate-700 dark:text-slate-300 hover:bg-red-50 dark:hover:bg-white/10 transition border border-slate-200 dark:border-white/10">STEM & Labs</button>
+                <button onclick="filterGallery('sports')" id="gallery-filter-sports" class="gallery-filter-btn px-4 py-2 rounded-xl text-xs font-bold bg-white dark:bg-white/5 text-slate-700 dark:text-slate-300 hover:bg-red-50 dark:hover:bg-white/10 transition border border-slate-200 dark:border-white/10">Sports & Arts</button>
+            </div>
+
+            <!-- Gallery Grid with Lightbox Triggers -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full" id="galleryGrid">
+                
+                <div data-category="campus" onclick="openLightbox('https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=1200&q=80', 'Main Academy Campus Building')" class="gallery-item straight-card rounded-2xl overflow-hidden border border-slate-200 dark:border-white/10 group relative h-64 shadow-md cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=800&q=80" alt="Campus Building" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-transparent to-transparent flex items-end p-5">
+                        <span class="text-white font-bold text-sm"><i class="fa-solid fa-magnifying-glass-plus mr-1.5 text-red-400"></i> Main Campus Building</span>
                     </div>
                 </div>
-                <button onclick="alert('Download simulated: Calendar PDF will download in production.')" class="px-3 py-1.5 rounded-lg bg-red-50 dark:bg-red-950/40 text-red-600 font-bold text-xs hover:bg-red-600 hover:text-white transition">
-                    Download
-                </button>
+
+                <div data-category="stem" onclick="openLightbox('https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1200&q=80', 'Advanced STEM Robotics Lab')" class="gallery-item straight-card rounded-2xl overflow-hidden border border-slate-200 dark:border-white/10 group relative h-64 shadow-md cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80" alt="Robotics Lab" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-transparent to-transparent flex items-end p-5">
+                        <span class="text-white font-bold text-sm"><i class="fa-solid fa-magnifying-glass-plus mr-1.5 text-red-400"></i> Advanced STEM Robotics Lab</span>
+                    </div>
+                </div>
+
+                <div data-category="sports" onclick="openLightbox('https://images.unsplash.com/photo-1546519638-68e109498ffc?auto=format&fit=crop&w=1200&q=80', 'Football & Athletics Grounds')" class="gallery-item straight-card rounded-2xl overflow-hidden border border-slate-200 dark:border-white/10 group relative h-64 shadow-md cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1546519638-68e109498ffc?auto=format&fit=crop&w=800&q=80" alt="Sports Grounds" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-transparent to-transparent flex items-end p-5">
+                        <span class="text-white font-bold text-sm"><i class="fa-solid fa-magnifying-glass-plus mr-1.5 text-red-400"></i> Athletics & Play Area</span>
+                    </div>
+                </div>
+
+                <div data-category="stem" onclick="openLightbox('https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&w=1200&q=80', 'Chemistry & Biology Research Lab')" class="gallery-item straight-card rounded-2xl overflow-hidden border border-slate-200 dark:border-white/10 group relative h-64 shadow-md cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&w=800&q=80" alt="Chemistry Lab" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-transparent to-transparent flex items-end p-5">
+                        <span class="text-white font-bold text-sm"><i class="fa-solid fa-magnifying-glass-plus mr-1.5 text-red-400"></i> Chemistry & Science Lab</span>
+                    </div>
+                </div>
+
+                <div data-category="campus" onclick="openLightbox('https://images.unsplash.com/photo-1521587760476-6c12a4b040da?auto=format&fit=crop&w=1200&q=80', 'Digital Resource Library')" class="gallery-item straight-card rounded-2xl overflow-hidden border border-slate-200 dark:border-white/10 group relative h-64 shadow-md cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1521587760476-6c12a4b040da?auto=format&fit=crop&w=800&q=80" alt="Library" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-transparent to-transparent flex items-end p-5">
+                        <span class="text-white font-bold text-sm"><i class="fa-solid fa-magnifying-glass-plus mr-1.5 text-red-400"></i> Digital Resource Library</span>
+                    </div>
+                </div>
+
+                <div data-category="sports" onclick="openLightbox('https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&w=1200&q=80', 'Annual Stage Presentation & Auditorium')" class="gallery-item straight-card rounded-2xl overflow-hidden border border-slate-200 dark:border-white/10 group relative h-64 shadow-md cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&w=800&q=80" alt="Auditorium" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-transparent to-transparent flex items-end p-5">
+                        <span class="text-white font-bold text-sm"><i class="fa-solid fa-magnifying-glass-plus mr-1.5 text-red-400"></i> Auditorium & Cultural Stage</span>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
@@ -533,26 +577,67 @@
         </div>
     </footer>
 
-    <!-- Floating Actions -->
+    <!-- FEATURE 5: SMART WHATSAPP CHAT POPUP WIDGET -->
     <div class="hsja-floating-container">
+        <!-- Smart Chat Card Popup -->
+        <div id="whatsappChatCard" class="hidden w-72 sm:w-80 bg-white dark:bg-[#111722] rounded-3xl shadow-2xl border border-slate-200 dark:border-white/10 overflow-hidden mb-2 text-left">
+            <div class="bg-gradient-to-r from-emerald-600 to-teal-700 text-white p-4 flex items-center justify-between">
+                <div class="flex items-center gap-2.5">
+                    <div class="w-9 h-9 rounded-full bg-white/20 flex items-center justify-center text-lg">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-xs">Admissions Desk</h4>
+                        <span class="text-[10px] text-emerald-200 flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-emerald-300 animate-ping"></span> Typically replies instantly</span>
+                    </div>
+                </div>
+                <button onclick="toggleWhatsAppCard()" class="text-white/80 hover:text-white text-sm"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="p-4 space-y-3 bg-slate-50 dark:bg-[#0E1520]">
+                <div class="bg-white dark:bg-[#161F2E] p-3 rounded-2xl border border-slate-200 dark:border-white/5 text-xs text-slate-700 dark:text-slate-300 shadow-sm">
+                    👋 Hello! Welcome to Apex Academy. How can we assist you today?
+                </div>
+                <div class="space-y-1.5">
+                    <a href="https://wa.me/1234567890?text=Hello,%20I%20want%20to%20inquire%20about%20the%20Tuition%20Fee%20Schedule." target="_blank" class="block w-full p-2.5 rounded-xl bg-white dark:bg-[#161F2E] border border-slate-200 dark:border-white/10 text-xs font-bold text-emerald-700 dark:text-emerald-400 hover:border-emerald-500 transition shadow-sm">
+                        💰 Fee Schedule Inquiry &rarr;
+                    </a>
+                    <a href="https://wa.me/1234567890?text=Hello,%20I%20would%20like%20to%20book%20a%20Campus%20Tour." target="_blank" class="block w-full p-2.5 rounded-xl bg-white dark:bg-[#161F2E] border border-slate-200 dark:border-white/10 text-xs font-bold text-emerald-700 dark:text-emerald-400 hover:border-emerald-500 transition shadow-sm">
+                        🏫 Book a Campus Visit &rarr;
+                    </a>
+                    <a href="https://wa.me/1234567890?text=Hello,%20please%20share%20Admission%20Eligibility%20details." target="_blank" class="block w-full p-2.5 rounded-xl bg-white dark:bg-[#161F2E] border border-slate-200 dark:border-white/10 text-xs font-bold text-emerald-700 dark:text-emerald-400 hover:border-emerald-500 transition shadow-sm">
+                        📋 Admission Eligibility &rarr;
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Back to Top & WhatsApp Buttons -->
         <button id="backToTop" type="button" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" title="Back to Top" class="hsja-top-btn">
             <i class="fa-solid fa-arrow-up"></i>
         </button>
-        <a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer" title="Chat on WhatsApp" class="hsja-whatsapp-btn">
+        <button onclick="toggleWhatsAppCard()" title="Chat with Admissions" class="hsja-whatsapp-btn">
             <i class="fa-brands fa-whatsapp"></i>
-        </a>
+        </button>
     </div>
 
-    <!-- ================= 1. STUDENT PORTAL MODAL ================= -->
+    <!-- FULLSCREEN GALLERY LIGHTBOX MODAL -->
+    <div id="lightboxModal" class="fixed inset-0 z-[100000] hidden flex items-center justify-center p-4 bg-black/95 backdrop-blur-md">
+        <div class="relative w-full max-w-4xl max-h-[90vh] flex flex-col items-center">
+            <button onclick="closeLightbox()" class="absolute -top-12 right-0 text-white/80 hover:text-white text-2xl transition">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <img id="lightboxImage" src="" alt="Fullscreen Preview" class="w-full max-h-[75vh] object-contain rounded-2xl shadow-2xl border border-white/10">
+            <h4 id="lightboxCaption" class="text-white font-bold text-sm sm:text-base mt-4 text-center"></h4>
+        </div>
+    </div>
+
+    <!-- STUDENT PORTAL MODAL -->
     <div id="portalModal" class="fixed inset-0 z-[100000] hidden flex items-center justify-center p-4 bg-black/80 backdrop-blur-md">
         <div class="relative w-full max-w-md bg-white dark:bg-[#111722] rounded-3xl border border-slate-200 dark:border-white/10 shadow-2xl overflow-hidden p-6">
-            
-            <!-- Close Button -->
             <button onclick="closePortalModal()" class="absolute top-4 right-4 w-8 h-8 rounded-full bg-slate-100 dark:bg-white/10 flex items-center justify-center text-slate-500 hover:text-red-600 transition">
                 <i class="fa-solid fa-xmark"></i>
             </button>
 
-            <!-- State 1: Login Form -->
             <div id="portalLoginView" class="space-y-4">
                 <div class="flex items-center gap-3">
                     <div class="w-10 h-10 rounded-xl bg-red-600 text-white flex items-center justify-center text-lg">
@@ -584,7 +669,6 @@
                 </form>
             </div>
 
-            <!-- State 2: Interactive Student Dashboard -->
             <div id="portalDashboardView" class="hidden space-y-4">
                 <div class="flex items-center justify-between border-b border-slate-100 dark:border-white/10 pb-3">
                     <div>
@@ -597,7 +681,6 @@
                     </button>
                 </div>
 
-                <!-- Metrics -->
                 <div class="grid grid-cols-2 gap-3">
                     <div class="p-3 bg-slate-50 dark:bg-[#161F2E] rounded-xl border border-slate-200 dark:border-white/10">
                         <span class="text-[10px] text-slate-500 uppercase font-bold block">Attendance</span>
@@ -609,7 +692,6 @@
                     </div>
                 </div>
 
-                <!-- Term Examination Results -->
                 <div class="p-3 bg-slate-50 dark:bg-[#161F2E] rounded-xl border border-slate-200 dark:border-white/10">
                     <h5 class="text-xs font-bold text-slate-900 dark:text-white mb-2 flex items-center gap-1.5">
                         <i class="fa-solid fa-award text-red-600"></i> Term Examination Results
@@ -621,11 +703,10 @@
                     <i class="fa-solid fa-download"></i> Download Report Card & Challan
                 </button>
             </div>
-
         </div>
     </div>
 
-    <!-- ================= 2. CAMPUS VIDEO TOUR MODAL ================= -->
+    <!-- CAMPUS VIDEO TOUR MODAL -->
     <div id="videoModal" class="fixed inset-0 z-[100000] hidden flex items-center justify-center p-4 bg-black/90 backdrop-blur-md">
         <div class="relative w-full max-w-3xl bg-black rounded-3xl overflow-hidden shadow-2xl border border-white/20">
             <button onclick="closeVideoModal()" class="absolute top-4 right-4 z-10 w-9 h-9 rounded-full bg-white/20 text-white flex items-center justify-center text-sm hover:bg-red-600 transition">
