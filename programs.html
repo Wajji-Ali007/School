@@ -19,7 +19,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@500;600;700;800;900&display=swap" rel="stylesheet">
     
-    <!-- Tailwind Configuration -->
+    <!-- Royal Navy & Burnished Gold Tailwind Configuration -->
     <script>
         tailwind.config = {
             darkMode: 'class',
@@ -31,11 +31,12 @@
                     },
                     colors: {
                         brand: {
-                            red: '#DC2626',
-                            crimson: '#991B1B',
-                            rose: '#E11D48',
-                            dark: '#080C14',
-                            cardDark: '#111722',
+                            navy: '#0F2744',
+                            navyDark: '#081728',
+                            gold: '#D97706',
+                            goldLight: '#F59E0B',
+                            dark: '#06121E',
+                            cardDark: '#0D2035',
                         }
                     }
                 }
@@ -46,42 +47,45 @@
     <!-- External CSS Linked -->
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-slate-50 dark:bg-[#080C14] text-slate-900 dark:text-slate-100 font-sans antialiased selection:bg-brand-red selection:text-white transition-colors duration-300 w-full overflow-x-hidden relative">
+<body class="bg-slate-50 dark:bg-[#06121E] text-slate-900 dark:text-slate-100 font-sans antialiased selection:bg-brand-gold selection:text-white transition-colors duration-300 w-full overflow-x-hidden relative">
 
     <!-- Top Bar -->
-    <div class="bg-red-700 dark:bg-black text-white text-xs py-2 px-4 border-b border-red-800 dark:border-white/10 w-full">
+    <div class="bg-brand-navy dark:bg-black text-white text-xs py-2 px-4 border-b border-brand-gold/30 w-full">
         <div class="max-w-7xl mx-auto flex justify-between items-center gap-2">
             <div class="flex items-center gap-4 text-[11px] sm:text-xs">
-                <span class="flex items-center gap-1.5"><i class="fa-solid fa-phone text-red-200"></i> +1 (234) 567-8900</span>
-                <span class="hidden sm:flex items-center gap-1.5"><i class="fa-solid fa-envelope text-red-200"></i> contact@apexacademy.edu</span>
+                <span class="flex items-center gap-1.5"><i class="fa-solid fa-phone text-brand-goldLight"></i> +1 (234) 567-8900</span>
+                <span class="hidden sm:flex items-center gap-1.5"><i class="fa-solid fa-envelope text-brand-goldLight"></i> contact@apexacademy.edu</span>
             </div>
-            <a href="index.html" class="hover:text-red-200 font-bold flex items-center gap-1 text-[11px]">
-                <i class="fa-solid fa-arrow-left"></i> Back to Home
+            <a href="index.html" class="hover:text-brand-goldLight font-bold flex items-center gap-1 text-[11px] transition">
+                <i class="fa-solid fa-arrow-left"></i> Back to Main Website
             </a>
         </div>
     </div>
 
     <!-- Header Navbar -->
-    <header class="sticky top-0 z-40 bg-white/95 dark:bg-[#0B0F17]/95 backdrop-blur-md border-b border-slate-200 dark:border-white/10 shadow-sm w-full">
+    <header class="sticky top-0 z-40 bg-white/95 dark:bg-[#081728]/95 backdrop-blur-md border-b border-slate-200 dark:border-white/10 shadow-sm w-full">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 h-20 flex justify-between items-center">
+            <!-- Brand Logo -->
             <a href="index.html" class="flex items-center gap-2.5">
-                <div class="w-11 h-11 p-2 rounded-xl bg-gradient-to-br from-red-600 to-rose-700 text-white shadow-md flex items-center justify-center">
+                <div class="w-11 h-11 p-2 rounded-xl bg-gradient-to-br from-brand-navy to-slate-900 text-brand-goldLight border border-brand-gold/40 shadow-md flex items-center justify-center">
                     <i class="fa-solid fa-graduation-cap text-lg"></i>
                 </div>
                 <div>
                     <div class="flex items-center gap-1.5">
                         <span class="text-lg font-black text-slate-900 dark:text-white font-heading">APEX</span>
-                        <span class="w-2 h-2 rounded-full bg-red-600 animate-ping"></span>
+                        <span class="w-2 h-2 rounded-full bg-brand-gold animate-ping"></span>
                     </div>
-                    <span class="text-[10px] font-bold text-red-600 dark:text-red-400 uppercase tracking-wider block">International Academy</span>
+                    <span class="text-[10px] font-bold text-brand-gold uppercase tracking-wider block">International Academy</span>
                 </div>
             </a>
+
+            <!-- Right Controls -->
             <div class="flex items-center gap-3">
                 <button id="themeToggleBtn" type="button" aria-label="Toggle Theme" title="Switch Light/Dark Mode"
                         class="w-10 h-10 rounded-xl bg-slate-100 dark:bg-white/10 border border-slate-300 dark:border-white/10 text-slate-700 dark:text-yellow-400 flex items-center justify-center text-sm hover:scale-105 active:scale-95 transition">
                     <i id="themeIcon" class="fa-solid fa-moon"></i>
                 </button>
-                <a href="index.html#admission" class="px-4 py-2 rounded-xl font-bold text-xs uppercase tracking-wider text-white bg-gradient-to-r from-red-600 to-rose-600 shadow-md hover:scale-105 transition flex items-center gap-1.5">
+                <a href="index.html#admission" class="px-4 py-2 rounded-xl font-bold text-xs uppercase tracking-wider text-slate-950 bg-gradient-to-r from-amber-400 via-amber-500 to-yellow-500 shadow-md hover:scale-105 transition flex items-center gap-1.5 border border-yellow-300">
                     <i class="fa-solid fa-graduation-cap"></i>
                     <span class="hidden sm:inline">Apply for Admission</span>
                     <span class="sm:hidden">Apply</span>
@@ -91,23 +95,23 @@
     </header>
 
     <!-- Page Title Banner -->
-    <section class="py-12 sm:py-16 bg-gradient-to-b from-red-50 to-white dark:from-[#111722] dark:to-[#080C14] border-b border-slate-200 dark:border-white/10 text-center px-4 w-full" data-aos="fade-down">
-        <span class="inline-block bg-red-100 dark:bg-red-950/60 text-red-700 dark:text-red-300 px-3.5 py-1 rounded-full text-xs font-bold mb-3 shadow-sm">
-            <i class="fa-solid fa-award text-red-600 mr-1"></i> Academic Wings & Detailed Syllabi
+    <section class="py-12 sm:py-16 hsja-hero-bg border-b border-slate-200 dark:border-white/10 text-center px-4 w-full" data-aos="fade-down">
+        <span class="inline-block bg-amber-50 dark:bg-amber-950/60 text-brand-gold dark:text-amber-300 border border-amber-300 dark:border-amber-500/40 px-3.5 py-1 rounded-full text-xs font-bold mb-3 shadow-sm">
+            <i class="fa-solid fa-award text-brand-gold mr-1"></i> Academic Wings & Detailed Syllabi
         </span>
         <h1 class="text-3xl sm:text-5xl font-black font-heading text-slate-900 dark:text-white tracking-tight">Academic Programs</h1>
-        <p class="text-slate-600 dark:text-slate-400 text-sm sm:text-base max-w-xl mx-auto mt-2">Comprehensive educational pathways from early development to high school graduation.</p>
+        <p class="text-slate-600 dark:text-slate-400 text-sm sm:text-base max-w-xl mx-auto mt-2">Comprehensive educational pathways from early development to college graduation.</p>
     </section>
 
-    <!-- Quick Jump Bar -->
-    <div class="sticky top-20 z-30 bg-white/95 dark:bg-[#0B0F17]/95 backdrop-blur-md border-b border-slate-200 dark:border-white/10 py-3 px-4 shadow-sm overflow-x-auto w-full">
+    <!-- Quick Jump Bar (Navy & Gold Styling) -->
+    <div class="sticky top-20 z-30 bg-white/95 dark:bg-[#081728]/95 backdrop-blur-md border-b border-slate-200 dark:border-white/10 py-3 px-4 shadow-sm overflow-x-auto w-full">
         <div class="max-w-7xl mx-auto flex items-center justify-start sm:justify-center gap-2 min-w-max text-xs font-bold">
-            <a href="#early-years" class="px-3.5 py-1.5 rounded-full bg-red-600 text-white shadow-sm"><i class="fa-solid fa-shapes mr-1"></i> Pre-School</a>
-            <a href="#primary" class="px-3.5 py-1.5 rounded-full bg-slate-100 dark:bg-white/10 hover:bg-red-600 hover:text-white transition"><i class="fa-solid fa-book-open mr-1"></i> Primary</a>
-            <a href="#middle" class="px-3.5 py-1.5 rounded-full bg-slate-100 dark:bg-white/10 hover:bg-red-600 hover:text-white transition"><i class="fa-solid fa-graduation-cap mr-1"></i> Middle</a>
-            <a href="#high-school" class="px-3.5 py-1.5 rounded-full bg-slate-100 dark:bg-white/10 hover:bg-red-600 hover:text-white transition"><i class="fa-solid fa-award mr-1"></i> High School</a>
-            <a href="#cambridge" class="px-3.5 py-1.5 rounded-full bg-slate-100 dark:bg-white/10 hover:bg-red-600 hover:text-white transition"><i class="fa-solid fa-flask-vial mr-1"></i> Cambridge</a>
-            <a href="#robotics" class="px-3.5 py-1.5 rounded-full bg-slate-100 dark:bg-white/10 hover:bg-red-600 hover:text-white transition"><i class="fa-solid fa-laptop-code mr-1"></i> STEM & Robotics</a>
+            <a href="#early-years" class="px-3.5 py-1.5 rounded-full bg-brand-navy text-brand-goldLight border border-brand-gold/40 shadow-sm"><i class="fa-solid fa-shapes mr-1"></i> Pre-School</a>
+            <a href="#primary" class="px-3.5 py-1.5 rounded-full bg-slate-100 dark:bg-white/10 hover:bg-brand-navy hover:text-brand-goldLight transition border border-transparent hover:border-brand-gold/40"><i class="fa-solid fa-book-open mr-1"></i> Primary</a>
+            <a href="#middle" class="px-3.5 py-1.5 rounded-full bg-slate-100 dark:bg-white/10 hover:bg-brand-navy hover:text-brand-goldLight transition border border-transparent hover:border-brand-gold/40"><i class="fa-solid fa-graduation-cap mr-1"></i> Middle</a>
+            <a href="#high-school" class="px-3.5 py-1.5 rounded-full bg-slate-100 dark:bg-white/10 hover:bg-brand-navy hover:text-brand-goldLight transition border border-transparent hover:border-brand-gold/40"><i class="fa-solid fa-award mr-1"></i> High School</a>
+            <a href="#cambridge" class="px-3.5 py-1.5 rounded-full bg-slate-100 dark:bg-white/10 hover:bg-brand-navy hover:text-brand-goldLight transition border border-transparent hover:border-brand-gold/40"><i class="fa-solid fa-flask-vial mr-1"></i> Cambridge</a>
+            <a href="#robotics" class="px-3.5 py-1.5 rounded-full bg-slate-100 dark:bg-white/10 hover:bg-brand-navy hover:text-brand-goldLight transition border border-transparent hover:border-brand-gold/40"><i class="fa-solid fa-laptop-code mr-1"></i> STEM & Robotics</a>
         </div>
     </div>
 
@@ -115,25 +119,25 @@
     <main class="max-w-7xl mx-auto px-4 sm:px-6 py-12 space-y-12 w-full">
         
         <!-- 1. Pre-School / Montessori -->
-        <section id="early-years" class="scroll-mt-36 straight-card bg-white dark:bg-[#111722] rounded-3xl p-6 sm:p-10 border border-slate-200 dark:border-white/10 shadow-lg" data-aos="fade-up">
+        <section id="early-years" class="scroll-mt-36 straight-card bg-white dark:bg-[#0D2035] rounded-3xl p-6 sm:p-10 border border-slate-200 dark:border-white/10 shadow-lg" data-aos="fade-up">
             <div class="grid lg:grid-cols-12 gap-8 items-center">
                 <div class="lg:col-span-7 space-y-4">
-                    <span class="text-xs font-black uppercase text-red-600 bg-red-100 dark:bg-red-950/60 px-3 py-1 rounded-full">Early Childhood (Ages 2.5 - 5.5)</span>
+                    <span class="text-xs font-black uppercase text-brand-gold bg-amber-50 dark:bg-amber-950/60 border border-amber-300 dark:border-amber-500/40 px-3 py-1 rounded-full">Early Childhood (Ages 2.5 - 5.5)</span>
                     <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 dark:text-white font-heading">Pre-School & Montessori Wing</h2>
                     <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
                         A warm, child-centered environment fostering natural curiosity, sensory exploration, and motor coordination. Our early years curriculum integrates phonics, hands-on learning kits, and positive social interaction habits.
                     </p>
                     <div class="grid sm:grid-cols-2 gap-3 text-xs">
-                        <div class="p-3.5 rounded-2xl bg-slate-50 dark:bg-[#161F2E] border border-slate-200 dark:border-white/10">
-                            <strong class="text-red-600 block font-bold"><i class="fa-solid fa-shapes mr-1"></i> Phonics & Language</strong>
+                        <div class="p-3.5 rounded-2xl bg-slate-50 dark:bg-[#081728] border border-slate-200 dark:border-white/10">
+                            <strong class="text-brand-gold block font-bold"><i class="fa-solid fa-shapes mr-1"></i> Phonics & Language</strong>
                             <span class="text-slate-600 dark:text-slate-300">Early speech articulation, vocabulary, and guided storytelling.</span>
                         </div>
-                        <div class="p-3.5 rounded-2xl bg-slate-50 dark:bg-[#161F2E] border border-slate-200 dark:border-white/10">
-                            <strong class="text-red-600 block font-bold"><i class="fa-solid fa-heart mr-1"></i> Caring Educators</strong>
+                        <div class="p-3.5 rounded-2xl bg-slate-50 dark:bg-[#081728] border border-slate-200 dark:border-white/10">
+                            <strong class="text-brand-gold block font-bold"><i class="fa-solid fa-heart mr-1"></i> Caring Educators</strong>
                             <span class="text-slate-600 dark:text-slate-300">Certified early childhood specialists with classroom assistants.</span>
                         </div>
                     </div>
-                    <a href="index.html#admission" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-red-600 text-white font-extrabold text-xs uppercase shadow-md hover:bg-red-700 transition">
+                    <a href="index.html#admission" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-brand-navy hover:bg-slate-900 border border-brand-gold/40 text-brand-goldLight font-extrabold text-xs uppercase shadow-md transition">
                         <i class="fa-solid fa-paper-plane"></i> Enroll in Pre-School
                     </a>
                 </div>
@@ -144,25 +148,25 @@
         </section>
 
         <!-- 2. Primary School -->
-        <section id="primary" class="scroll-mt-36 straight-card bg-white dark:bg-[#111722] rounded-3xl p-6 sm:p-10 border border-slate-200 dark:border-white/10 shadow-lg" data-aos="fade-up">
+        <section id="primary" class="scroll-mt-36 straight-card bg-white dark:bg-[#0D2035] rounded-3xl p-6 sm:p-10 border border-slate-200 dark:border-white/10 shadow-lg" data-aos="fade-up">
             <div class="grid lg:grid-cols-12 gap-8 items-center">
                 <div class="lg:col-span-7 space-y-4">
-                    <span class="text-xs font-black uppercase text-red-600 bg-red-100 dark:bg-red-950/60 px-3 py-1 rounded-full">Grades 1 to 5</span>
+                    <span class="text-xs font-black uppercase text-brand-gold bg-amber-50 dark:bg-amber-950/60 border border-amber-300 dark:border-amber-500/40 px-3 py-1 rounded-full">Grades 1 to 5</span>
                     <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 dark:text-white font-heading">Primary School Wing</h2>
                     <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
                         Laying strong foundations in Science, Mathematics, English linguistics, and Social Studies. Students develop analytical capabilities, active reading habits, and collaborative teamwork skills.
                     </p>
                     <div class="grid sm:grid-cols-2 gap-3 text-xs">
-                        <div class="p-3.5 rounded-2xl bg-slate-50 dark:bg-[#161F2E] border border-slate-200 dark:border-white/10">
-                            <strong class="text-red-600 block font-bold"><i class="fa-solid fa-book-open-reader mr-1"></i> Core Mastery</strong>
+                        <div class="p-3.5 rounded-2xl bg-slate-50 dark:bg-[#081728] border border-slate-200 dark:border-white/10">
+                            <strong class="text-brand-gold block font-bold"><i class="fa-solid fa-book-open-reader mr-1"></i> Core Mastery</strong>
                             <span class="text-slate-600 dark:text-slate-300">Structured lessons with conceptual evaluations and science experiments.</span>
                         </div>
-                        <div class="p-3.5 rounded-2xl bg-slate-50 dark:bg-[#161F2E] border border-slate-200 dark:border-white/10">
-                            <strong class="text-red-600 block font-bold"><i class="fa-solid fa-clipboard-check mr-1"></i> Continuous Monitoring</strong>
+                        <div class="p-3.5 rounded-2xl bg-slate-50 dark:bg-[#081728] border border-slate-200 dark:border-white/10">
+                            <strong class="text-brand-gold block font-bold"><i class="fa-solid fa-clipboard-check mr-1"></i> Continuous Monitoring</strong>
                             <span class="text-slate-600 dark:text-slate-300">Bi-monthly diagnostic assessments to support every student.</span>
                         </div>
                     </div>
-                    <a href="index.html#admission" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-red-600 text-white font-extrabold text-xs uppercase shadow-md hover:bg-red-700 transition">
+                    <a href="index.html#admission" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-brand-navy hover:bg-slate-900 border border-brand-gold/40 text-brand-goldLight font-extrabold text-xs uppercase shadow-md transition">
                         <i class="fa-solid fa-paper-plane"></i> Apply for Primary
                     </a>
                 </div>
@@ -173,15 +177,15 @@
         </section>
 
         <!-- 3. Middle School -->
-        <section id="middle" class="scroll-mt-36 straight-card bg-white dark:bg-[#111722] rounded-3xl p-6 sm:p-10 border border-slate-200 dark:border-white/10 shadow-lg" data-aos="fade-up">
+        <section id="middle" class="scroll-mt-36 straight-card bg-white dark:bg-[#0D2035] rounded-3xl p-6 sm:p-10 border border-slate-200 dark:border-white/10 shadow-lg" data-aos="fade-up">
             <div class="grid lg:grid-cols-12 gap-8 items-center">
                 <div class="lg:col-span-7 space-y-4">
-                    <span class="text-xs font-black uppercase text-red-600 bg-red-100 dark:bg-red-950/60 px-3 py-1 rounded-full">Grades 6 to 8</span>
+                    <span class="text-xs font-black uppercase text-brand-gold bg-amber-50 dark:bg-amber-950/60 border border-amber-300 dark:border-amber-500/40 px-3 py-1 rounded-full">Grades 6 to 8</span>
                     <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 dark:text-white font-heading">Middle School Program</h2>
                     <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
                         Transitioning students from foundational learning into analytical and critical thinking. Focus is placed on advanced science modules, algebra, debating societies, and digital literacy.
                     </p>
-                    <a href="index.html#admission" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-red-600 text-white font-extrabold text-xs uppercase shadow-md hover:bg-red-700 transition">
+                    <a href="index.html#admission" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-brand-navy hover:bg-slate-900 border border-brand-gold/40 text-brand-goldLight font-extrabold text-xs uppercase shadow-md transition">
                         <i class="fa-solid fa-paper-plane"></i> Apply for Middle School
                     </a>
                 </div>
@@ -192,15 +196,15 @@
         </section>
 
         <!-- 4. High School -->
-        <section id="high-school" class="scroll-mt-36 straight-card bg-white dark:bg-[#111722] rounded-3xl p-6 sm:p-10 border border-slate-200 dark:border-white/10 shadow-lg" data-aos="fade-up">
+        <section id="high-school" class="scroll-mt-36 straight-card bg-white dark:bg-[#0D2035] rounded-3xl p-6 sm:p-10 border border-slate-200 dark:border-white/10 shadow-lg" data-aos="fade-up">
             <div class="grid lg:grid-cols-12 gap-8 items-center">
                 <div class="lg:col-span-7 space-y-4">
-                    <span class="text-xs font-black uppercase text-red-600 bg-red-100 dark:bg-red-950/60 px-3 py-1 rounded-full">Grades 9 to 12</span>
+                    <span class="text-xs font-black uppercase text-brand-gold bg-amber-50 dark:bg-amber-950/60 border border-amber-300 dark:border-amber-500/40 px-3 py-1 rounded-full">Grades 9 to 12</span>
                     <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 dark:text-white font-heading">Secondary & High School</h2>
                     <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
                         Rigorous board exam preparation, specialized laboratories for Physics, Chemistry, and Biology, intensive past-paper mock exam series, and college counseling.
                     </p>
-                    <a href="index.html#admission" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-red-600 text-white font-extrabold text-xs uppercase shadow-md hover:bg-red-700 transition">
+                    <a href="index.html#admission" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-brand-navy hover:bg-slate-900 border border-brand-gold/40 text-brand-goldLight font-extrabold text-xs uppercase shadow-md transition">
                         <i class="fa-solid fa-paper-plane"></i> Apply for High School
                     </a>
                 </div>
@@ -211,15 +215,15 @@
         </section>
 
         <!-- 5. Cambridge Track -->
-        <section id="cambridge" class="scroll-mt-36 straight-card bg-white dark:bg-[#111722] rounded-3xl p-6 sm:p-10 border border-slate-200 dark:border-white/10 shadow-lg" data-aos="fade-up">
+        <section id="cambridge" class="scroll-mt-36 straight-card bg-white dark:bg-[#0D2035] rounded-3xl p-6 sm:p-10 border border-slate-200 dark:border-white/10 shadow-lg" data-aos="fade-up">
             <div class="grid lg:grid-cols-12 gap-8 items-center">
                 <div class="lg:col-span-7 space-y-4">
-                    <span class="text-xs font-black uppercase text-red-600 bg-red-100 dark:bg-red-950/60 px-3 py-1 rounded-full">International Certification</span>
+                    <span class="text-xs font-black uppercase text-brand-gold bg-amber-50 dark:bg-amber-950/60 border border-amber-300 dark:border-amber-500/40 px-3 py-1 rounded-full">International Certification</span>
                     <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 dark:text-white font-heading">Cambridge O-Levels Track</h2>
                     <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
                         Based directly on international Cambridge curricula. Prepares learners for global qualifications with high standards of intellectual inquiry and experimental science research.
                     </p>
-                    <a href="index.html#admission" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-red-600 text-white font-extrabold text-xs uppercase shadow-md hover:bg-red-700 transition">
+                    <a href="index.html#admission" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-brand-navy hover:bg-slate-900 border border-brand-gold/40 text-brand-goldLight font-extrabold text-xs uppercase shadow-md transition">
                         <i class="fa-solid fa-paper-plane"></i> Explore Cambridge Track
                     </a>
                 </div>
@@ -230,15 +234,15 @@
         </section>
 
         <!-- 6. STEM & Robotics -->
-        <section id="robotics" class="scroll-mt-36 straight-card bg-white dark:bg-[#111722] rounded-3xl p-6 sm:p-10 border border-slate-200 dark:border-white/10 shadow-lg" data-aos="fade-up">
+        <section id="robotics" class="scroll-mt-36 straight-card bg-white dark:bg-[#0D2035] rounded-3xl p-6 sm:p-10 border border-slate-200 dark:border-white/10 shadow-lg" data-aos="fade-up">
             <div class="grid lg:grid-cols-12 gap-8 items-center">
                 <div class="lg:col-span-7 space-y-4">
-                    <span class="text-xs font-black uppercase text-red-600 bg-red-100 dark:bg-red-950/60 px-3 py-1 rounded-full">Digital Innovation</span>
+                    <span class="text-xs font-black uppercase text-brand-gold bg-amber-50 dark:bg-amber-950/60 border border-amber-300 dark:border-amber-500/40 px-3 py-1 rounded-full">Digital Innovation</span>
                     <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 dark:text-white font-heading">Modern STEM & Robotics Wing</h2>
                     <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
                         Equipping students with future-ready skills: algorithmic logic, coding, robotics hardware prototyping, and cyber ethics in supervised modern computer labs.
                     </p>
-                    <a href="index.html#admission" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-red-600 text-white font-extrabold text-xs uppercase shadow-md hover:bg-red-700 transition">
+                    <a href="index.html#admission" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-brand-navy hover:bg-slate-900 border border-brand-gold/40 text-brand-goldLight font-extrabold text-xs uppercase shadow-md transition">
                         <i class="fa-solid fa-paper-plane"></i> Explore STEM Wing
                     </a>
                 </div>
