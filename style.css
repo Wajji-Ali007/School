@@ -1,0 +1,124 @@
+/* ================= GLOBAL OVERFLOW LOCK ================= */
+body {
+    overflow-x: hidden !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    position: relative;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* ================= CUSTOM SCROLLBAR ================= */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #F1F5F9;
+}
+.dark ::-webkit-scrollbar-track {
+    background: #080C14;
+}
+::-webkit-scrollbar-thumb {
+    background: #DC2626;
+    border-radius: 4px;
+}
+
+/* ================= HERO SECTION BACKGROUND ================= */
+.hsja-hero-bg {
+    background-color: #FFFFFF !important;
+    background-image: 
+        radial-gradient(at 0% 0%, rgba(220, 38, 38, 0.08) 0px, transparent 50%),
+        radial-gradient(at 100% 0%, rgba(225, 29, 72, 0.05) 0px, transparent 50%),
+        radial-gradient(at 50% 100%, rgba(254, 226, 226, 0.4) 0px, transparent 50%) !important;
+    transition: background 0.3s ease-in-out;
+}
+
+.dark .hsja-hero-bg {
+    background-color: #080C14 !important;
+    background-image: 
+        radial-gradient(at 0% 0%, rgba(220, 38, 38, 0.45) 0px, transparent 50%),
+        radial-gradient(at 100% 0%, rgba(153, 27, 27, 0.35) 0px, transparent 50%),
+        radial-gradient(at 50% 100%, rgba(225, 29, 72, 0.25) 0px, transparent 50%) !important;
+}
+
+/* ================= CLEAN STRAIGHT CARDS ================= */
+.straight-card {
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease !important;
+}
+.straight-card:active {
+    transform: scale(0.98) !important;
+}
+@media (min-width: 1024px) {
+    .straight-card:hover {
+        transform: translateY(-4px) !important;
+    }
+}
+
+/* ================= AMBIENT RED GLOW SHADOWS ================= */
+.glow-red {
+    box-shadow: 0 10px 30px -8px rgba(220, 38, 38, 0.25);
+}
+.glow-red:hover {
+    box-shadow: 0 18px 45px -5px rgba(220, 38, 38, 0.55);
+}
+
+/* ================= MOBILE NAVIGATION TABS ================= */
+.mobile-tab-item {
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.mobile-tab-item:active {
+    transform: scale(0.97);
+    border-color: #DC2626 !important;
+    box-shadow: 0 0 15px rgba(220, 38, 38, 0.4) !important;
+}
+
+/* ================= FLOATING ACTION BUTTONS ================= */
+.hsja-floating-container {
+    position: fixed !important;
+    bottom: 20px !important;
+    right: 20px !important;
+    z-index: 999999 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 10px !important;
+}
+
+.hsja-top-btn {
+    width: 44px !important;
+    height: 44px !important;
+    border-radius: 50% !important;
+    background-color: #ffffff !important;
+    border: 2px solid #dc2626 !important;
+    color: #dc2626 !important;
+    font-size: 16px !important;
+    cursor: pointer !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.25) !important;
+    transition: transform 0.2s !important;
+}
+.hsja-top-btn:hover {
+    transform: scale(1.1) !important;
+}
+
+.hsja-whatsapp-btn {
+    width: 52px !important;
+    height: 52px !important;
+    border-radius: 50% !important;
+    background-color: #25d366 !important;
+    color: #ffffff !important;
+    font-size: 28px !important;
+    text-decoration: none !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    box-shadow: 0 4px 20px rgba(37,211,102,0.5) !important;
+    transition: transform 0.2s !important;
+}
+.hsja-whatsapp-btn:hover {
+    transform: scale(1.1) !important;
+}
