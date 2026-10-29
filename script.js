@@ -12,6 +12,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     // Calculate initial fee on load
     calculateTuition();
+    // Start live countdown timer
+    startEventCountdown();
 });
 
 // 2. Light / Dark Theme Switcher
@@ -259,7 +261,89 @@ function calculateTuition() {
     displayTotal.textContent = "Rs. " + total.toLocaleString() + " / month";
 }
 
-// 10. Admission Form Handler
+// 10. Live Event Countdown Timer (Sports Gala)
+function startEventCountdown() {
+    // 14 days dynamic target date
+    const targetDate = new Date();
+    targetDate.setDate(targetDate.getDate() + 14);
+
+    function updateTimer() {
+        const now = new Date().getTime();
+        const difference = targetDate.getTime() - now;
+
+        if (difference <= 0) return;
+
+        const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+        const cdDays = document.getElementById('cdDays');
+        const cdHours = document.getElementById('cdHours');
+        const cdMins = document.getElementById('cdMins');
+        const cdSecs = document.getElementById('cdSecs');
+
+        if (cdDays) cdDays.textContent = String(days).padStart(2, '0');
+        if (cdHours) cdHours.textContent = String(hours).padStart(2, '0');
+        if (cdMins) cdMins.textContent = String(minutes).padStart(2, '0');
+        if (cdSecs) cdSecs.textContent = String(seconds).padStart(2, '0');
+    }
+
+    updateTimer();
+    setInterval(updateTimer, 1000);
+}
+
+// 11. Smart WhatsApp Chat Popup
+function toggleWhatsAppCard() {
+    const card = document.getElementById('whatsappChatCard');
+    if (card) {
+        card.classList.toggle('hidden');
+    }
+}
+
+// 12. Filterable Gallery & Fullscreen Lightbox
+function filterGallery(category) {
+    const buttons = document.querySelectorAll('.gallery-filter-btn');
+    buttons.forEach(btn => {
+        btn.className = "gallery-filter-btn px-4 py-2 rounded-xl text-xs font-bold bg-white dark:bg-white/5 text-slate-700 dark:text-slate-300 hover:bg-red-50 dark:hover:bg-white/10 transition border border-slate-200 dark:border-white/10";
+    });
+
+    const activeBtn = document.getElementById('gallery-filter-' + category);
+    if (activeBtn) {
+        activeBtn.className = "gallery-filter-btn px-4 py-2 rounded-xl text-xs font-bold bg-red-600 text-white shadow-md transition";
+    }
+
+    const items = document.querySelectorAll('.gallery-item');
+    items.forEach(item => {
+        if (category === 'all' || item.getAttribute('data-category') === category) {
+            item.classList.remove('hidden');
+        } else {
+            item.classList.add('hidden');
+        }
+    });
+}
+
+function openLightbox(imageUrl, imageTitle) {
+    const modal = document.getElementById('lightboxModal');
+    const img = document.getElementById('lightboxImage');
+    const title = document.getElementById('lightboxCaption');
+    if (modal && img && title) {
+        img.src = imageUrl;
+        title.textContent = imageTitle;
+        modal.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+    }
+}
+
+function closeLightbox() {
+    const modal = document.getElementById('lightboxModal');
+    if (modal) {
+        modal.classList.add('hidden');
+        document.body.style.overflow = '';
+    }
+}
+
+// 13. Admission Form Handler
 function handleForm(e) {
     e.preventDefault();
     const successBox = document.getElementById('successBox');
