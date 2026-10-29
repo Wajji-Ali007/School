@@ -19,7 +19,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@500;600;700;800;900&display=swap" rel="stylesheet">
     
-    <!-- Tailwind Configuration -->
     <script>
         tailwind.config = {
             darkMode: 'class',
@@ -56,14 +55,16 @@
         <div class="max-w-7xl mx-auto flex justify-between items-center gap-2">
             <div class="flex items-center gap-4 sm:gap-6 text-[11px] sm:text-xs">
                 <span class="flex items-center gap-1.5"><i class="fa-solid fa-phone text-red-200"></i> +1 (234) 567-8900</span>
-                <span class="hidden md:flex items-center gap-1.5"><i class="fa-solid fa-envelope text-red-200"></i> admissions@apexacademy.edu</span>
+                <span class="hidden md:flex items-center gap-1.5"><i class="fa-solid fa-envelope text-red-200"></i> contact@apexacademy.edu</span>
                 <span class="hidden sm:flex items-center gap-1.5 text-red-100"><i class="fa-solid fa-location-dot text-red-200"></i> Main City Campus</span>
             </div>
             <div class="flex items-center gap-3">
-                <a href="#" class="hover:text-red-200 transition"><i class="fa-brands fa-facebook-f text-xs"></i></a>
-                <a href="#" class="hover:text-red-200 transition"><i class="fa-brands fa-instagram text-xs"></i></a>
-                <a href="#map" class="ml-2 bg-white/15 hover:bg-white text-white hover:text-red-700 font-bold px-2 py-0.5 rounded text-[11px] transition flex items-center gap-1">
-                    <i class="fa-solid fa-location-arrow text-[10px]"></i> Campus Map
+                <!-- Portal Login Trigger in Topbar -->
+                <button onclick="openPortalModal()" class="bg-white/15 hover:bg-white text-white hover:text-red-700 font-bold px-2.5 py-0.5 rounded text-[11px] transition flex items-center gap-1">
+                    <i class="fa-solid fa-user-lock text-[10px]"></i> Portal Login
+                </button>
+                <a href="#map" class="bg-white/15 hover:bg-white text-white hover:text-red-700 font-bold px-2 py-0.5 rounded text-[11px] transition flex items-center gap-1">
+                    <i class="fa-solid fa-location-arrow text-[10px]"></i> Map
                 </a>
             </div>
         </div>
@@ -73,7 +74,6 @@
     <header class="sticky top-0 z-40 bg-white/95 dark:bg-[#0B0F17]/95 backdrop-blur-xl border-b border-slate-200 dark:border-white/10 shadow-sm transition-colors w-full">
         <div class="max-w-7xl mx-auto px-4 sm:px-6">
             <div class="flex justify-between items-center h-20">
-                <!-- Generic Vector SVG Logo -->
                 <a href="#" class="flex items-center gap-2.5 shrink-0 group">
                     <div class="w-11 h-11 p-2 rounded-xl bg-gradient-to-br from-red-600 to-rose-700 text-white shadow-md flex items-center justify-center">
                         <i class="fa-solid fa-graduation-cap text-lg"></i>
@@ -87,7 +87,6 @@
                     </div>
                 </a>
 
-                <!-- Desktop Menu -->
                 <nav class="hidden lg:flex items-center gap-1 xl:gap-2 text-[13px] font-bold text-slate-700 dark:text-slate-200">
                     <a href="#" class="px-3 py-1.5 rounded-lg text-red-600 bg-red-50 dark:bg-red-950/40 font-extrabold">Home</a>
                     <a href="#about" class="px-2.5 py-1.5 rounded-lg hover:text-red-600 hover:bg-slate-100 dark:hover:bg-white/5 transition">About</a>
@@ -100,7 +99,6 @@
                     <a href="#faqs" class="px-2.5 py-1.5 rounded-lg hover:text-red-600 hover:bg-slate-100 dark:hover:bg-white/5 transition">FAQs</a>
                 </nav>
 
-                <!-- Right Action Buttons -->
                 <div class="hidden lg:flex items-center gap-2.5 shrink-0">
                     <button id="themeToggleBtn" type="button" aria-label="Toggle Theme" title="Switch Light/Dark Mode"
                             class="w-10 h-10 rounded-xl bg-slate-100 dark:bg-white/10 border border-slate-300 dark:border-white/10 text-slate-700 dark:text-yellow-400 flex items-center justify-center text-sm hover:scale-105 active:scale-95 transition">
@@ -112,7 +110,6 @@
                     </a>
                 </div>
 
-                <!-- Mobile Action Area -->
                 <div class="flex items-center gap-2 lg:hidden">
                     <button id="themeToggleMobile" type="button" class="w-9 h-9 rounded-lg bg-slate-100 dark:bg-white/10 text-slate-700 dark:text-yellow-400 flex items-center justify-center text-sm">
                         <i id="themeIconMobile" class="fa-solid fa-moon"></i>
@@ -136,15 +133,16 @@
                 <i class="fa-solid fa-chevron-right text-[10px] text-red-500"></i>
             </a>
 
-            <a href="#about" class="mobile-nav-link mobile-tab-item flex items-center justify-between p-3 rounded-xl bg-slate-50 dark:bg-[#111722] border border-slate-200/80 dark:border-white/10">
+            <!-- Mobile Portal Login Action -->
+            <button onclick="closeMobileDrawer(); openPortalModal();" class="w-full mobile-tab-item flex items-center justify-between p-3 rounded-xl bg-slate-50 dark:bg-[#111722] border border-slate-200/80 dark:border-white/10">
                 <div class="flex items-center gap-3">
                     <div class="w-8 h-8 rounded-lg bg-slate-100 dark:bg-white/5 text-red-600 flex items-center justify-center text-xs">
-                        <i class="fa-solid fa-school"></i>
+                        <i class="fa-solid fa-user-lock"></i>
                     </div>
-                    <span class="font-bold text-xs text-slate-800 dark:text-slate-200">About Academy</span>
+                    <span class="font-bold text-xs text-slate-800 dark:text-slate-200">Student Portal Login</span>
                 </div>
-                <i class="fa-solid fa-chevron-right text-[10px] text-slate-400"></i>
-            </a>
+                <span class="text-[10px] font-bold text-red-600 bg-red-100 dark:bg-red-950/60 px-2 py-0.5 rounded-full">Portal</span>
+            </button>
 
             <a href="programs.html" class="mobile-nav-link mobile-tab-item flex items-center justify-between p-3 rounded-xl bg-slate-50 dark:bg-[#111722] border border-slate-200/80 dark:border-white/10">
                 <div class="flex items-center gap-3">
@@ -166,32 +164,12 @@
                 <i class="fa-solid fa-chevron-right text-[10px] text-slate-400"></i>
             </a>
 
-            <a href="#gallery" class="mobile-nav-link mobile-tab-item flex items-center justify-between p-3 rounded-xl bg-slate-50 dark:bg-[#111722] border border-slate-200/80 dark:border-white/10">
-                <div class="flex items-center gap-3">
-                    <div class="w-8 h-8 rounded-lg bg-slate-100 dark:bg-white/5 text-red-600 flex items-center justify-center text-xs">
-                        <i class="fa-solid fa-images"></i>
-                    </div>
-                    <span class="font-bold text-xs text-slate-800 dark:text-slate-200">Campus Gallery</span>
-                </div>
-                <i class="fa-solid fa-chevron-right text-[10px] text-slate-400"></i>
-            </a>
-
             <a href="#map" class="mobile-nav-link mobile-tab-item flex items-center justify-between p-3 rounded-xl bg-slate-50 dark:bg-[#111722] border border-slate-200/80 dark:border-white/10">
                 <div class="flex items-center gap-3">
                     <div class="w-8 h-8 rounded-lg bg-slate-100 dark:bg-white/5 text-red-600 flex items-center justify-center text-xs">
                         <i class="fa-solid fa-map-location-dot"></i>
                     </div>
                     <span class="font-bold text-xs text-slate-800 dark:text-slate-200">Campus Location Map</span>
-                </div>
-                <i class="fa-solid fa-chevron-right text-[10px] text-slate-400"></i>
-            </a>
-
-            <a href="#faqs" class="mobile-nav-link mobile-tab-item flex items-center justify-between p-3 rounded-xl bg-slate-50 dark:bg-[#111722] border border-slate-200/80 dark:border-white/10">
-                <div class="flex items-center gap-3">
-                    <div class="w-8 h-8 rounded-lg bg-slate-100 dark:bg-white/5 text-red-600 flex items-center justify-center text-xs">
-                        <i class="fa-solid fa-circle-question"></i>
-                    </div>
-                    <span class="font-bold text-xs text-slate-800 dark:text-slate-200">Frequently Asked Questions</span>
                 </div>
                 <i class="fa-solid fa-chevron-right text-[10px] text-slate-400"></i>
             </a>
@@ -209,12 +187,12 @@
                 <i class="fa-solid fa-bell"></i> Admissions Open
             </span>
             <marquee behavior="scroll" direction="left" onmouseover="this.stop();" onmouseout="this.start();" class="text-slate-700 dark:text-slate-200 font-medium">
-                Admissions actively open for Pre-School, Primary, Cambridge, and High School Wings! | Scholarship entrance exams scheduled every Saturday. | Schedule your campus visit today.
+                Admissions actively open for Academic Session 2026-2027! | Scholarships available for merit achievers. | Schedule your personalized campus visit today.
             </marquee>
         </div>
     </div>
 
-    <!-- Hero Section -->
+    <!-- Hero Section with Video Tour Trigger Button -->
     <section class="hsja-hero-bg py-12 lg:py-20 relative overflow-hidden w-full">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 relative z-10 w-full">
             <div class="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center w-full">
@@ -234,19 +212,19 @@
                         Apex International Academy pairs world-class academic frameworks and modern STEM education with profound moral character building and leadership skills.
                     </p>
 
+                    <!-- CTAs with Video Tour Modal Trigger -->
                     <div class="flex flex-wrap items-center justify-center lg:justify-start gap-3 pt-2">
                         <a href="#admission" class="bg-gradient-to-r from-red-600 via-red-500 to-rose-600 hover:from-red-700 hover:to-rose-700 text-white font-extrabold px-6 sm:px-7 py-3.5 rounded-xl shadow-lg shadow-red-600/30 hover:scale-105 transition duration-300 flex items-center gap-2.5 text-sm">
                             <i class="fa-solid fa-paper-plane text-xs"></i>
                             <span>Enroll Your Child</span>
                         </a>
-                        <a href="#map" class="bg-white dark:bg-[#111722] hover:bg-slate-100 dark:hover:bg-[#161F2E] border border-slate-300 dark:border-white/20 text-slate-800 dark:text-white font-bold px-6 py-3.5 rounded-xl shadow-sm hover:border-red-500 transition duration-300 flex items-center gap-2 text-sm">
-                            <i class="fa-solid fa-location-crosshairs text-red-600"></i>
-                            <span>Find On Map</span>
-                        </a>
+                        <button onclick="openVideoModal()" class="bg-white dark:bg-[#111722] hover:bg-slate-100 dark:hover:bg-[#161F2E] border border-slate-300 dark:border-white/20 text-slate-800 dark:text-white font-bold px-5 py-3.5 rounded-xl shadow-sm hover:border-red-500 transition duration-300 flex items-center gap-2 text-sm">
+                            <i class="fa-solid fa-circle-play text-red-600 text-base"></i>
+                            <span>Watch Campus Tour</span>
+                        </button>
                     </div>
                 </div>
 
-                <!-- Royalty-Free Unsplash Image -->
                 <div class="lg:col-span-5 relative w-full" data-aos="fade-left">
                     <div class="straight-card relative mx-auto w-full max-w-md rounded-2xl overflow-hidden border-2 border-slate-200 dark:border-white/10 shadow-xl bg-white dark:bg-[#111722]">
                         <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=800&q=80" alt="Students in Classroom" class="w-full h-[360px] sm:h-[420px] object-cover">
@@ -290,32 +268,7 @@
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 w-full overflow-hidden">
-        <div class="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center w-full">
-            <div class="lg:col-span-6 space-y-4" data-aos="fade-right">
-                <span class="text-xs font-black uppercase text-red-600 bg-red-100 dark:bg-red-950/60 px-3 py-1 rounded-full">About Us</span>
-                <h2 class="text-2xl sm:text-4xl font-black text-slate-900 dark:text-white font-heading">
-                    Inspiring Character, Knowledge & Leadership
-                </h2>
-                <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
-                    Apex Academy is an educational institution focused on progressive pedagogy, board exam distinctions, and holistic character grooming. Our mission is to build confident, visionary, and morally upright global leaders.
-                </p>
-                <div class="space-y-2 text-xs text-slate-700 dark:text-slate-300 pt-2">
-                    <div class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-red-600"></i> Qualified and passionate certified educators.</div>
-                    <div class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-red-600"></i> Well-equipped Physics, Chemistry, Biology & Robotics Labs.</div>
-                    <div class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-red-600"></i> Safe campus environment with CCTV surveillance and modern amenities.</div>
-                </div>
-            </div>
-            <div class="lg:col-span-6 w-full" data-aos="fade-left">
-                <div class="straight-card rounded-2xl overflow-hidden border border-slate-200 dark:border-white/10 shadow-lg w-full bg-slate-100 dark:bg-slate-900">
-                    <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=800&q=80" alt="Students Studying" class="w-full h-80 object-cover">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Academic Wings Section -->
+    <!-- Academic Wings Grid -->
     <section id="programs" class="py-20 bg-slate-100 dark:bg-[#0B0F17] border-y border-slate-200 dark:border-white/5 transition-colors w-full overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 w-full">
             <div class="text-center max-w-2xl mx-auto mb-12" data-aos="fade-up">
@@ -327,7 +280,7 @@
             </div>
 
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
-                <!-- Wing 1 -->
+                <!-- Program Cards linking to programs.html -->
                 <a href="programs.html#early-years" class="straight-card group bg-white dark:bg-[#111722] rounded-2xl border border-slate-200 dark:border-white/10 p-6 shadow-md hover:border-red-500 hover:shadow-xl transition-all flex flex-col justify-between w-full" data-aos="fade-up" data-aos-delay="100">
                     <div>
                         <div class="w-12 h-12 rounded-xl bg-red-50 dark:bg-red-600/20 border border-red-200 dark:border-red-500/40 text-red-600 dark:text-red-400 flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition duration-300">
@@ -345,7 +298,6 @@
                     </div>
                 </a>
 
-                <!-- Wing 2 -->
                 <a href="programs.html#primary" class="straight-card group bg-white dark:bg-[#111722] rounded-2xl border border-slate-200 dark:border-white/10 p-6 shadow-md hover:border-red-500 hover:shadow-xl transition-all flex flex-col justify-between w-full" data-aos="fade-up" data-aos-delay="200">
                     <div>
                         <div class="w-12 h-12 rounded-xl bg-red-50 dark:bg-red-600/20 border border-red-200 dark:border-red-500/40 text-red-600 dark:text-red-400 flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition duration-300">
@@ -363,7 +315,6 @@
                     </div>
                 </a>
 
-                <!-- Wing 3 -->
                 <a href="programs.html#middle" class="straight-card group bg-white dark:bg-[#111722] rounded-2xl border border-slate-200 dark:border-white/10 p-6 shadow-md hover:border-red-500 hover:shadow-xl transition-all flex flex-col justify-between w-full" data-aos="fade-up" data-aos-delay="300">
                     <div>
                         <div class="w-12 h-12 rounded-xl bg-rose-50 dark:bg-rose-600/20 border border-rose-200 dark:border-rose-500/40 text-rose-600 dark:text-rose-400 flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition duration-300">
@@ -375,60 +326,6 @@
                             Conceptual science, advanced mathematics, analytical writing, and debate sessions preparing students for higher streams.
                         </p>
                     </div>
-                    <div class="pt-5 border-t border-slate-100 dark:border-white/10 mt-5 flex items-center justify-between text-xs font-bold text-rose-600">
-                        <span class="flex items-center gap-1.5"><i class="fa-solid fa-arrow-up-right-from-square text-[11px]"></i> Read Full Syllabus & Details</span>
-                        <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition"></i>
-                    </div>
-                </a>
-
-                <!-- Wing 4 -->
-                <a href="programs.html#high-school" class="straight-card group bg-white dark:bg-[#111722] rounded-2xl border border-slate-200 dark:border-white/10 p-6 shadow-md hover:border-red-500 hover:shadow-xl transition-all flex flex-col justify-between w-full" data-aos="fade-up" data-aos-delay="100">
-                    <div>
-                        <div class="w-12 h-12 rounded-xl bg-red-50 dark:bg-red-600/20 border border-red-200 dark:border-red-500/40 text-red-600 dark:text-red-400 flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition duration-300">
-                            <i class="fa-solid fa-award"></i>
-                        </div>
-                        <span class="text-[11px] font-bold text-red-600 uppercase tracking-wider">Secondary Board</span>
-                        <h3 class="text-xl font-bold text-slate-900 dark:text-white font-heading mt-1 group-hover:text-red-600 transition">High School / Matric</h3>
-                        <p class="text-xs text-slate-600 dark:text-slate-400 mt-2.5 leading-relaxed">
-                            Comprehensive preparation with physics, chemistry, and biology labs, intensive past-paper mock sessions, and career counseling.
-                        </p>
-                    </div>
-                    <div class="pt-5 border-t border-slate-100 dark:border-white/10 mt-5 flex items-center justify-between text-xs font-bold text-red-600">
-                        <span class="flex items-center gap-1.5"><i class="fa-solid fa-arrow-up-right-from-square text-[11px]"></i> Read Full Syllabus & Details</span>
-                        <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition"></i>
-                    </div>
-                </a>
-
-                <!-- Wing 5 -->
-                <a href="programs.html#cambridge" class="straight-card group bg-white dark:bg-[#111722] rounded-2xl border border-slate-200 dark:border-white/10 p-6 shadow-md hover:border-red-500 hover:shadow-xl transition-all flex flex-col justify-between w-full" data-aos="fade-up" data-aos-delay="200">
-                    <div>
-                        <div class="w-12 h-12 rounded-xl bg-red-50 dark:bg-red-700/20 border border-red-200 dark:border-red-600/40 text-red-700 dark:text-red-400 flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition duration-300">
-                            <i class="fa-solid fa-flask-vial"></i>
-                        </div>
-                        <span class="text-[11px] font-bold text-red-700 dark:text-red-400 uppercase tracking-wider">International Stream</span>
-                        <h3 class="text-xl font-bold text-slate-900 dark:text-white font-heading mt-1 group-hover:text-red-600 transition">Cambridge O-Levels</h3>
-                        <p class="text-xs text-slate-600 dark:text-slate-400 mt-2.5 leading-relaxed">
-                            Globally recognized Cambridge international curriculum instilling deep analytical thinking and high English communication proficiency.
-                        </p>
-                    </div>
-                    <div class="pt-5 border-t border-slate-100 dark:border-white/10 mt-5 flex items-center justify-between text-xs font-bold text-red-700 dark:text-red-400">
-                        <span class="flex items-center gap-1.5"><i class="fa-solid fa-arrow-up-right-from-square text-[11px]"></i> Read Full Syllabus & Details</span>
-                        <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition"></i>
-                    </div>
-                </a>
-
-                <!-- Wing 6 -->
-                <a href="programs.html#robotics" class="straight-card group bg-white dark:bg-[#111722] rounded-2xl border border-slate-200 dark:border-white/10 p-6 shadow-md hover:border-red-500 hover:shadow-xl transition-all flex flex-col justify-between w-full" data-aos="fade-up" data-aos-delay="300">
-                    <div>
-                        <div class="w-12 h-12 rounded-xl bg-red-50 dark:bg-red-600/20 border border-red-200 dark:border-red-500/40 text-red-600 dark:text-red-400 flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition duration-300">
-                            <i class="fa-solid fa-laptop-code"></i>
-                        </div>
-                        <span class="text-[11px] font-bold text-red-600 uppercase tracking-wider">Digital Skills</span>
-                        <h3 class="text-xl font-bold text-slate-900 dark:text-white font-heading mt-1 group-hover:text-red-600 transition">Modern IT & Robotics</h3>
-                        <p class="text-xs text-slate-600 dark:text-slate-400 mt-2.5 leading-relaxed">
-                            Practical digital literacy, computer coding fundamentals, typing speed training, and hardware concepts in modern laboratories.
-                        </p>
-                    </div>
                     <div class="pt-5 border-t border-slate-100 dark:border-white/10 mt-5 flex items-center justify-between text-xs font-bold text-red-600">
                         <span class="flex items-center gap-1.5"><i class="fa-solid fa-arrow-up-right-from-square text-[11px]"></i> Read Full Syllabus & Details</span>
                         <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition"></i>
@@ -438,257 +335,100 @@
         </div>
     </section>
 
-    <!-- Fee & Timings Tabs -->
+    <!-- Fee & Timings + Interactive Live Calculator -->
     <section id="structure" class="py-20 max-w-6xl mx-auto px-4 sm:px-6 w-full overflow-hidden" data-aos="fade-up">
         <div class="text-center max-w-2xl mx-auto mb-12">
             <span class="text-xs font-bold uppercase tracking-widest text-red-600 dark:text-red-400 bg-red-100 dark:bg-red-950/40 border border-red-300 dark:border-red-500/30 px-3.5 py-1 rounded-full">
                 Transparent Info
             </span>
-            <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white font-heading mt-3">Academic & Fee Overview</h2>
-            <p class="text-slate-600 dark:text-slate-400 text-sm mt-2">Click on any wing tab to explore timing, curriculum highlights, and criteria.</p>
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white font-heading mt-3">Tuition & Fee Schedule</h2>
+            <p class="text-slate-600 dark:text-slate-400 text-sm mt-2">Explore timetable overviews or calculate your monthly estimate in real time below.</p>
         </div>
 
-        <div class="flex flex-wrap justify-center gap-2.5 mb-8">
-            <button onclick="switchTab('montessori')" id="tab-montessori" class="tab-btn px-5 py-2.5 rounded-xl font-bold text-xs bg-red-600 text-white shadow-md transition">
-                Montessori
-            </button>
-            <button onclick="switchTab('primary')" id="tab-primary" class="tab-btn px-5 py-2.5 rounded-xl font-bold text-xs bg-white dark:bg-white/5 text-slate-700 dark:text-slate-300 hover:bg-red-50 dark:hover:bg-white/10 transition border border-slate-200 dark:border-white/10">
-                Primary (1-5)
-            </button>
-            <button onclick="switchTab('middle')" id="tab-middle" class="tab-btn px-5 py-2.5 rounded-xl font-bold text-xs bg-white dark:bg-white/5 text-slate-700 dark:text-slate-300 hover:bg-red-50 dark:hover:bg-white/10 transition border border-slate-200 dark:border-white/10">
-                Middle (6-8)
-            </button>
-            <button onclick="switchTab('high')" id="tab-high" class="tab-btn px-5 py-2.5 rounded-xl font-bold text-xs bg-white dark:bg-white/5 text-slate-700 dark:text-slate-300 hover:bg-red-50 dark:hover:bg-white/10 transition border border-slate-200 dark:border-white/10">
-                High School
-            </button>
+        <!-- NEW FEATURE: Interactive Live Tuition Calculator Widget -->
+        <div class="straight-card bg-gradient-to-br from-red-600/10 via-white to-slate-50 dark:from-red-950/30 dark:via-[#111722] dark:to-[#0B0F17] p-6 sm:p-8 rounded-3xl border border-red-500/30 shadow-xl mb-10">
+            <div class="max-w-3xl mx-auto space-y-6">
+                <div class="flex items-center gap-3 border-b border-slate-200 dark:border-white/10 pb-4">
+                    <div class="w-10 h-10 rounded-xl bg-red-600 text-white flex items-center justify-center text-lg">
+                        <i class="fa-solid fa-calculator"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-black text-slate-900 dark:text-white font-heading">Live Tuition & Transport Calculator</h3>
+                        <p class="text-xs text-slate-600 dark:text-slate-400">Select options to see instant estimated monthly tuition.</p>
+                    </div>
+                </div>
+
+                <div class="grid sm:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1.5">Select Academic Grade</label>
+                        <select id="calcGrade" onchange="calculateTuition()" class="w-full px-3.5 py-2.5 rounded-xl bg-white dark:bg-[#161F2E] border border-slate-300 dark:border-white/10 text-slate-900 dark:text-white text-xs font-semibold focus:outline-none focus:border-red-600">
+                            <option value="3500">Pre-School / Montessori (Rs. 3,500/mo)</option>
+                            <option value="4200">Primary Wing - Grades 1 to 5 (Rs. 4,200/mo)</option>
+                            <option value="5000">Middle School - Grades 6 to 8 (Rs. 5,000/mo)</option>
+                            <option value="6000">Secondary / High School (Rs. 6,000/mo)</option>
+                            <option value="7500">Cambridge O-Levels Track (Rs. 7,500/mo)</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1.5">Transport Service</label>
+                        <select id="calcTransport" onchange="calculateTuition()" class="w-full px-3.5 py-2.5 rounded-xl bg-white dark:bg-[#161F2E] border border-slate-300 dark:border-white/10 text-slate-900 dark:text-white text-xs font-semibold focus:outline-none focus:border-red-600">
+                            <option value="0">No Transport (Self Drop/Pickup)</option>
+                            <option value="1500">Zone A: 1 to 5 km (+ Rs. 1,500/mo)</option>
+                            <option value="2500">Zone B: 5 to 10 km (+ Rs. 2,500/mo)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="flex items-center gap-2 pt-1">
+                    <input type="checkbox" id="calcSibling" onchange="calculateTuition()" class="w-4 h-4 text-red-600 rounded border-slate-300 focus:ring-red-500">
+                    <label for="calcSibling" class="text-xs font-medium text-slate-700 dark:text-slate-300 cursor-pointer">
+                        Apply Sibling Discount (10% waiver on tuition for 2nd/3rd child)
+                    </label>
+                </div>
+
+                <div class="pt-4 border-t border-slate-200 dark:border-white/10 flex flex-wrap items-center justify-between gap-3">
+                    <span class="text-xs font-bold text-slate-600 dark:text-slate-400 uppercase tracking-wider">Estimated Total Tuition:</span>
+                    <span id="calcTotalDisplay" class="text-2xl font-black text-red-600 font-heading">Rs. 3,500 / month</span>
+                </div>
+            </div>
         </div>
 
-        <div class="straight-card bg-white dark:bg-[#111722] p-6 sm:p-8 rounded-2xl shadow-xl border border-slate-200 dark:border-white/10 w-full">
-            <div id="content-montessori" class="tab-content grid md:grid-cols-3 gap-5">
-                <div class="p-5 rounded-xl bg-slate-50 dark:bg-[#161F2E] border border-slate-200 dark:border-white/10">
-                    <i class="fa-solid fa-clock text-red-600 text-xl mb-2"></i>
-                    <h4 class="font-bold text-sm text-slate-900 dark:text-white">Daily Timings</h4>
-                    <p class="text-xs text-slate-600 dark:text-slate-300 mt-1">8:30 AM to 12:30 PM (Mon - Thu)</p>
-                    <p class="text-xs text-slate-600 dark:text-slate-300">8:30 AM to 11:30 AM (Friday)</p>
+        <!-- Downloadable Documents Card -->
+        <div class="grid sm:grid-cols-2 gap-4 mb-8">
+            <div class="p-5 rounded-2xl bg-white dark:bg-[#111722] border border-slate-200 dark:border-white/10 flex items-center justify-between shadow-sm">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-xl bg-red-100 dark:bg-red-950/60 text-red-600 flex items-center justify-center text-lg">
+                        <i class="fa-solid fa-file-pdf"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-xs text-slate-900 dark:text-white">Official Prospectus 2026-2027</h4>
+                        <p class="text-[10px] text-slate-500">Includes admission criteria & code of conduct (PDF).</p>
+                    </div>
                 </div>
-                <div class="p-5 rounded-xl bg-slate-50 dark:bg-[#161F2E] border border-slate-200 dark:border-white/10">
-                    <i class="fa-solid fa-book-open text-red-600 text-xl mb-2"></i>
-                    <h4 class="font-bold text-sm text-slate-900 dark:text-white">Curriculum Highlights</h4>
-                    <p class="text-xs text-slate-600 dark:text-slate-300 mt-1">Sensorial training, jolly phonics, daily rhymes, and motor skill kits.</p>
-                </div>
-                <div class="p-5 rounded-xl bg-slate-50 dark:bg-[#161F2E] border border-slate-200 dark:border-white/10">
-                    <i class="fa-solid fa-certificate text-red-600 text-xl mb-2"></i>
-                    <h4 class="font-bold text-sm text-slate-900 dark:text-white">Age Eligibility</h4>
-                    <p class="text-xs text-slate-600 dark:text-slate-300 mt-1">Playgroup: 2.5 - 3.5 Years</p>
-                    <p class="text-xs text-slate-600 dark:text-slate-300">Kindergarten: 4.5 - 5.5 Years</p>
-                </div>
+                <button onclick="alert('Download simulated: Prospectus PDF will download in production.')" class="px-3 py-1.5 rounded-lg bg-red-50 dark:bg-red-950/40 text-red-600 font-bold text-xs hover:bg-red-600 hover:text-white transition">
+                    Download
+                </button>
             </div>
 
-            <div id="content-primary" class="tab-content hidden grid md:grid-cols-3 gap-5">
-                <div class="p-5 rounded-xl bg-slate-50 dark:bg-[#161F2E] border border-slate-200 dark:border-white/10">
-                    <i class="fa-solid fa-clock text-red-600 text-xl mb-2"></i>
-                    <h4 class="font-bold text-sm text-slate-900 dark:text-white">Daily Timings</h4>
-                    <p class="text-xs text-slate-600 dark:text-slate-300 mt-1">8:00 AM to 1:45 PM (Mon - Thu)</p>
-                    <p class="text-xs text-slate-600 dark:text-slate-300">8:00 AM to 12:30 PM (Friday)</p>
+            <div class="p-5 rounded-2xl bg-white dark:bg-[#111722] border border-slate-200 dark:border-white/10 flex items-center justify-between shadow-sm">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-xl bg-red-100 dark:bg-red-950/60 text-red-600 flex items-center justify-center text-lg">
+                        <i class="fa-solid fa-calendar-days"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-xs text-slate-900 dark:text-white">Annual Academic Calendar</h4>
+                        <p class="text-[10px] text-slate-500">Exam schedules, holiday breaks & sports weeks.</p>
+                    </div>
                 </div>
-                <div class="p-5 rounded-xl bg-slate-50 dark:bg-[#161F2E] border border-slate-200 dark:border-white/10">
-                    <i class="fa-solid fa-microscope text-red-600 text-xl mb-2"></i>
-                    <h4 class="font-bold text-sm text-slate-900 dark:text-white">Core Subjects</h4>
-                    <p class="text-xs text-slate-600 dark:text-slate-300 mt-1">English, Science, Mathematics, Computer, Social Studies & Languages.</p>
-                </div>
-                <div class="p-5 rounded-xl bg-slate-50 dark:bg-[#161F2E] border border-slate-200 dark:border-white/10">
-                    <i class="fa-solid fa-award text-red-600 text-xl mb-2"></i>
-                    <h4 class="font-bold text-sm text-slate-900 dark:text-white">Assessments</h4>
-                    <p class="text-xs text-slate-600 dark:text-slate-300 mt-1">Bi-monthly evaluations + Midterm & Final exams.</p>
-                </div>
-            </div>
-
-            <div id="content-middle" class="tab-content hidden grid md:grid-cols-3 gap-5">
-                <div class="p-5 rounded-xl bg-slate-50 dark:bg-[#161F2E] border border-slate-200 dark:border-white/10">
-                    <i class="fa-solid fa-clock text-red-600 text-xl mb-2"></i>
-                    <h4 class="font-bold text-sm text-slate-900 dark:text-white">Timings & Tests</h4>
-                    <p class="text-xs text-slate-600 dark:text-slate-300 mt-1">8:00 AM to 2:00 PM</p>
-                    <p class="text-xs text-slate-600 dark:text-slate-300">Saturday practical lab slots.</p>
-                </div>
-                <div class="p-5 rounded-xl bg-slate-50 dark:bg-[#161F2E] border border-slate-200 dark:border-white/10">
-                    <i class="fa-solid fa-atom text-red-600 text-xl mb-2"></i>
-                    <h4 class="font-bold text-sm text-slate-900 dark:text-white">Science Practicals</h4>
-                    <p class="text-xs text-slate-600 dark:text-slate-300 mt-1">Hands-on chemistry, biology & physics laboratory training.</p>
-                </div>
-                <div class="p-5 rounded-xl bg-slate-50 dark:bg-[#161F2E] border border-slate-200 dark:border-white/10">
-                    <i class="fa-solid fa-hand-holding-dollar text-red-600 text-xl mb-2"></i>
-                    <h4 class="font-bold text-sm text-slate-900 dark:text-white">Scholarships</h4>
-                    <p class="text-xs text-slate-600 dark:text-slate-300 mt-1">Up to 50% tuition waiver for 85%+ scorers in merit tests.</p>
-                </div>
-            </div>
-
-            <div id="content-high" class="tab-content hidden grid md:grid-cols-3 gap-5">
-                <div class="p-5 rounded-xl bg-slate-50 dark:bg-[#161F2E] border border-slate-200 dark:border-white/10">
-                    <i class="fa-solid fa-graduation-cap text-red-600 text-xl mb-2"></i>
-                    <h4 class="font-bold text-sm text-slate-900 dark:text-white">Exam Board Track</h4>
-                    <p class="text-xs text-slate-600 dark:text-slate-300 mt-1">Intensive syllabus coverage & mock exam series.</p>
-                </div>
-                <div class="p-5 rounded-xl bg-slate-50 dark:bg-[#161F2E] border border-slate-200 dark:border-white/10">
-                    <i class="fa-solid fa-laptop-code text-red-600 text-xl mb-2"></i>
-                    <h4 class="font-bold text-sm text-slate-900 dark:text-white">Subject Groups</h4>
-                    <p class="text-xs text-slate-600 dark:text-slate-300 mt-1">Pre-Medical, Pre-Engineering & Computer Science disciplines.</p>
-                </div>
-                <div class="p-5 rounded-xl bg-slate-50 dark:bg-[#161F2E] border border-slate-200 dark:border-white/10">
-                    <i class="fa-solid fa-trophy text-red-600 text-xl mb-2"></i>
-                    <h4 class="font-bold text-sm text-slate-900 dark:text-white">Academic Distinctions</h4>
-                    <p class="text-xs text-slate-600 dark:text-slate-300 mt-1">Consistently producing top grades and university enrollments.</p>
-                </div>
+                <button onclick="alert('Download simulated: Calendar PDF will download in production.')" class="px-3 py-1.5 rounded-lg bg-red-50 dark:bg-red-950/40 text-red-600 font-bold text-xs hover:bg-red-600 hover:text-white transition">
+                    Download
+                </button>
             </div>
         </div>
     </section>
 
-    <!-- Campus Gallery (Royalty-free Unsplash Photos) -->
-    <section id="gallery" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 w-full overflow-hidden" data-aos="fade-up">
-        <div class="text-center max-w-2xl mx-auto mb-12">
-            <span class="text-xs font-bold uppercase tracking-widest text-red-600 dark:text-red-400 bg-red-100 dark:bg-red-950/40 border border-red-300 dark:border-red-500/30 px-3.5 py-1 rounded-full">
-                Campus Highlights
-            </span>
-            <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white font-heading mt-3">Life at Apex Academy</h2>
-            <p class="text-slate-600 dark:text-slate-400 text-sm mt-2">Take a glimpse into our modern classrooms, STEM labs, and sports facilities.</p>
-        </div>
-
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
-            <div class="straight-card rounded-2xl overflow-hidden border border-slate-200 dark:border-white/10 group relative h-64 shadow-md w-full">
-                <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=800&q=80" alt="Campus Building" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
-                <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-transparent to-transparent flex items-end p-5">
-                    <div>
-                        <span class="text-red-400 text-[10px] font-bold uppercase">Modern Facility</span>
-                        <h4 class="text-white font-bold text-sm">Main Campus Building</h4>
-                    </div>
-                </div>
-            </div>
-
-            <div class="straight-card rounded-2xl overflow-hidden border border-slate-200 dark:border-white/10 group relative h-64 shadow-md w-full">
-                <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80" alt="Robotics Lab" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
-                <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-transparent to-transparent flex items-end p-5">
-                    <div>
-                        <span class="text-red-400 text-[10px] font-bold uppercase">STEM Innovation</span>
-                        <h4 class="text-white font-bold text-sm">Advanced Robotics Lab</h4>
-                    </div>
-                </div>
-            </div>
-
-            <div class="straight-card rounded-2xl overflow-hidden border border-slate-200 dark:border-white/10 group relative h-64 shadow-md w-full">
-                <img src="https://images.unsplash.com/photo-1546519638-68e109498ffc?auto=format&fit=crop&w=800&q=80" alt="Sports Grounds" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
-                <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-transparent to-transparent flex items-end p-5">
-                    <div>
-                        <span class="text-red-400 text-[10px] font-bold uppercase">Athletics</span>
-                        <h4 class="text-white font-bold text-sm">Sports & Play Area</h4>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Google Map Location -->
-    <section id="map" class="py-20 bg-slate-100 dark:bg-[#0B0F17] relative border-t border-slate-200 dark:border-white/5 transition-colors w-full overflow-hidden">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 w-full">
-            <div class="text-center max-w-2xl mx-auto mb-12" data-aos="fade-up">
-                <span class="text-xs font-bold uppercase tracking-widest text-red-600 dark:text-red-400 bg-red-100 dark:bg-red-950/40 border border-red-300 dark:border-red-500/30 px-3.5 py-1 rounded-full shadow-sm">
-                    <i class="fa-solid fa-location-dot mr-1"></i> Visit Campus
-                </span>
-                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white font-heading mt-3">Find Us On Google Maps</h2>
-                <p class="text-slate-600 dark:text-slate-400 text-sm mt-2">Conveniently located with dedicated school transport routes available.</p>
-            </div>
-
-            <div class="grid lg:grid-cols-12 gap-6 items-stretch w-full">
-                <div class="lg:col-span-4 straight-card bg-white dark:bg-[#111722] p-6 rounded-2xl shadow-xl border border-slate-200 dark:border-white/10 flex flex-col justify-between space-y-5 w-full" data-aos="fade-right">
-                    <div>
-                        <span class="bg-red-600 text-white text-[10px] font-black uppercase px-2.5 py-1 rounded">Main Campus</span>
-                        <h3 class="text-lg font-bold text-slate-900 dark:text-white font-heading mt-2.5">Apex International Academy</h3>
-                        <p class="text-xs text-slate-600 dark:text-slate-300 mt-1.5 leading-relaxed">
-                            Easily accessible campus with safe drop-off zones and dedicated visitor parking.
-                        </p>
-                    </div>
-
-                    <div class="space-y-3 text-xs">
-                        <div class="flex items-start gap-3 p-3 bg-slate-50 dark:bg-[#161F2E] rounded-xl border border-slate-200 dark:border-white/5">
-                            <i class="fa-solid fa-map-pin text-red-600 text-sm mt-0.5"></i>
-                            <div>
-                                <strong class="text-slate-900 dark:text-white block font-bold">Address:</strong>
-                                <span class="text-slate-600 dark:text-slate-300">123 Education Boulevard, Academy District.</span>
-                            </div>
-                        </div>
-
-                        <div class="flex items-start gap-3 p-3 bg-slate-50 dark:bg-[#161F2E] rounded-xl border border-slate-200 dark:border-white/5">
-                            <i class="fa-solid fa-clock text-red-600 text-sm mt-0.5"></i>
-                            <div>
-                                <strong class="text-slate-900 dark:text-white block font-bold">Visiting Hours:</strong>
-                                <span class="text-slate-600 dark:text-slate-300">Mon - Sat: 8:30 AM to 2:00 PM</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <a href="https://maps.google.com" target="_blank" class="w-full text-center bg-gradient-to-r from-red-600 to-rose-600 hover:from-red-700 hover:to-rose-700 text-white font-bold py-3 rounded-xl text-xs shadow-lg shadow-red-600/30 transition duration-200 flex items-center justify-center gap-2">
-                        <i class="fa-solid fa-diamond-turn-right"></i>
-                        <span>Get GPS Driving Directions</span>
-                    </a>
-                </div>
-
-                <div class="lg:col-span-8 straight-card bg-white dark:bg-[#111722] rounded-2xl overflow-hidden h-[360px] lg:h-full min-h-[340px] relative shadow-xl border border-slate-200 dark:border-white/10 w-full" data-aos="fade-left">
-                    <!-- Standard Google Map Embed -->
-                    <iframe src="https://maps.google.com/maps?q=Central%20Park%20New%20York&t=&z=13&ie=UTF8&iwloc=&output=embed" 
-                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Campus Map">
-                    </iframe>
-                    <div class="absolute top-4 right-4 bg-white/95 dark:bg-[#0B0F17]/95 backdrop-blur-md border border-red-500/30 text-slate-900 dark:text-white px-3 py-1 rounded-xl text-xs font-bold shadow-xl hidden sm:flex items-center gap-1.5">
-                        <span class="w-2 h-2 rounded-full bg-red-600 animate-ping"></span>
-                        <span>Verified Campus Location</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQs Section -->
-    <section id="faqs" class="py-20 bg-white dark:bg-[#080C14] transition-colors w-full overflow-hidden" data-aos="fade-up">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 w-full">
-            <div class="text-center mb-12">
-                <span class="text-xs font-bold uppercase tracking-widest text-red-600 dark:text-red-400 bg-red-100 dark:bg-red-950/40 border border-red-300 dark:border-red-500/30 px-3.5 py-1 rounded-full">
-                    Got Questions?
-                </span>
-                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white font-heading mt-3">Frequently Asked Questions</h2>
-            </div>
-
-            <div class="space-y-3.5 w-full">
-                <div class="rounded-xl border border-slate-200 dark:border-white/10 bg-slate-50 dark:bg-[#111722] overflow-hidden">
-                    <button onclick="toggleFaq(1)" class="w-full px-5 py-3.5 text-left font-bold text-sm text-slate-900 dark:text-white flex justify-between items-center hover:text-red-600 transition">
-                        <span>Is safe transportation available for students?</span>
-                        <i id="faq-icon-1" class="fa-solid fa-chevron-down text-xs transition-transform duration-300"></i>
-                    </button>
-                    <div id="faq-ans-1" class="hidden px-5 pb-4 text-xs text-slate-600 dark:text-slate-300 leading-relaxed border-t border-slate-200 dark:border-white/5 pt-3">
-                        Yes, our monitored school transport fleet covers major residential zones with trained staff and female attendants for junior students.
-                    </div>
-                </div>
-
-                <div class="rounded-xl border border-slate-200 dark:border-white/10 bg-slate-50 dark:bg-[#111722] overflow-hidden">
-                    <button onclick="toggleFaq(2)" class="w-full px-5 py-3.5 text-left font-bold text-sm text-slate-900 dark:text-white flex justify-between items-center hover:text-red-600 transition">
-                        <span>What is the entrance assessment procedure?</span>
-                        <i id="faq-icon-2" class="fa-solid fa-chevron-down text-xs transition-transform duration-300"></i>
-                    </button>
-                    <div id="faq-ans-2" class="hidden px-5 pb-4 text-xs text-slate-600 dark:text-slate-300 leading-relaxed border-t border-slate-200 dark:border-white/5 pt-3">
-                        Applicants for primary and secondary grades undergo a diagnostic assessment in core subjects. Pre-school children are evaluated through an informal observation interview.
-                    </div>
-                </div>
-
-                <div class="rounded-xl border border-slate-200 dark:border-white/10 bg-slate-50 dark:bg-[#111722] overflow-hidden">
-                    <button onclick="toggleFaq(3)" class="w-full px-5 py-3.5 text-left font-bold text-sm text-slate-900 dark:text-white flex justify-between items-center hover:text-red-600 transition">
-                        <span>Are merit scholarships or tuition concessions available?</span>
-                        <i id="faq-icon-3" class="fa-solid fa-chevron-down text-xs transition-transform duration-300"></i>
-                    </button>
-                    <div id="faq-ans-3" class="hidden px-5 pb-4 text-xs text-slate-600 dark:text-slate-300 leading-relaxed border-t border-slate-200 dark:border-white/5 pt-3">
-                        Yes, generous merit scholarships are awarded to high-achieving academic performers based on our scholarship assessment results.
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Admission Application Section (Web3Forms Ready) -->
+    <!-- Admission Application Section -->
     <section id="admission" class="py-20 bg-slate-50 dark:bg-[#0B0F17] relative overflow-hidden transition-colors w-full" data-aos="fade-up">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 relative z-10 w-full">
             <div class="grid lg:grid-cols-12 gap-8 lg:gap-10 items-center w-full">
@@ -712,12 +452,10 @@
                     </div>
                 </div>
 
-                <!-- Form Card -->
                 <div class="lg:col-span-7 straight-card bg-white dark:bg-[#111722] p-6 sm:p-8 rounded-2xl shadow-xl border border-slate-200 dark:border-white/10 w-full">
                     <h3 class="text-xl font-black text-slate-900 dark:text-white font-heading">Online Admission Inquiry</h3>
                     <p class="text-xs text-slate-500 dark:text-slate-400 mb-5">Enter candidate details for an immediate assessment schedule.</p>
 
-                    <!-- Formspree / Web3Forms Ready -->
                     <form onsubmit="handleForm(event)" class="space-y-3.5">
                         <div class="grid sm:grid-cols-2 gap-3.5">
                             <div>
@@ -733,13 +471,11 @@
                         <div>
                             <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">Applying For Wing *</label>
                             <select required class="w-full px-3.5 py-2.5 rounded-xl bg-slate-50 dark:bg-[#161F2E] border border-slate-200 dark:border-white/10 text-slate-900 dark:text-white focus:outline-none focus:border-red-600 text-sm">
-                                <option value="">Select an Academic Track</option>
                                 <option value="Early-Years">Pre-School / Montessori</option>
                                 <option value="Primary">Primary School (Grades 1-5)</option>
                                 <option value="Middle">Middle School (Grades 6-8)</option>
                                 <option value="High-School">Secondary / High School</option>
                                 <option value="Cambridge">Cambridge O-Levels</option>
-                                <option value="Robotics">STEM & Robotics Wing</option>
                             </select>
                         </div>
 
@@ -805,6 +541,100 @@
         <a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer" title="Chat on WhatsApp" class="hsja-whatsapp-btn">
             <i class="fa-brands fa-whatsapp"></i>
         </a>
+    </div>
+
+    <!-- ================= 1. STUDENT PORTAL MODAL ================= -->
+    <div id="portalModal" class="fixed inset-0 z-[100000] hidden flex items-center justify-center p-4 bg-black/80 backdrop-blur-md">
+        <div class="relative w-full max-w-md bg-white dark:bg-[#111722] rounded-3xl border border-slate-200 dark:border-white/10 shadow-2xl overflow-hidden p-6">
+            
+            <!-- Close Button -->
+            <button onclick="closePortalModal()" class="absolute top-4 right-4 w-8 h-8 rounded-full bg-slate-100 dark:bg-white/10 flex items-center justify-center text-slate-500 hover:text-red-600 transition">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <!-- State 1: Login Form -->
+            <div id="portalLoginView" class="space-y-4">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-xl bg-red-600 text-white flex items-center justify-center text-lg">
+                        <i class="fa-solid fa-user-lock"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-black text-slate-900 dark:text-white font-heading">Student & Parent Portal</h3>
+                        <p class="text-[11px] text-slate-500">Access academic records, attendance & fee bills.</p>
+                    </div>
+                </div>
+
+                <div class="p-3 bg-red-50 dark:bg-red-950/40 rounded-xl border border-red-200 dark:border-red-900/40 text-[11px] text-red-700 dark:text-red-300">
+                    <i class="fa-solid fa-circle-info mr-1"></i> Demo Login: Enter Roll No <strong>101</strong> or <strong>102</strong> to preview.
+                </div>
+
+                <form id="portalLoginForm" onsubmit="handlePortalLogin(event)" class="space-y-3">
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">Student Roll Number / ID *</label>
+                        <input type="text" id="portalRollInput" required placeholder="e.g. 101" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-50 dark:bg-[#161F2E] border border-slate-200 dark:border-white/10 text-slate-900 dark:text-white text-xs font-semibold focus:outline-none focus:border-red-600">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">Access PIN / Password *</label>
+                        <input type="password" required placeholder="••••••" value="123456" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-50 dark:bg-[#161F2E] border border-slate-200 dark:border-white/10 text-slate-900 dark:text-white text-xs font-semibold focus:outline-none focus:border-red-600">
+                    </div>
+
+                    <button type="submit" class="w-full bg-red-600 hover:bg-red-700 text-white font-extrabold py-3 rounded-xl shadow-md text-xs uppercase tracking-wider transition">
+                        Sign In to Portal &rarr;
+                    </button>
+                </form>
+            </div>
+
+            <!-- State 2: Interactive Student Dashboard -->
+            <div id="portalDashboardView" class="hidden space-y-4">
+                <div class="flex items-center justify-between border-b border-slate-100 dark:border-white/10 pb-3">
+                    <div>
+                        <h4 id="dashStudentName" class="text-base font-black text-slate-900 dark:text-white font-heading">Muhammad Ali</h4>
+                        <p id="dashStudentGrade" class="text-xs text-red-600 font-bold">Grade 8 - Section A</p>
+                        <p id="dashStudentRoll" class="text-[10px] text-slate-500">Roll No: 101</p>
+                    </div>
+                    <button onclick="logoutPortal()" class="text-xs text-red-600 hover:underline font-bold">
+                        <i class="fa-solid fa-right-from-bracket mr-1"></i> Sign Out
+                    </button>
+                </div>
+
+                <!-- Metrics -->
+                <div class="grid grid-cols-2 gap-3">
+                    <div class="p-3 bg-slate-50 dark:bg-[#161F2E] rounded-xl border border-slate-200 dark:border-white/10">
+                        <span class="text-[10px] text-slate-500 uppercase font-bold block">Attendance</span>
+                        <span id="dashAttendance" class="text-lg font-black text-emerald-600">96.4%</span>
+                    </div>
+                    <div class="p-3 bg-slate-50 dark:bg-[#161F2E] rounded-xl border border-slate-200 dark:border-white/10">
+                        <span class="text-[10px] text-slate-500 uppercase font-bold block">Fee Status</span>
+                        <span id="dashFeeStatus" class="text-xs font-black text-emerald-600 mt-1 block">Paid (Current Month)</span>
+                    </div>
+                </div>
+
+                <!-- Term Examination Results -->
+                <div class="p-3 bg-slate-50 dark:bg-[#161F2E] rounded-xl border border-slate-200 dark:border-white/10">
+                    <h5 class="text-xs font-bold text-slate-900 dark:text-white mb-2 flex items-center gap-1.5">
+                        <i class="fa-solid fa-award text-red-600"></i> Term Examination Results
+                    </h5>
+                    <div id="dashGradesList" class="space-y-1"></div>
+                </div>
+
+                <button onclick="alert('Simulated: Fee Challan & Report Card PDF generated.')" class="w-full py-2.5 rounded-xl border border-slate-300 dark:border-white/10 text-xs font-bold text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-white/5 transition flex items-center justify-center gap-1.5">
+                    <i class="fa-solid fa-download"></i> Download Report Card & Challan
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- ================= 2. CAMPUS VIDEO TOUR MODAL ================= -->
+    <div id="videoModal" class="fixed inset-0 z-[100000] hidden flex items-center justify-center p-4 bg-black/90 backdrop-blur-md">
+        <div class="relative w-full max-w-3xl bg-black rounded-3xl overflow-hidden shadow-2xl border border-white/20">
+            <button onclick="closeVideoModal()" class="absolute top-4 right-4 z-10 w-9 h-9 rounded-full bg-white/20 text-white flex items-center justify-center text-sm hover:bg-red-600 transition">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="aspect-video w-full">
+                <iframe id="videoIframe" class="w-full h-full" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
+        </div>
     </div>
 
     <!-- AOS JS CDN -->
