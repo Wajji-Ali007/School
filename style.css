@@ -118,6 +118,7 @@ body {
     justify-content: center !important;
     box-shadow: 0 4px 20px rgba(37,211,102,0.5) !important;
     transition: transform 0.2s !important;
+    cursor: pointer !important;
 }
 .hsja-whatsapp-btn:hover {
     transform: scale(1.1) !important;
