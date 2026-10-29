@@ -19,7 +19,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@500;600;700;800;900&display=swap" rel="stylesheet">
     
-    <!-- Tailwind Configuration -->
+    <!-- Royal Navy & Burnished Gold Tailwind Configuration -->
     <script>
         tailwind.config = {
             darkMode: 'class',
@@ -31,11 +31,12 @@
                     },
                     colors: {
                         brand: {
-                            red: '#DC2626',
-                            crimson: '#991B1B',
-                            rose: '#E11D48',
-                            dark: '#080C14',
-                            cardDark: '#111722',
+                            navy: '#0F2744',
+                            navyDark: '#081728',
+                            gold: '#D97706',
+                            goldLight: '#F59E0B',
+                            dark: '#06121E',
+                            cardDark: '#0D2035',
                         }
                     }
                 }
@@ -46,24 +47,24 @@
     <!-- External CSS Linked -->
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-slate-50 dark:bg-[#080C14] text-slate-900 dark:text-slate-100 font-sans antialiased selection:bg-brand-red selection:text-white transition-colors duration-300 w-full overflow-x-hidden relative">
+<body class="bg-slate-50 dark:bg-[#06121E] text-slate-900 dark:text-slate-100 font-sans antialiased selection:bg-brand-gold selection:text-white transition-colors duration-300 w-full overflow-x-hidden relative">
 
     <!-- Scroll Progress Bar -->
-    <div id="scrollProgressBar" class="fixed top-0 left-0 h-1 bg-gradient-to-r from-red-600 via-rose-500 to-red-400 z-[100] transition-all duration-150" style="width: 0%;"></div>
+    <div id="scrollProgressBar" class="fixed top-0 left-0 h-1 bg-gradient-to-r from-brand-navy via-brand-gold to-yellow-400 z-[100] transition-all duration-150" style="width: 0%;"></div>
 
-    <!-- Top Info Bar -->
-    <div class="bg-red-700 dark:bg-black text-white text-xs py-2 px-4 border-b border-red-800 dark:border-white/10 relative z-30 transition-colors w-full">
+    <!-- Top Info Bar (Royal Navy & Gold) -->
+    <div class="bg-brand-navy dark:bg-black text-white text-xs py-2 px-4 border-b border-brand-gold/30 relative z-30 transition-colors w-full">
         <div class="max-w-7xl mx-auto flex justify-between items-center gap-2">
             <div class="flex items-center gap-4 sm:gap-6 text-[11px] sm:text-xs">
-                <span class="flex items-center gap-1.5"><i class="fa-solid fa-phone text-red-200"></i> +1 (234) 567-8900</span>
-                <span class="hidden md:flex items-center gap-1.5"><i class="fa-solid fa-envelope text-red-200"></i> contact@apexacademy.edu</span>
-                <span class="hidden sm:flex items-center gap-1.5 text-red-100"><i class="fa-solid fa-location-dot text-red-200"></i> Main City Campus</span>
+                <span class="flex items-center gap-1.5"><i class="fa-solid fa-phone text-brand-goldLight"></i> +1 (234) 567-8900</span>
+                <span class="hidden md:flex items-center gap-1.5"><i class="fa-solid fa-envelope text-brand-goldLight"></i> admissions@apexacademy.edu</span>
+                <span class="hidden sm:flex items-center gap-1.5 text-slate-200"><i class="fa-solid fa-location-dot text-brand-goldLight"></i> Main City Campus</span>
             </div>
             <div class="flex items-center gap-3">
-                <button onclick="openPortalModal()" class="bg-white/15 hover:bg-white text-white hover:text-red-700 font-bold px-2.5 py-0.5 rounded text-[11px] transition flex items-center gap-1">
+                <button onclick="openPortalModal()" class="bg-brand-gold hover:bg-yellow-500 text-slate-950 font-extrabold px-3 py-1 rounded text-[11px] transition flex items-center gap-1.5 shadow-sm">
                     <i class="fa-solid fa-user-lock text-[10px]"></i> Portal Login
                 </button>
-                <a href="#map" class="bg-white/15 hover:bg-white text-white hover:text-red-700 font-bold px-2 py-0.5 rounded text-[11px] transition flex items-center gap-1">
+                <a href="#map" class="bg-white/10 hover:bg-white text-white hover:text-brand-navy font-bold px-2.5 py-1 rounded text-[11px] transition flex items-center gap-1">
                     <i class="fa-solid fa-location-arrow text-[10px]"></i> Map
                 </a>
             </div>
@@ -71,46 +72,50 @@
     </div>
 
     <!-- Main Navigation Bar -->
-    <header class="sticky top-0 z-40 bg-white/95 dark:bg-[#0B0F17]/95 backdrop-blur-xl border-b border-slate-200 dark:border-white/10 shadow-sm transition-colors w-full">
+    <header class="sticky top-0 z-40 bg-white/95 dark:bg-[#081728]/95 backdrop-blur-xl border-b border-slate-200 dark:border-white/10 shadow-sm transition-colors w-full">
         <div class="max-w-7xl mx-auto px-4 sm:px-6">
             <div class="flex justify-between items-center h-20">
+                <!-- Academic Crest Logo -->
                 <a href="#" class="flex items-center gap-2.5 shrink-0 group">
-                    <div class="w-11 h-11 p-2 rounded-xl bg-gradient-to-br from-red-600 to-rose-700 text-white shadow-md flex items-center justify-center">
+                    <div class="w-11 h-11 p-2 rounded-xl bg-gradient-to-br from-brand-navy to-slate-900 text-brand-goldLight border border-brand-gold/40 shadow-md flex items-center justify-center">
                         <i class="fa-solid fa-graduation-cap text-lg"></i>
                     </div>
                     <div>
                         <div class="flex items-center gap-1.5">
                             <span class="text-lg font-black text-slate-900 dark:text-white font-heading tracking-tight leading-none">APEX</span>
-                            <span class="w-2 h-2 rounded-full bg-red-600 animate-ping"></span>
+                            <span class="w-2 h-2 rounded-full bg-brand-gold animate-ping"></span>
                         </div>
-                        <span class="text-[10px] font-bold text-red-600 dark:text-red-400 uppercase tracking-wider block mt-0.5 whitespace-nowrap">International Academy</span>
+                        <span class="text-[10px] font-bold text-brand-gold uppercase tracking-wider block mt-0.5 whitespace-nowrap">International Academy</span>
                     </div>
                 </a>
 
+                <!-- Desktop Navigation Links -->
                 <nav class="hidden lg:flex items-center gap-1 xl:gap-2 text-[13px] font-bold text-slate-700 dark:text-slate-200">
-                    <a href="#" class="px-3 py-1.5 rounded-lg text-red-600 bg-red-50 dark:bg-red-950/40 font-extrabold">Home</a>
-                    <a href="#about" class="px-2.5 py-1.5 rounded-lg hover:text-red-600 hover:bg-slate-100 dark:hover:bg-white/5 transition">About</a>
-                    <a href="programs.html" class="px-2.5 py-1.5 rounded-lg hover:text-red-600 hover:bg-slate-100 dark:hover:bg-white/5 transition flex items-center gap-1">
+                    <a href="#" class="px-3 py-1.5 rounded-lg text-brand-gold bg-amber-50 dark:bg-amber-950/40 font-extrabold border border-brand-gold/30">Home</a>
+                    <a href="#about" class="px-2.5 py-1.5 rounded-lg hover:text-brand-gold hover:bg-slate-100 dark:hover:bg-white/5 transition">About</a>
+                    <a href="programs.html" class="px-2.5 py-1.5 rounded-lg hover:text-brand-gold hover:bg-slate-100 dark:hover:bg-white/5 transition flex items-center gap-1">
                         <span>Wings</span> <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
                     </a>
-                    <a href="#structure" class="px-2.5 py-1.5 rounded-lg hover:text-red-600 hover:bg-slate-100 dark:hover:bg-white/5 transition">Fee & Timings</a>
-                    <a href="#events" class="px-2.5 py-1.5 rounded-lg hover:text-red-600 hover:bg-slate-100 dark:hover:bg-white/5 transition">Events</a>
-                    <a href="#faculty" class="px-2.5 py-1.5 rounded-lg hover:text-red-600 hover:bg-slate-100 dark:hover:bg-white/5 transition">Faculty</a>
-                    <a href="#gallery" class="px-2.5 py-1.5 rounded-lg hover:text-red-600 hover:bg-slate-100 dark:hover:bg-white/5 transition">Campus</a>
-                    <a href="#faqs" class="px-2.5 py-1.5 rounded-lg hover:text-red-600 hover:bg-slate-100 dark:hover:bg-white/5 transition">FAQs</a>
+                    <a href="#structure" class="px-2.5 py-1.5 rounded-lg hover:text-brand-gold hover:bg-slate-100 dark:hover:bg-white/5 transition">Tuition</a>
+                    <a href="#events" class="px-2.5 py-1.5 rounded-lg hover:text-brand-gold hover:bg-slate-100 dark:hover:bg-white/5 transition">Events</a>
+                    <a href="#faculty" class="px-2.5 py-1.5 rounded-lg hover:text-brand-gold hover:bg-slate-100 dark:hover:bg-white/5 transition">Faculty</a>
+                    <a href="#gallery" class="px-2.5 py-1.5 rounded-lg hover:text-brand-gold hover:bg-slate-100 dark:hover:bg-white/5 transition">Campus</a>
+                    <a href="#faqs" class="px-2.5 py-1.5 rounded-lg hover:text-brand-gold hover:bg-slate-100 dark:hover:bg-white/5 transition">FAQs</a>
                 </nav>
 
+                <!-- Right Action Buttons -->
                 <div class="hidden lg:flex items-center gap-2.5 shrink-0">
                     <button id="themeToggleBtn" type="button" aria-label="Toggle Theme" title="Switch Light/Dark Mode"
                             class="w-10 h-10 rounded-xl bg-slate-100 dark:bg-white/10 border border-slate-300 dark:border-white/10 text-slate-700 dark:text-yellow-400 flex items-center justify-center text-sm hover:scale-105 active:scale-95 transition">
                         <i id="themeIcon" class="fa-solid fa-moon"></i>
                     </button>
-                    <a href="#admission" class="px-4 py-2 rounded-xl font-bold text-xs uppercase tracking-wider text-white bg-gradient-to-r from-red-600 to-rose-600 shadow-md shadow-red-600/30 hover:scale-105 active:scale-95 transition flex items-center gap-1.5">
+                    <a href="#admission" class="px-4 py-2 rounded-xl font-bold text-xs uppercase tracking-wider text-slate-950 bg-gradient-to-r from-amber-400 via-amber-500 to-yellow-500 shadow-md hover:scale-105 active:scale-95 transition flex items-center gap-1.5 border border-yellow-300">
                         <i class="fa-solid fa-graduation-cap text-xs"></i>
                         <span>Apply Online</span>
                     </a>
                 </div>
 
+                <!-- Mobile Action Area -->
                 <div class="flex items-center gap-2 lg:hidden">
                     <button id="themeToggleMobile" type="button" class="w-9 h-9 rounded-lg bg-slate-100 dark:bg-white/10 text-slate-700 dark:text-yellow-400 flex items-center justify-center text-sm">
                         <i id="themeIconMobile" class="fa-solid fa-moon"></i>
@@ -123,30 +128,30 @@
         </div>
 
         <!-- Mobile Drawer Menu -->
-        <div id="mobileMenu" class="hidden lg:hidden bg-white/95 dark:bg-[#0B0F17]/95 backdrop-blur-2xl border-t border-slate-200 dark:border-white/10 px-4 py-4 space-y-2 shadow-2xl transition-all duration-300 max-h-[82vh] overflow-y-auto w-full">
-            <a href="#" class="mobile-nav-link mobile-tab-item flex items-center justify-between p-3 rounded-xl bg-red-50/80 dark:bg-red-950/30 border border-red-300 dark:border-red-900/60">
+        <div id="mobileMenu" class="hidden lg:hidden bg-white/95 dark:bg-[#081728]/95 backdrop-blur-2xl border-t border-slate-200 dark:border-white/10 px-4 py-4 space-y-2 shadow-2xl transition-all duration-300 max-h-[82vh] overflow-y-auto w-full">
+            <a href="#" class="mobile-nav-link mobile-tab-item flex items-center justify-between p-3 rounded-xl bg-amber-50 dark:bg-amber-950/30 border border-amber-300 dark:border-amber-900/60">
                 <div class="flex items-center gap-3">
-                    <div class="w-8 h-8 rounded-lg bg-red-600 text-white flex items-center justify-center text-xs">
+                    <div class="w-8 h-8 rounded-lg bg-brand-navy text-brand-goldLight flex items-center justify-center text-xs">
                         <i class="fa-solid fa-house"></i>
                     </div>
-                    <span class="font-extrabold text-xs text-red-600 dark:text-red-400">Home</span>
+                    <span class="font-extrabold text-xs text-brand-navy dark:text-brand-goldLight">Home</span>
                 </div>
-                <i class="fa-solid fa-chevron-right text-[10px] text-red-500"></i>
+                <i class="fa-solid fa-chevron-right text-[10px] text-brand-gold"></i>
             </a>
 
-            <button onclick="closeMobileDrawer(); openPortalModal();" class="w-full mobile-tab-item flex items-center justify-between p-3 rounded-xl bg-slate-50 dark:bg-[#111722] border border-slate-200/80 dark:border-white/10">
+            <button onclick="closeMobileDrawer(); openPortalModal();" class="w-full mobile-tab-item flex items-center justify-between p-3 rounded-xl bg-slate-50 dark:bg-[#0D2035] border border-slate-200/80 dark:border-white/10">
                 <div class="flex items-center gap-3">
-                    <div class="w-8 h-8 rounded-lg bg-slate-100 dark:bg-white/5 text-red-600 flex items-center justify-center text-xs">
+                    <div class="w-8 h-8 rounded-lg bg-slate-100 dark:bg-white/5 text-brand-gold flex items-center justify-center text-xs">
                         <i class="fa-solid fa-user-lock"></i>
                     </div>
                     <span class="font-bold text-xs text-slate-800 dark:text-slate-200">Student Portal Login</span>
                 </div>
-                <span class="text-[10px] font-bold text-red-600 bg-red-100 dark:bg-red-950/60 px-2 py-0.5 rounded-full">Portal</span>
+                <span class="text-[10px] font-bold text-slate-950 bg-amber-400 px-2 py-0.5 rounded-full">Portal</span>
             </button>
 
-            <a href="programs.html" class="mobile-nav-link mobile-tab-item flex items-center justify-between p-3 rounded-xl bg-slate-50 dark:bg-[#111722] border border-slate-200/80 dark:border-white/10">
+            <a href="programs.html" class="mobile-nav-link mobile-tab-item flex items-center justify-between p-3 rounded-xl bg-slate-50 dark:bg-[#0D2035] border border-slate-200/80 dark:border-white/10">
                 <div class="flex items-center gap-3">
-                    <div class="w-8 h-8 rounded-lg bg-slate-100 dark:bg-white/5 text-red-600 flex items-center justify-center text-xs">
+                    <div class="w-8 h-8 rounded-lg bg-slate-100 dark:bg-white/5 text-brand-gold flex items-center justify-center text-xs">
                         <i class="fa-solid fa-layer-group"></i>
                     </div>
                     <span class="font-bold text-xs text-slate-800 dark:text-slate-200">Academic Wings</span>
@@ -154,9 +159,9 @@
                 <i class="fa-solid fa-chevron-right text-[10px] text-slate-400"></i>
             </a>
 
-            <a href="#events" class="mobile-nav-link mobile-tab-item flex items-center justify-between p-3 rounded-xl bg-slate-50 dark:bg-[#111722] border border-slate-200/80 dark:border-white/10">
+            <a href="#events" class="mobile-nav-link mobile-tab-item flex items-center justify-between p-3 rounded-xl bg-slate-50 dark:bg-[#0D2035] border border-slate-200/80 dark:border-white/10">
                 <div class="flex items-center gap-3">
-                    <div class="w-8 h-8 rounded-lg bg-slate-100 dark:bg-white/5 text-red-600 flex items-center justify-center text-xs">
+                    <div class="w-8 h-8 rounded-lg bg-slate-100 dark:bg-white/5 text-brand-gold flex items-center justify-center text-xs">
                         <i class="fa-solid fa-calendar-check"></i>
                     </div>
                     <span class="font-bold text-xs text-slate-800 dark:text-slate-200">Events & Countdown</span>
@@ -164,9 +169,9 @@
                 <i class="fa-solid fa-chevron-right text-[10px] text-slate-400"></i>
             </a>
 
-            <a href="#faculty" class="mobile-nav-link mobile-tab-item flex items-center justify-between p-3 rounded-xl bg-slate-50 dark:bg-[#111722] border border-slate-200/80 dark:border-white/10">
+            <a href="#faculty" class="mobile-nav-link mobile-tab-item flex items-center justify-between p-3 rounded-xl bg-slate-50 dark:bg-[#0D2035] border border-slate-200/80 dark:border-white/10">
                 <div class="flex items-center gap-3">
-                    <div class="w-8 h-8 rounded-lg bg-slate-100 dark:bg-white/5 text-red-600 flex items-center justify-center text-xs">
+                    <div class="w-8 h-8 rounded-lg bg-slate-100 dark:bg-white/5 text-brand-gold flex items-center justify-center text-xs">
                         <i class="fa-solid fa-chalkboard-user"></i>
                     </div>
                     <span class="font-bold text-xs text-slate-800 dark:text-slate-200">Faculty Mentors</span>
@@ -174,36 +179,36 @@
                 <i class="fa-solid fa-chevron-right text-[10px] text-slate-400"></i>
             </a>
 
-            <a href="#admission" class="mobile-nav-link block text-center bg-gradient-to-r from-red-600 to-rose-600 text-white py-3 rounded-xl font-extrabold text-xs uppercase tracking-wider shadow-md active:scale-95 transition mt-3">
+            <a href="#admission" class="mobile-nav-link block text-center bg-gradient-to-r from-amber-400 to-yellow-500 text-slate-950 py-3 rounded-xl font-extrabold text-xs uppercase tracking-wider shadow-md active:scale-95 transition mt-3">
                 <i class="fa-solid fa-graduation-cap mr-1.5"></i> Apply Online Now
             </a>
         </div>
     </header>
 
     <!-- News Marquee Ticker -->
-    <div class="bg-red-50 dark:bg-red-950/40 border-b border-red-200 dark:border-red-500/20 text-red-900 dark:text-red-300 py-2 px-4 text-xs font-semibold w-full overflow-hidden">
+    <div class="bg-amber-50 dark:bg-[#0D2035] border-b border-amber-200/80 dark:border-white/10 text-slate-800 dark:text-amber-200 py-2 px-4 text-xs font-semibold w-full overflow-hidden">
         <div class="max-w-7xl mx-auto flex items-center overflow-hidden">
-            <span class="bg-red-600 text-white text-[10px] font-black uppercase px-2.5 py-0.5 rounded-full mr-3 shrink-0 shadow flex items-center gap-1.5">
+            <span class="bg-brand-gold text-white text-[10px] font-black uppercase px-2.5 py-0.5 rounded-full mr-3 shrink-0 shadow flex items-center gap-1.5">
                 <i class="fa-solid fa-bell"></i> Admissions Open
             </span>
             <marquee behavior="scroll" direction="left" onmouseover="this.stop();" onmouseout="this.start();" class="text-slate-700 dark:text-slate-200 font-medium">
-                Admissions actively open for Academic Session 2026-2027! | Scholarships available for merit achievers. | Schedule your campus visit today.
+                Admissions actively open for Academic Session 2026-2027! | Scholarships available for distinction achievers. | Schedule your campus visit today.
             </marquee>
         </div>
     </div>
 
-    <!-- Hero Section -->
+    <!-- Hero Section (Royal Navy & Gold Palette) -->
     <section class="hsja-hero-bg py-12 lg:py-20 relative overflow-hidden w-full">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 relative z-10 w-full">
             <div class="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center w-full">
                 <div class="lg:col-span-7 space-y-5 text-center lg:text-left" data-aos="fade-right">
-                    <div class="inline-flex items-center gap-2 bg-red-100 dark:bg-red-950/60 border border-red-300 dark:border-red-500/40 px-3.5 py-1 rounded-full text-xs font-bold text-red-700 dark:text-red-300 shadow-sm">
-                        <i class="fa-solid fa-crown text-red-600"></i> Leading Educational Institution
+                    <div class="inline-flex items-center gap-2 bg-amber-50 dark:bg-amber-950/60 border border-amber-300 dark:border-amber-500/40 px-3.5 py-1 rounded-full text-xs font-bold text-brand-gold dark:text-amber-300 shadow-sm">
+                        <i class="fa-solid fa-crown text-brand-gold"></i> Leading Educational Institution
                     </div>
 
                     <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black font-heading leading-[1.1] tracking-tight text-slate-900 dark:text-white break-words">
                         Next-Gen Learning <br>
-                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-red-600 via-rose-600 to-red-800 dark:from-red-500 dark:via-rose-300 dark:to-white">
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-navy via-brand-gold to-yellow-500 dark:from-white dark:via-amber-300 dark:to-yellow-400">
                             Inspiring Excellence
                         </span>
                     </h1>
@@ -213,30 +218,30 @@
                     </p>
 
                     <div class="flex flex-wrap items-center justify-center lg:justify-start gap-3 pt-2">
-                        <a href="#admission" class="bg-gradient-to-r from-red-600 via-red-500 to-rose-600 hover:from-red-700 hover:to-rose-700 text-white font-extrabold px-6 sm:px-7 py-3.5 rounded-xl shadow-lg shadow-red-600/30 hover:scale-105 transition duration-300 flex items-center gap-2.5 text-sm">
-                            <i class="fa-solid fa-paper-plane text-xs"></i>
+                        <a href="#admission" class="bg-gradient-to-r from-brand-navy to-slate-900 hover:bg-slate-800 text-white font-extrabold px-6 sm:px-7 py-3.5 rounded-xl shadow-lg border border-brand-gold/40 hover:scale-105 transition duration-300 flex items-center gap-2.5 text-sm">
+                            <i class="fa-solid fa-paper-plane text-xs text-brand-goldLight"></i>
                             <span>Enroll Your Child</span>
                         </a>
-                        <button onclick="openVideoModal()" class="bg-white dark:bg-[#111722] hover:bg-slate-100 dark:hover:bg-[#161F2E] border border-slate-300 dark:border-white/20 text-slate-800 dark:text-white font-bold px-5 py-3.5 rounded-xl shadow-sm hover:border-red-500 transition duration-300 flex items-center gap-2 text-sm">
-                            <i class="fa-solid fa-circle-play text-red-600 text-base"></i>
+                        <button onclick="openVideoModal()" class="bg-white dark:bg-[#0D2035] hover:bg-slate-100 dark:hover:bg-[#132B45] border border-slate-300 dark:border-white/20 text-slate-800 dark:text-white font-bold px-5 py-3.5 rounded-xl shadow-sm hover:border-brand-gold transition duration-300 flex items-center gap-2 text-sm">
+                            <i class="fa-solid fa-circle-play text-brand-gold text-base"></i>
                             <span>Watch Campus Tour</span>
                         </button>
                     </div>
                 </div>
 
                 <div class="lg:col-span-5 relative w-full" data-aos="fade-left">
-                    <div class="straight-card relative mx-auto w-full max-w-md rounded-2xl overflow-hidden border-2 border-slate-200 dark:border-white/10 shadow-xl bg-white dark:bg-[#111722]">
+                    <div class="straight-card relative mx-auto w-full max-w-md rounded-2xl overflow-hidden border-2 border-slate-200 dark:border-white/10 shadow-xl bg-white dark:bg-[#0D2035]">
                         <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=800&q=80" alt="Students in Classroom" class="w-full h-[360px] sm:h-[420px] object-cover">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/20 to-transparent"></div>
                         <div class="absolute bottom-5 left-5 right-5 text-white">
-                            <span class="bg-red-600 text-white text-[10px] font-black uppercase px-2 py-0.5 rounded shadow-sm">
+                            <span class="bg-brand-gold text-slate-950 text-[10px] font-black uppercase px-2 py-0.5 rounded shadow-sm">
                                 Academic Life
                             </span>
                             <h4 class="text-sm sm:text-base font-bold mt-1.5 text-white">Interactive Classrooms & STEM Labs</h4>
                             <p class="text-xs text-slate-200 mt-0.5">Holistic teaching methods designed for every learner.</p>
                         </div>
-                        <div class="absolute top-4 right-4 bg-white/95 dark:bg-[#0B0F17]/95 border border-red-500/30 px-3 py-1.5 rounded-xl shadow-lg flex items-center gap-2">
-                            <i class="fa-solid fa-award text-red-600 text-sm"></i>
+                        <div class="absolute top-4 right-4 bg-white/95 dark:bg-[#081728]/95 border border-brand-gold/40 px-3 py-1.5 rounded-xl shadow-lg flex items-center gap-2">
+                            <i class="fa-solid fa-award text-brand-gold text-sm"></i>
                             <span class="text-[11px] font-black text-slate-900 dark:text-white">100% Exam Success</span>
                         </div>
                     </div>
@@ -245,17 +250,17 @@
         </div>
     </section>
 
-    <!-- FEATURE 1: LIVE COUNTDOWN & UPCOMING EVENTS -->
-    <section id="events" class="py-12 bg-white dark:bg-[#0B0F17] border-y border-slate-200 dark:border-white/5 transition-colors w-full">
+    <!-- LIVE COUNTDOWN & UPCOMING EVENTS (Navy & Gold) -->
+    <section id="events" class="py-12 bg-white dark:bg-[#06121E] border-y border-slate-200 dark:border-white/5 transition-colors w-full">
         <div class="max-w-7xl mx-auto px-4 sm:px-6">
-            <div class="straight-card bg-gradient-to-br from-red-600 via-rose-600 to-red-800 text-white rounded-3xl p-6 sm:p-10 shadow-xl" data-aos="fade-up">
+            <div class="straight-card bg-gradient-to-br from-brand-navy via-[#0C213B] to-slate-950 text-white rounded-3xl p-6 sm:p-10 shadow-xl border border-brand-gold/30" data-aos="fade-up">
                 <div class="grid lg:grid-cols-12 gap-8 items-center">
                     <div class="lg:col-span-7 space-y-3 text-center lg:text-left">
-                        <span class="bg-white/20 text-white text-xs font-black uppercase tracking-wider px-3 py-1 rounded-full inline-block">
-                            <i class="fa-solid fa-trophy mr-1"></i> Major Upcoming Event
+                        <span class="bg-brand-gold/20 text-brand-goldLight border border-brand-gold/40 text-xs font-black uppercase tracking-wider px-3 py-1 rounded-full inline-block">
+                            <i class="fa-solid fa-trophy mr-1 text-brand-goldLight"></i> Major Upcoming Event
                         </span>
                         <h3 class="text-2xl sm:text-4xl font-black font-heading">Annual Athletics & Sports Gala 2026</h3>
-                        <p class="text-xs sm:text-sm text-red-100 max-w-xl">
+                        <p class="text-xs sm:text-sm text-slate-300 max-w-xl">
                             Join us for 3 days of track athletics, football championships, gymnastics demonstrations, and trophies.
                         </p>
                     </div>
@@ -264,19 +269,19 @@
                     <div class="lg:col-span-5 flex justify-center lg:justify-end gap-3 sm:gap-4 text-center">
                         <div class="bg-white/10 backdrop-blur-md border border-white/20 p-3 sm:p-4 rounded-2xl min-w-[65px] sm:min-w-[80px]">
                             <span id="cdDays" class="text-2xl sm:text-4xl font-black block font-heading">14</span>
-                            <span class="text-[10px] sm:text-xs font-bold uppercase text-red-200">Days</span>
+                            <span class="text-[10px] sm:text-xs font-bold uppercase text-brand-goldLight">Days</span>
                         </div>
                         <div class="bg-white/10 backdrop-blur-md border border-white/20 p-3 sm:p-4 rounded-2xl min-w-[65px] sm:min-w-[80px]">
                             <span id="cdHours" class="text-2xl sm:text-4xl font-black block font-heading">08</span>
-                            <span class="text-[10px] sm:text-xs font-bold uppercase text-red-200">Hours</span>
+                            <span class="text-[10px] sm:text-xs font-bold uppercase text-brand-goldLight">Hours</span>
                         </div>
                         <div class="bg-white/10 backdrop-blur-md border border-white/20 p-3 sm:p-4 rounded-2xl min-w-[65px] sm:min-w-[80px]">
                             <span id="cdMins" class="text-2xl sm:text-4xl font-black block font-heading">42</span>
-                            <span class="text-[10px] sm:text-xs font-bold uppercase text-red-200">Mins</span>
+                            <span class="text-[10px] sm:text-xs font-bold uppercase text-brand-goldLight">Mins</span>
                         </div>
                         <div class="bg-white/10 backdrop-blur-md border border-white/20 p-3 sm:p-4 rounded-2xl min-w-[65px] sm:min-w-[80px]">
                             <span id="cdSecs" class="text-2xl sm:text-4xl font-black block font-heading text-yellow-300">19</span>
-                            <span class="text-[10px] sm:text-xs font-bold uppercase text-red-200">Secs</span>
+                            <span class="text-[10px] sm:text-xs font-bold uppercase text-brand-goldLight">Secs</span>
                         </div>
                     </div>
                 </div>
@@ -286,9 +291,9 @@
 
     <!-- Stats Ribbon -->
     <section class="py-12 max-w-6xl mx-auto px-4 w-full" data-aos="fade-up">
-        <div class="straight-card bg-white dark:bg-[#111722] rounded-2xl border border-slate-200 dark:border-white/10 p-5 sm:p-7 grid grid-cols-2 lg:grid-cols-4 gap-4 text-center divide-y sm:divide-y-0 sm:divide-x divide-slate-100 dark:divide-white/10 shadow-lg w-full">
+        <div class="straight-card bg-white dark:bg-[#0D2035] rounded-2xl border border-slate-200 dark:border-white/10 p-5 sm:p-7 grid grid-cols-2 lg:grid-cols-4 gap-4 text-center divide-y sm:divide-y-0 sm:divide-x divide-slate-100 dark:divide-white/10 shadow-lg w-full">
             <div class="pt-2 sm:pt-0">
-                <span class="text-3xl sm:text-4xl font-black text-red-600 font-heading">25+</span>
+                <span class="text-3xl sm:text-4xl font-black text-brand-gold font-heading">25+</span>
                 <p class="text-xs text-slate-600 dark:text-slate-300 font-bold uppercase tracking-wider mt-1">Years of Legacy</p>
             </div>
             <div class="pt-2 sm:pt-0">
@@ -296,54 +301,54 @@
                 <p class="text-xs text-slate-600 dark:text-slate-300 font-bold uppercase tracking-wider mt-1">Enrolled Learners</p>
             </div>
             <div class="pt-3 sm:pt-0">
-                <span class="text-3xl sm:text-4xl font-black text-red-600 font-heading">85+</span>
+                <span class="text-3xl sm:text-4xl font-black text-brand-gold font-heading">85+</span>
                 <p class="text-xs text-slate-600 dark:text-slate-300 font-bold uppercase tracking-wider mt-1">Expert Mentors</p>
             </div>
             <div class="pt-3 sm:pt-0">
-                <span class="text-3xl sm:text-4xl font-black text-rose-600 font-heading">100%</span>
+                <span class="text-3xl sm:text-4xl font-black text-emerald-600 font-heading">100%</span>
                 <p class="text-xs text-slate-600 dark:text-slate-300 font-bold uppercase tracking-wider mt-1">Success Rate</p>
             </div>
         </div>
     </section>
 
-    <!-- FEATURE 2: PRIDE OF ACADEMY (HIGH ACHIEVERS) -->
-    <section class="py-16 bg-slate-100 dark:bg-[#0B0F17] border-y border-slate-200 dark:border-white/5 transition-colors w-full overflow-hidden" data-aos="fade-up">
+    <!-- PRIDE OF ACADEMY (WESTERN TOPPERS) -->
+    <section class="py-16 bg-slate-100 dark:bg-[#081728] border-y border-slate-200 dark:border-white/5 transition-colors w-full overflow-hidden" data-aos="fade-up">
         <div class="max-w-7xl mx-auto px-4 sm:px-6">
             <div class="text-center max-w-2xl mx-auto mb-12">
-                <span class="text-xs font-bold uppercase tracking-widest text-red-600 dark:text-red-400 bg-red-100 dark:bg-red-950/40 border border-red-300 dark:border-red-500/30 px-3.5 py-1 rounded-full">
+                <span class="text-xs font-bold uppercase tracking-widest text-brand-gold bg-amber-50 dark:bg-amber-950/40 border border-amber-300 dark:border-amber-500/30 px-3.5 py-1 rounded-full">
                     Hall of Fame
                 </span>
                 <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white font-heading mt-3">Pride of Apex Academy</h2>
-                <p class="text-slate-600 dark:text-slate-400 text-sm mt-2">Celebrating our outstanding distinction holders and national board position achievers.</p>
+                <p class="text-slate-600 dark:text-slate-400 text-sm mt-2">Celebrating our international distinction holders and high academic achievers.</p>
             </div>
 
             <div class="grid md:grid-cols-3 gap-6">
-                <!-- Achiever 1 -->
-                <div class="straight-card bg-white dark:bg-[#111722] rounded-2xl border border-slate-200 dark:border-white/10 p-6 text-center shadow-md relative overflow-hidden">
-                    <span class="absolute top-4 right-4 bg-amber-400 text-slate-900 text-[10px] font-black uppercase px-2 py-0.5 rounded shadow">Gold Medal</span>
-                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=80" alt="Student Topper" class="w-20 h-20 rounded-full mx-auto object-cover border-4 border-red-600 mb-4 shadow">
-                    <h4 class="font-black text-base text-slate-900 dark:text-white font-heading">Ayesha Malik</h4>
-                    <p class="text-xs text-red-600 font-bold">1st Position - High School Board</p>
+                <!-- Topper 1 -->
+                <div class="straight-card bg-white dark:bg-[#0D2035] rounded-2xl border border-slate-200 dark:border-white/10 p-6 text-center shadow-md relative overflow-hidden">
+                    <span class="absolute top-4 right-4 bg-amber-400 text-slate-950 text-[10px] font-black uppercase px-2 py-0.5 rounded shadow">Gold Medal</span>
+                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=80" alt="Student Topper" class="w-20 h-20 rounded-full mx-auto object-cover border-4 border-brand-gold mb-4 shadow">
+                    <h4 class="font-black text-base text-slate-900 dark:text-white font-heading">Emily Watson</h4>
+                    <p class="text-xs text-brand-gold font-bold">1st Position - National High School Honors</p>
                     <p class="text-2xl font-black text-slate-900 dark:text-white font-heading mt-2">98.6%</p>
                     <p class="text-[11px] text-slate-500 mt-1">Pre-Medical Distinction Award</p>
                 </div>
 
-                <!-- Achiever 2 -->
-                <div class="straight-card bg-white dark:bg-[#111722] rounded-2xl border border-slate-200 dark:border-white/10 p-6 text-center shadow-md relative overflow-hidden">
-                    <span class="absolute top-4 right-4 bg-amber-400 text-slate-900 text-[10px] font-black uppercase px-2 py-0.5 rounded shadow">8 A* Stars</span>
-                    <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=300&q=80" alt="Student Topper" class="w-20 h-20 rounded-full mx-auto object-cover border-4 border-red-600 mb-4 shadow">
-                    <h4 class="font-black text-base text-slate-900 dark:text-white font-heading">Hamza Tariq</h4>
-                    <p class="text-xs text-red-600 font-bold">Top Cambridge O-Levels Performer</p>
+                <!-- Topper 2 -->
+                <div class="straight-card bg-white dark:bg-[#0D2035] rounded-2xl border border-slate-200 dark:border-white/10 p-6 text-center shadow-md relative overflow-hidden">
+                    <span class="absolute top-4 right-4 bg-amber-400 text-slate-950 text-[10px] font-black uppercase px-2 py-0.5 rounded shadow">8 A* Stars</span>
+                    <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=300&q=80" alt="Student Topper" class="w-20 h-20 rounded-full mx-auto object-cover border-4 border-brand-gold mb-4 shadow">
+                    <h4 class="font-black text-base text-slate-900 dark:text-white font-heading">Alexander Hayes</h4>
+                    <p class="text-xs text-brand-gold font-bold">Top Cambridge O-Levels Scholar</p>
                     <p class="text-2xl font-black text-slate-900 dark:text-white font-heading mt-2">Straight A*</p>
-                    <p class="text-ces text-[11px] text-slate-500 mt-1">Global Chemistry & Math Distinction</p>
+                    <p class="text-[11px] text-slate-500 mt-1">Global Chemistry & Math Distinction</p>
                 </div>
 
-                <!-- Achiever 3 -->
-                <div class="straight-card bg-white dark:bg-[#111722] rounded-2xl border border-slate-200 dark:border-white/10 p-6 text-center shadow-md relative overflow-hidden">
-                    <span class="absolute top-4 right-4 bg-amber-400 text-slate-900 text-[10px] font-black uppercase px-2 py-0.5 rounded shadow">Champion</span>
-                    <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=300&q=80" alt="Student Topper" class="w-20 h-20 rounded-full mx-auto object-cover border-4 border-red-600 mb-4 shadow">
-                    <h4 class="font-black text-base text-slate-900 dark:text-white font-heading">Zainab Fatima</h4>
-                    <p class="text-xs text-red-600 font-bold">National Robotics Olympiad 2026</p>
+                <!-- Topper 3 -->
+                <div class="straight-card bg-white dark:bg-[#0D2035] rounded-2xl border border-slate-200 dark:border-white/10 p-6 text-center shadow-md relative overflow-hidden">
+                    <span class="absolute top-4 right-4 bg-amber-400 text-slate-950 text-[10px] font-black uppercase px-2 py-0.5 rounded shadow">Champion</span>
+                    <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=300&q=80" alt="Student Topper" class="w-20 h-20 rounded-full mx-auto object-cover border-4 border-brand-gold mb-4 shadow">
+                    <h4 class="font-black text-base text-slate-900 dark:text-white font-heading">Sophia Bennett</h4>
+                    <p class="text-xs text-brand-gold font-bold">National Robotics Olympiad 2026</p>
                     <p class="text-2xl font-black text-slate-900 dark:text-white font-heading mt-2">1st Place</p>
                     <p class="text-[11px] text-slate-500 mt-1">Autonomous Rover Project Lead</p>
                 </div>
@@ -351,10 +356,10 @@
         </div>
     </section>
 
-    <!-- FEATURE 3: FACULTY / TEACHERS SHOWCASE -->
+    <!-- FACULTY SHOWCASE (PROPERLY FRAMED PORTRAIT HEADSHOTS - NEVER CUT OFF) -->
     <section id="faculty" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 w-full" data-aos="fade-up">
         <div class="text-center max-w-2xl mx-auto mb-14">
-            <span class="text-xs font-bold uppercase tracking-widest text-red-600 dark:text-red-400 bg-red-100 dark:bg-red-950/40 border border-red-300 dark:border-red-500/30 px-3.5 py-1 rounded-full">
+            <span class="text-xs font-bold uppercase tracking-widest text-brand-gold bg-amber-50 dark:bg-amber-950/40 border border-amber-300 dark:border-amber-500/30 px-3.5 py-1 rounded-full">
                 Our Educators
             </span>
             <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white font-heading mt-3">Learn from Certified Mentors</h2>
@@ -362,53 +367,53 @@
         </div>
 
         <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            <!-- Teacher 1 -->
-            <div class="straight-card bg-white dark:bg-[#111722] rounded-2xl border border-slate-200 dark:border-white/10 overflow-hidden shadow-md">
-                <img src="https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=400&q=80" alt="Teacher" class="w-full h-48 object-cover">
+            <!-- Teacher 1 (Centered Headshot) -->
+            <div class="straight-card bg-white dark:bg-[#0D2035] rounded-2xl border border-slate-200 dark:border-white/10 overflow-hidden shadow-md">
+                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80" alt="Dr. Sarah Jenkins" class="w-full h-60 object-cover object-top">
                 <div class="p-5 text-center space-y-1">
                     <h4 class="font-bold text-sm text-slate-900 dark:text-white">Dr. Sarah Jenkins</h4>
-                    <p class="text-xs text-red-600 font-semibold">Head of Sciences</p>
+                    <p class="text-xs text-brand-gold font-bold">Head of Sciences</p>
                     <p class="text-[11px] text-slate-500">Ph.D. Physics | 14+ Years Exp</p>
                 </div>
             </div>
 
-            <!-- Teacher 2 -->
-            <div class="straight-card bg-white dark:bg-[#111722] rounded-2xl border border-slate-200 dark:border-white/10 overflow-hidden shadow-md">
-                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=400&q=80" alt="Teacher" class="w-full h-48 object-cover">
+            <!-- Teacher 2 (Centered Headshot) -->
+            <div class="straight-card bg-white dark:bg-[#0D2035] rounded-2xl border border-slate-200 dark:border-white/10 overflow-hidden shadow-md">
+                <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=600&q=80" alt="David Vance" class="w-full h-60 object-cover object-top">
                 <div class="p-5 text-center space-y-1">
                     <h4 class="font-bold text-sm text-slate-900 dark:text-white">David Vance</h4>
-                    <p class="text-xs text-red-600 font-semibold">Senior Math Specialist</p>
+                    <p class="text-xs text-brand-gold font-bold">Senior Math Specialist</p>
                     <p class="text-[11px] text-slate-500">M.Sc. Pure Math | 11+ Years Exp</p>
                 </div>
             </div>
 
-            <!-- Teacher 3 -->
-            <div class="straight-card bg-white dark:bg-[#111722] rounded-2xl border border-slate-200 dark:border-white/10 overflow-hidden shadow-md">
-                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80" alt="Teacher" class="w-full h-48 object-cover">
+            <!-- Teacher 3 (Centered Headshot) -->
+            <div class="straight-card bg-white dark:bg-[#0D2035] rounded-2xl border border-slate-200 dark:border-white/10 overflow-hidden shadow-md">
+                <img src="https://images.unsplash.com/photo-1580894732454-defa563b7156?auto=format&fit=crop&w=600&q=80" alt="Elena Rostova" class="w-full h-60 object-cover object-top">
                 <div class="p-5 text-center space-y-1">
                     <h4 class="font-bold text-sm text-slate-900 dark:text-white">Elena Rostova</h4>
-                    <p class="text-xs text-red-600 font-semibold">Cambridge Coordinator</p>
+                    <p class="text-xs text-brand-gold font-bold">Cambridge Coordinator</p>
                     <p class="text-[11px] text-slate-500">M.Ed. Linguistics | 9+ Years Exp</p>
                 </div>
             </div>
 
-            <!-- Teacher 4 -->
-            <div class="straight-card bg-white dark:bg-[#111722] rounded-2xl border border-slate-200 dark:border-white/10 overflow-hidden shadow-md">
-                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=400&q=80" alt="Teacher" class="w-full h-48 object-cover">
+            <!-- Teacher 4 (Centered Headshot) -->
+            <div class="straight-card bg-white dark:bg-[#0D2035] rounded-2xl border border-slate-200 dark:border-white/10 overflow-hidden shadow-md">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&q=80" alt="Marcus Thorne" class="w-full h-60 object-cover object-top">
                 <div class="p-5 text-center space-y-1">
                     <h4 class="font-bold text-sm text-slate-900 dark:text-white">Marcus Thorne</h4>
-                    <p class="text-xs text-red-600 font-semibold">Robotics & AI Lead</p>
+                    <p class="text-xs text-brand-gold font-bold">Robotics & AI Lead</p>
                     <p class="text-[11px] text-slate-500">B.Sc. Computer Eng | 8+ Years Exp</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- FEATURE 4: FILTERABLE PHOTO GALLERY WITH LIGHTBOX -->
-    <section id="gallery" class="py-20 bg-slate-100 dark:bg-[#0B0F17] border-y border-slate-200 dark:border-white/5 transition-colors w-full overflow-hidden" data-aos="fade-up">
+    <!-- FILTERABLE PHOTO GALLERY WITH FULLSCREEN LIGHTBOX -->
+    <section id="gallery" class="py-20 bg-slate-100 dark:bg-[#081728] border-y border-slate-200 dark:border-white/5 transition-colors w-full overflow-hidden" data-aos="fade-up">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 w-full">
             <div class="text-center max-w-2xl mx-auto mb-10">
-                <span class="text-xs font-bold uppercase tracking-widest text-red-600 dark:text-red-400 bg-red-100 dark:bg-red-950/40 border border-red-300 dark:border-red-500/30 px-3.5 py-1 rounded-full">
+                <span class="text-xs font-bold uppercase tracking-widest text-brand-gold bg-amber-50 dark:bg-amber-950/40 border border-amber-300 dark:border-amber-500/30 px-3.5 py-1 rounded-full">
                     Campus Tour
                 </span>
                 <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white font-heading mt-3">Interactive Campus Gallery</h2>
@@ -417,67 +422,44 @@
 
             <!-- Gallery Filter Buttons -->
             <div class="flex flex-wrap justify-center gap-2 mb-8">
-                <button onclick="filterGallery('all')" id="gallery-filter-all" class="gallery-filter-btn px-4 py-2 rounded-xl text-xs font-bold bg-red-600 text-white shadow-md transition">All Photos</button>
-                <button onclick="filterGallery('campus')" id="gallery-filter-campus" class="gallery-filter-btn px-4 py-2 rounded-xl text-xs font-bold bg-white dark:bg-white/5 text-slate-700 dark:text-slate-300 hover:bg-red-50 dark:hover:bg-white/10 transition border border-slate-200 dark:border-white/10">Campus</button>
-                <button onclick="filterGallery('stem')" id="gallery-filter-stem" class="gallery-filter-btn px-4 py-2 rounded-xl text-xs font-bold bg-white dark:bg-white/5 text-slate-700 dark:text-slate-300 hover:bg-red-50 dark:hover:bg-white/10 transition border border-slate-200 dark:border-white/10">STEM & Labs</button>
-                <button onclick="filterGallery('sports')" id="gallery-filter-sports" class="gallery-filter-btn px-4 py-2 rounded-xl text-xs font-bold bg-white dark:bg-white/5 text-slate-700 dark:text-slate-300 hover:bg-red-50 dark:hover:bg-white/10 transition border border-slate-200 dark:border-white/10">Sports & Arts</button>
+                <button onclick="filterGallery('all')" id="gallery-filter-all" class="gallery-filter-btn px-4 py-2 rounded-xl text-xs font-bold bg-brand-navy text-white border border-brand-gold shadow-md transition">All Photos</button>
+                <button onclick="filterGallery('campus')" id="gallery-filter-campus" class="gallery-filter-btn px-4 py-2 rounded-xl text-xs font-bold bg-white dark:bg-white/5 text-slate-700 dark:text-slate-300 hover:bg-amber-50 dark:hover:bg-white/10 transition border border-slate-200 dark:border-white/10">Campus</button>
+                <button onclick="filterGallery('stem')" id="gallery-filter-stem" class="gallery-filter-btn px-4 py-2 rounded-xl text-xs font-bold bg-white dark:bg-white/5 text-slate-700 dark:text-slate-300 hover:bg-amber-50 dark:hover:bg-white/10 transition border border-slate-200 dark:border-white/10">STEM & Labs</button>
+                <button onclick="filterGallery('sports')" id="gallery-filter-sports" class="gallery-filter-btn px-4 py-2 rounded-xl text-xs font-bold bg-white dark:bg-white/5 text-slate-700 dark:text-slate-300 hover:bg-amber-50 dark:hover:bg-white/10 transition border border-slate-200 dark:border-white/10">Sports & Arts</button>
             </div>
 
             <!-- Gallery Grid with Lightbox Triggers -->
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full" id="galleryGrid">
-                
                 <div data-category="campus" onclick="openLightbox('https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=1200&q=80', 'Main Academy Campus Building')" class="gallery-item straight-card rounded-2xl overflow-hidden border border-slate-200 dark:border-white/10 group relative h-64 shadow-md cursor-pointer">
                     <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=800&q=80" alt="Campus Building" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-transparent to-transparent flex items-end p-5">
-                        <span class="text-white font-bold text-sm"><i class="fa-solid fa-magnifying-glass-plus mr-1.5 text-red-400"></i> Main Campus Building</span>
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-transparent to-transparent flex items-end p-5">
+                        <span class="text-white font-bold text-sm"><i class="fa-solid fa-magnifying-glass-plus mr-1.5 text-brand-goldLight"></i> Main Campus Building</span>
                     </div>
                 </div>
 
                 <div data-category="stem" onclick="openLightbox('https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1200&q=80', 'Advanced STEM Robotics Lab')" class="gallery-item straight-card rounded-2xl overflow-hidden border border-slate-200 dark:border-white/10 group relative h-64 shadow-md cursor-pointer">
                     <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80" alt="Robotics Lab" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-transparent to-transparent flex items-end p-5">
-                        <span class="text-white font-bold text-sm"><i class="fa-solid fa-magnifying-glass-plus mr-1.5 text-red-400"></i> Advanced STEM Robotics Lab</span>
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-transparent to-transparent flex items-end p-5">
+                        <span class="text-white font-bold text-sm"><i class="fa-solid fa-magnifying-glass-plus mr-1.5 text-brand-goldLight"></i> Advanced STEM Robotics Lab</span>
                     </div>
                 </div>
 
                 <div data-category="sports" onclick="openLightbox('https://images.unsplash.com/photo-1546519638-68e109498ffc?auto=format&fit=crop&w=1200&q=80', 'Football & Athletics Grounds')" class="gallery-item straight-card rounded-2xl overflow-hidden border border-slate-200 dark:border-white/10 group relative h-64 shadow-md cursor-pointer">
                     <img src="https://images.unsplash.com/photo-1546519638-68e109498ffc?auto=format&fit=crop&w=800&q=80" alt="Sports Grounds" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-transparent to-transparent flex items-end p-5">
-                        <span class="text-white font-bold text-sm"><i class="fa-solid fa-magnifying-glass-plus mr-1.5 text-red-400"></i> Athletics & Play Area</span>
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-transparent to-transparent flex items-end p-5">
+                        <span class="text-white font-bold text-sm"><i class="fa-solid fa-magnifying-glass-plus mr-1.5 text-brand-goldLight"></i> Athletics & Play Area</span>
                     </div>
                 </div>
-
-                <div data-category="stem" onclick="openLightbox('https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&w=1200&q=80', 'Chemistry & Biology Research Lab')" class="gallery-item straight-card rounded-2xl overflow-hidden border border-slate-200 dark:border-white/10 group relative h-64 shadow-md cursor-pointer">
-                    <img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&w=800&q=80" alt="Chemistry Lab" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-transparent to-transparent flex items-end p-5">
-                        <span class="text-white font-bold text-sm"><i class="fa-solid fa-magnifying-glass-plus mr-1.5 text-red-400"></i> Chemistry & Science Lab</span>
-                    </div>
-                </div>
-
-                <div data-category="campus" onclick="openLightbox('https://images.unsplash.com/photo-1521587760476-6c12a4b040da?auto=format&fit=crop&w=1200&q=80', 'Digital Resource Library')" class="gallery-item straight-card rounded-2xl overflow-hidden border border-slate-200 dark:border-white/10 group relative h-64 shadow-md cursor-pointer">
-                    <img src="https://images.unsplash.com/photo-1521587760476-6c12a4b040da?auto=format&fit=crop&w=800&q=80" alt="Library" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-transparent to-transparent flex items-end p-5">
-                        <span class="text-white font-bold text-sm"><i class="fa-solid fa-magnifying-glass-plus mr-1.5 text-red-400"></i> Digital Resource Library</span>
-                    </div>
-                </div>
-
-                <div data-category="sports" onclick="openLightbox('https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&w=1200&q=80', 'Annual Stage Presentation & Auditorium')" class="gallery-item straight-card rounded-2xl overflow-hidden border border-slate-200 dark:border-white/10 group relative h-64 shadow-md cursor-pointer">
-                    <img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&w=800&q=80" alt="Auditorium" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-transparent to-transparent flex items-end p-5">
-                        <span class="text-white font-bold text-sm"><i class="fa-solid fa-magnifying-glass-plus mr-1.5 text-red-400"></i> Auditorium & Cultural Stage</span>
-                    </div>
-                </div>
-
             </div>
         </div>
     </section>
 
     <!-- Admission Application Section -->
-    <section id="admission" class="py-20 bg-slate-50 dark:bg-[#0B0F17] relative overflow-hidden transition-colors w-full" data-aos="fade-up">
+    <section id="admission" class="py-20 bg-slate-50 dark:bg-[#06121E] relative overflow-hidden transition-colors w-full" data-aos="fade-up">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 relative z-10 w-full">
             <div class="grid lg:grid-cols-12 gap-8 lg:gap-10 items-center w-full">
                 <div class="lg:col-span-5 space-y-4">
-                    <span class="text-xs font-bold uppercase tracking-widest text-red-600 dark:text-red-400 bg-red-100 dark:bg-red-950/40 border border-red-300 dark:border-red-500/30 px-3.5 py-1 rounded-full">
+                    <span class="text-xs font-bold uppercase tracking-widest text-brand-gold bg-amber-50 dark:bg-amber-950/40 border border-amber-300 dark:border-amber-500/30 px-3.5 py-1 rounded-full">
                         Admissions Open
                     </span>
                     <h2 class="text-3xl sm:text-4xl font-black text-slate-900 dark:text-white font-heading leading-tight">
@@ -486,17 +468,17 @@
                     <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
                         Seats for the upcoming academic session are strictly allocated based on assessment criteria. Register your child now to receive our admissions call.
                     </p>
-                    <div class="p-4 rounded-xl bg-white dark:bg-[#111722] border border-slate-200 dark:border-white/10 space-y-2 text-xs shadow-sm">
-                        <p class="text-red-600 font-bold flex items-center gap-2">
+                    <div class="p-4 rounded-xl bg-white dark:bg-[#0D2035] border border-slate-200 dark:border-white/10 space-y-2 text-xs shadow-sm">
+                        <p class="text-brand-gold font-bold flex items-center gap-2">
                             <i class="fa-solid fa-map-pin"></i> 123 Education Boulevard, Academy District
                         </p>
                         <p class="text-slate-700 dark:text-slate-300 flex items-center gap-2">
-                            <i class="fa-solid fa-phone text-red-600"></i> +1 (234) 567-8900 (Admissions Helpline)
+                            <i class="fa-solid fa-phone text-brand-gold"></i> +1 (234) 567-8900 (Admissions Helpline)
                         </p>
                     </div>
                 </div>
 
-                <div class="lg:col-span-7 straight-card bg-white dark:bg-[#111722] p-6 sm:p-8 rounded-2xl shadow-xl border border-slate-200 dark:border-white/10 w-full">
+                <div class="lg:col-span-7 straight-card bg-white dark:bg-[#0D2035] p-6 sm:p-8 rounded-2xl shadow-xl border border-slate-200 dark:border-white/10 w-full">
                     <h3 class="text-xl font-black text-slate-900 dark:text-white font-heading">Online Admission Inquiry</h3>
                     <p class="text-xs text-slate-500 dark:text-slate-400 mb-5">Enter candidate details for an immediate assessment schedule.</p>
 
@@ -504,17 +486,17 @@
                         <div class="grid sm:grid-cols-2 gap-3.5">
                             <div>
                                 <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">Student Full Name *</label>
-                                <input type="text" required placeholder="John Doe" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-50 dark:bg-[#161F2E] border border-slate-200 dark:border-white/10 text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:border-red-600 text-sm">
+                                <input type="text" required placeholder="Oliver Smith" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-50 dark:bg-[#081728] border border-slate-200 dark:border-white/10 text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:border-brand-gold text-sm">
                             </div>
                             <div>
                                 <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">Parent Phone / WhatsApp *</label>
-                                <input type="tel" required placeholder="+1 234 567 8900" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-50 dark:bg-[#161F2E] border border-slate-200 dark:border-white/10 text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:border-red-600 text-sm">
+                                <input type="tel" required placeholder="+1 234 567 8900" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-50 dark:bg-[#081728] border border-slate-200 dark:border-white/10 text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:border-brand-gold text-sm">
                             </div>
                         </div>
 
                         <div>
                             <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">Applying For Wing *</label>
-                            <select required class="w-full px-3.5 py-2.5 rounded-xl bg-slate-50 dark:bg-[#161F2E] border border-slate-200 dark:border-white/10 text-slate-900 dark:text-white focus:outline-none focus:border-red-600 text-sm">
+                            <select required class="w-full px-3.5 py-2.5 rounded-xl bg-slate-50 dark:bg-[#081728] border border-slate-200 dark:border-white/10 text-slate-900 dark:text-white focus:outline-none focus:border-brand-gold text-sm">
                                 <option value="Early-Years">Pre-School / Montessori</option>
                                 <option value="Primary">Primary School (Grades 1-5)</option>
                                 <option value="Middle">Middle School (Grades 6-8)</option>
@@ -523,7 +505,7 @@
                             </select>
                         </div>
 
-                        <button type="submit" class="w-full bg-gradient-to-r from-red-600 via-red-500 to-rose-600 text-white font-extrabold py-3 rounded-xl shadow-md shadow-red-600/40 hover:scale-[1.01] transition duration-200 text-sm">
+                        <button type="submit" class="w-full bg-gradient-to-r from-amber-400 via-amber-500 to-yellow-500 text-slate-950 font-extrabold py-3.5 rounded-xl shadow-md hover:scale-[1.01] transition duration-200 text-sm border border-yellow-300">
                             Submit Admission Application &rarr;
                         </button>
                     </form>
@@ -541,7 +523,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 grid sm:grid-cols-2 lg:grid-cols-4 gap-8 pb-10 border-b border-slate-800">
             <div>
                 <div class="flex items-center gap-2 mb-3">
-                    <div class="w-8 h-8 rounded-lg bg-red-600 text-white flex items-center justify-center font-black">A</div>
+                    <div class="w-8 h-8 rounded-lg bg-brand-gold text-slate-950 flex items-center justify-center font-black">A</div>
                     <span class="text-base font-black text-white font-heading">Apex Academy</span>
                 </div>
                 <p class="leading-relaxed">
@@ -551,23 +533,23 @@
             <div>
                 <h5 class="text-white font-bold uppercase tracking-wider mb-2.5">Academic Tracks</h5>
                 <ul class="space-y-1.5">
-                    <li><a href="programs.html#early-years" class="hover:text-red-400">Early Years Foundation</a></li>
-                    <li><a href="programs.html#primary" class="hover:text-red-400">Primary Curriculum</a></li>
-                    <li><a href="programs.html#middle" class="hover:text-red-400">Middle School Program</a></li>
-                    <li><a href="programs.html#high-school" class="hover:text-red-400">Secondary & High School</a></li>
+                    <li><a href="programs.html#early-years" class="hover:text-brand-goldLight">Early Years Foundation</a></li>
+                    <li><a href="programs.html#primary" class="hover:text-brand-goldLight">Primary Curriculum</a></li>
+                    <li><a href="programs.html#middle" class="hover:text-brand-goldLight">Middle School Program</a></li>
+                    <li><a href="programs.html#high-school" class="hover:text-brand-goldLight">Secondary & High School</a></li>
                 </ul>
             </div>
             <div>
                 <h5 class="text-white font-bold uppercase tracking-wider mb-2.5">Campus Desk</h5>
-                <p class="leading-relaxed mb-1.5"><i class="fa-solid fa-map-pin text-red-500 mr-1.5"></i> 123 Education Boulevard, Academy District</p>
-                <p class="mb-1"><i class="fa-solid fa-phone text-red-500 mr-1.5"></i> +1 (234) 567-8900</p>
-                <p><i class="fa-solid fa-envelope text-red-500 mr-1.5"></i> contact@apexacademy.edu</p>
+                <p class="leading-relaxed mb-1.5"><i class="fa-solid fa-map-pin text-brand-gold mr-1.5"></i> 123 Education Boulevard, Academy District</p>
+                <p class="mb-1"><i class="fa-solid fa-phone text-brand-gold mr-1.5"></i> +1 (234) 567-8900</p>
+                <p><i class="fa-solid fa-envelope text-brand-gold mr-1.5"></i> contact@apexacademy.edu</p>
             </div>
             <div>
                 <h5 class="text-white font-bold uppercase tracking-wider mb-2.5">Follow Us</h5>
                 <div class="flex gap-2.5 text-base">
-                    <a href="#" class="w-9 h-9 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-white hover:bg-red-600 transition"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="#" class="w-9 h-9 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-white hover:bg-red-600 transition"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="w-9 h-9 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-white hover:bg-brand-gold hover:text-slate-950 transition"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="w-9 h-9 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-white hover:bg-brand-gold hover:text-slate-950 transition"><i class="fa-brands fa-instagram"></i></a>
                     <a href="https://wa.me/1234567890" target="_blank" class="w-9 h-9 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-white hover:bg-emerald-500 transition"><i class="fa-brands fa-whatsapp"></i></a>
                 </div>
             </div>
@@ -577,10 +559,10 @@
         </div>
     </footer>
 
-    <!-- FEATURE 5: SMART WHATSAPP CHAT POPUP WIDGET -->
+    <!-- SMART WHATSAPP CHAT POPUP WIDGET -->
     <div class="hsja-floating-container">
-        <!-- Smart Chat Card Popup -->
-        <div id="whatsappChatCard" class="hidden w-72 sm:w-80 bg-white dark:bg-[#111722] rounded-3xl shadow-2xl border border-slate-200 dark:border-white/10 overflow-hidden mb-2 text-left">
+        <!-- Floating Smart Chat Card -->
+        <div id="whatsappChatCard" class="hidden w-72 sm:w-80 bg-white dark:bg-[#0D2035] rounded-3xl shadow-2xl border border-slate-200 dark:border-white/10 overflow-hidden mb-2 text-left">
             <div class="bg-gradient-to-r from-emerald-600 to-teal-700 text-white p-4 flex items-center justify-between">
                 <div class="flex items-center gap-2.5">
                     <div class="w-9 h-9 rounded-full bg-white/20 flex items-center justify-center text-lg">
@@ -593,19 +575,19 @@
                 </div>
                 <button onclick="toggleWhatsAppCard()" class="text-white/80 hover:text-white text-sm"><i class="fa-solid fa-xmark"></i></button>
             </div>
-            <div class="p-4 space-y-3 bg-slate-50 dark:bg-[#0E1520]">
-                <div class="bg-white dark:bg-[#161F2E] p-3 rounded-2xl border border-slate-200 dark:border-white/5 text-xs text-slate-700 dark:text-slate-300 shadow-sm">
-                    👋 Hello! Welcome to Apex Academy. How can we assist you today?
+            <div class="p-4 space-y-3 bg-slate-50 dark:bg-[#081728]">
+                <div class="bg-white dark:bg-[#0D2035] p-3 rounded-2xl border border-slate-200 dark:border-white/5 text-xs text-slate-700 dark:text-slate-300 shadow-sm">
+                    Hello! Welcome to Apex Academy. How can we assist you today?
                 </div>
                 <div class="space-y-1.5">
-                    <a href="https://wa.me/1234567890?text=Hello,%20I%20want%20to%20inquire%20about%20the%20Tuition%20Fee%20Schedule." target="_blank" class="block w-full p-2.5 rounded-xl bg-white dark:bg-[#161F2E] border border-slate-200 dark:border-white/10 text-xs font-bold text-emerald-700 dark:text-emerald-400 hover:border-emerald-500 transition shadow-sm">
-                        💰 Fee Schedule Inquiry &rarr;
+                    <a href="https://wa.me/1234567890?text=Hello,%20I%20want%20to%20inquire%20about%20the%20Tuition%20Fee%20Schedule." target="_blank" class="block w-full p-2.5 rounded-xl bg-white dark:bg-[#0D2035] border border-slate-200 dark:border-white/10 text-xs font-bold text-emerald-700 dark:text-emerald-400 hover:border-emerald-500 transition shadow-sm">
+                        Tuition Fee Inquiry &rarr;
                     </a>
-                    <a href="https://wa.me/1234567890?text=Hello,%20I%20would%20like%20to%20book%20a%20Campus%20Tour." target="_blank" class="block w-full p-2.5 rounded-xl bg-white dark:bg-[#161F2E] border border-slate-200 dark:border-white/10 text-xs font-bold text-emerald-700 dark:text-emerald-400 hover:border-emerald-500 transition shadow-sm">
-                        🏫 Book a Campus Visit &rarr;
+                    <a href="https://wa.me/1234567890?text=Hello,%20I%20would%20like%20to%20book%20a%20Campus%20Tour." target="_blank" class="block w-full p-2.5 rounded-xl bg-white dark:bg-[#0D2035] border border-slate-200 dark:border-white/10 text-xs font-bold text-emerald-700 dark:text-emerald-400 hover:border-emerald-500 transition shadow-sm">
+                        Book a Campus Visit &rarr;
                     </a>
-                    <a href="https://wa.me/1234567890?text=Hello,%20please%20share%20Admission%20Eligibility%20details." target="_blank" class="block w-full p-2.5 rounded-xl bg-white dark:bg-[#161F2E] border border-slate-200 dark:border-white/10 text-xs font-bold text-emerald-700 dark:text-emerald-400 hover:border-emerald-500 transition shadow-sm">
-                        📋 Admission Eligibility &rarr;
+                    <a href="https://wa.me/1234567890?text=Hello,%20please%20share%20Admission%20Eligibility%20details." target="_blank" class="block w-full p-2.5 rounded-xl bg-white dark:bg-[#0D2035] border border-slate-200 dark:border-white/10 text-xs font-bold text-emerald-700 dark:text-emerald-400 hover:border-emerald-500 transition shadow-sm">
+                        Admission Eligibility &rarr;
                     </a>
                 </div>
             </div>
@@ -631,16 +613,16 @@
         </div>
     </div>
 
-    <!-- STUDENT PORTAL MODAL -->
+    <!-- STUDENT PORTAL MODAL (Oliver Smith / Emma Davis Demo) -->
     <div id="portalModal" class="fixed inset-0 z-[100000] hidden flex items-center justify-center p-4 bg-black/80 backdrop-blur-md">
-        <div class="relative w-full max-w-md bg-white dark:bg-[#111722] rounded-3xl border border-slate-200 dark:border-white/10 shadow-2xl overflow-hidden p-6">
-            <button onclick="closePortalModal()" class="absolute top-4 right-4 w-8 h-8 rounded-full bg-slate-100 dark:bg-white/10 flex items-center justify-center text-slate-500 hover:text-red-600 transition">
+        <div class="relative w-full max-w-md bg-white dark:bg-[#0D2035] rounded-3xl border border-slate-200 dark:border-white/10 shadow-2xl overflow-hidden p-6">
+            <button onclick="closePortalModal()" class="absolute top-4 right-4 w-8 h-8 rounded-full bg-slate-100 dark:bg-white/10 flex items-center justify-center text-slate-500 hover:text-brand-gold transition">
                 <i class="fa-solid fa-xmark"></i>
             </button>
 
             <div id="portalLoginView" class="space-y-4">
                 <div class="flex items-center gap-3">
-                    <div class="w-10 h-10 rounded-xl bg-red-600 text-white flex items-center justify-center text-lg">
+                    <div class="w-10 h-10 rounded-xl bg-brand-navy text-brand-goldLight border border-brand-gold/40 flex items-center justify-center text-lg">
                         <i class="fa-solid fa-user-lock"></i>
                     </div>
                     <div>
@@ -649,21 +631,21 @@
                     </div>
                 </div>
 
-                <div class="p-3 bg-red-50 dark:bg-red-950/40 rounded-xl border border-red-200 dark:border-red-900/40 text-[11px] text-red-700 dark:text-red-300">
-                    <i class="fa-solid fa-circle-info mr-1"></i> Demo Login: Enter Roll No <strong>101</strong> or <strong>102</strong> to preview.
+                <div class="p-3 bg-amber-50 dark:bg-amber-950/40 rounded-xl border border-amber-200 dark:border-amber-900/40 text-[11px] text-brand-gold">
+                    <i class="fa-solid fa-circle-info mr-1"></i> Demo Access: Enter Student ID <strong>101</strong> or <strong>102</strong> to preview.
                 </div>
 
                 <form id="portalLoginForm" onsubmit="handlePortalLogin(event)" class="space-y-3">
                     <div>
-                        <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">Student Roll Number / ID *</label>
-                        <input type="text" id="portalRollInput" required placeholder="e.g. 101" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-50 dark:bg-[#161F2E] border border-slate-200 dark:border-white/10 text-slate-900 dark:text-white text-xs font-semibold focus:outline-none focus:border-red-600">
+                        <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">Student ID / Roll Number *</label>
+                        <input type="text" id="portalRollInput" required placeholder="e.g. 101" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-50 dark:bg-[#081728] border border-slate-200 dark:border-white/10 text-slate-900 dark:text-white text-xs font-semibold focus:outline-none focus:border-brand-gold">
                     </div>
                     <div>
                         <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">Access PIN / Password *</label>
-                        <input type="password" required placeholder="••••••" value="123456" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-50 dark:bg-[#161F2E] border border-slate-200 dark:border-white/10 text-slate-900 dark:text-white text-xs font-semibold focus:outline-none focus:border-red-600">
+                        <input type="password" required placeholder="••••••" value="123456" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-50 dark:bg-[#081728] border border-slate-200 dark:border-white/10 text-slate-900 dark:text-white text-xs font-semibold focus:outline-none focus:border-brand-gold">
                     </div>
 
-                    <button type="submit" class="w-full bg-red-600 hover:bg-red-700 text-white font-extrabold py-3 rounded-xl shadow-md text-xs uppercase tracking-wider transition">
+                    <button type="submit" class="w-full bg-brand-navy hover:bg-slate-900 border border-brand-gold/40 text-brand-goldLight font-extrabold py-3 rounded-xl shadow-md text-xs uppercase tracking-wider transition">
                         Sign In to Portal &rarr;
                     </button>
                 </form>
@@ -672,35 +654,35 @@
             <div id="portalDashboardView" class="hidden space-y-4">
                 <div class="flex items-center justify-between border-b border-slate-100 dark:border-white/10 pb-3">
                     <div>
-                        <h4 id="dashStudentName" class="text-base font-black text-slate-900 dark:text-white font-heading">Muhammad Ali</h4>
-                        <p id="dashStudentGrade" class="text-xs text-red-600 font-bold">Grade 8 - Section A</p>
-                        <p id="dashStudentRoll" class="text-[10px] text-slate-500">Roll No: 101</p>
+                        <h4 id="dashStudentName" class="text-base font-black text-slate-900 dark:text-white font-heading">Oliver Smith</h4>
+                        <p id="dashStudentGrade" class="text-xs text-brand-gold font-bold">Grade 8 - Honors Section</p>
+                        <p id="dashStudentRoll" class="text-[10px] text-slate-500">Student ID: 101</p>
                     </div>
-                    <button onclick="logoutPortal()" class="text-xs text-red-600 hover:underline font-bold">
+                    <button onclick="logoutPortal()" class="text-xs text-brand-gold hover:underline font-bold">
                         <i class="fa-solid fa-right-from-bracket mr-1"></i> Sign Out
                     </button>
                 </div>
 
                 <div class="grid grid-cols-2 gap-3">
-                    <div class="p-3 bg-slate-50 dark:bg-[#161F2E] rounded-xl border border-slate-200 dark:border-white/10">
+                    <div class="p-3 bg-slate-50 dark:bg-[#081728] rounded-xl border border-slate-200 dark:border-white/10">
                         <span class="text-[10px] text-slate-500 uppercase font-bold block">Attendance</span>
-                        <span id="dashAttendance" class="text-lg font-black text-emerald-600">96.4%</span>
+                        <span id="dashAttendance" class="text-lg font-black text-emerald-600">96.8%</span>
                     </div>
-                    <div class="p-3 bg-slate-50 dark:bg-[#161F2E] rounded-xl border border-slate-200 dark:border-white/10">
+                    <div class="p-3 bg-slate-50 dark:bg-[#081728] rounded-xl border border-slate-200 dark:border-white/10">
                         <span class="text-[10px] text-slate-500 uppercase font-bold block">Fee Status</span>
                         <span id="dashFeeStatus" class="text-xs font-black text-emerald-600 mt-1 block">Paid (Current Month)</span>
                     </div>
                 </div>
 
-                <div class="p-3 bg-slate-50 dark:bg-[#161F2E] rounded-xl border border-slate-200 dark:border-white/10">
+                <div class="p-3 bg-slate-50 dark:bg-[#081728] rounded-xl border border-slate-200 dark:border-white/10">
                     <h5 class="text-xs font-bold text-slate-900 dark:text-white mb-2 flex items-center gap-1.5">
-                        <i class="fa-solid fa-award text-red-600"></i> Term Examination Results
+                        <i class="fa-solid fa-award text-brand-gold"></i> Term Examination Results
                     </h5>
                     <div id="dashGradesList" class="space-y-1"></div>
                 </div>
 
-                <button onclick="alert('Simulated: Fee Challan & Report Card PDF generated.')" class="w-full py-2.5 rounded-xl border border-slate-300 dark:border-white/10 text-xs font-bold text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-white/5 transition flex items-center justify-center gap-1.5">
-                    <i class="fa-solid fa-download"></i> Download Report Card & Challan
+                <button onclick="alert('Simulated: Fee Receipt & Grade Transcript PDF downloaded.')" class="w-full py-2.5 rounded-xl border border-slate-300 dark:border-white/10 text-xs font-bold text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-white/5 transition flex items-center justify-center gap-1.5">
+                    <i class="fa-solid fa-download"></i> Download Transcript & Challan
                 </button>
             </div>
         </div>
@@ -709,7 +691,7 @@
     <!-- CAMPUS VIDEO TOUR MODAL -->
     <div id="videoModal" class="fixed inset-0 z-[100000] hidden flex items-center justify-center p-4 bg-black/90 backdrop-blur-md">
         <div class="relative w-full max-w-3xl bg-black rounded-3xl overflow-hidden shadow-2xl border border-white/20">
-            <button onclick="closeVideoModal()" class="absolute top-4 right-4 z-10 w-9 h-9 rounded-full bg-white/20 text-white flex items-center justify-center text-sm hover:bg-red-600 transition">
+            <button onclick="closeVideoModal()" class="absolute top-4 right-4 z-10 w-9 h-9 rounded-full bg-white/20 text-white flex items-center justify-center text-sm hover:bg-brand-gold hover:text-slate-950 transition">
                 <i class="fa-solid fa-xmark"></i>
             </button>
             <div class="aspect-video w-full">
