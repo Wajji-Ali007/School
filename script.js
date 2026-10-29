@@ -1,18 +1,16 @@
-// 1. Initialize AOS Animations with Mobile Support
+// 1. Initialize Smooth & Cinematic AOS Animations (1000ms Duration)
 document.addEventListener('DOMContentLoaded', () => {
     if (typeof AOS !== 'undefined') {
         AOS.init({
-            duration: 700,
+            duration: 1000,           // Slower cinematic duration so user feels the flow
             easing: 'ease-out-cubic',
             once: false,
             mirror: true,
-            offset: 50,
+            offset: 80,
             disable: false
         });
     }
-    // Calculate initial fee on load
     calculateTuition();
-    // Start live countdown timer
     startEventCountdown();
 });
 
@@ -30,16 +28,18 @@ function updateThemeUI(isDark) {
         if (themeIconDesktop) themeIconDesktop.className = 'fa-solid fa-sun';
         if (themeIconMobile) themeIconMobile.className = 'fa-solid fa-sun';
         if (backBtn) {
-            backBtn.style.backgroundColor = '#111722';
-            backBtn.style.color = '#f87171';
+            backBtn.style.backgroundColor = '#0F2744';
+            backBtn.style.color = '#F59E0B';
+            backBtn.style.borderColor = '#D97706';
         }
     } else {
         htmlElement.classList.remove('dark');
         if (themeIconDesktop) themeIconDesktop.className = 'fa-solid fa-moon';
         if (themeIconMobile) themeIconMobile.className = 'fa-solid fa-moon';
         if (backBtn) {
-            backBtn.style.backgroundColor = '#ffffff';
-            backBtn.style.color = '#dc2626';
+            backBtn.style.backgroundColor = '#0F2744';
+            backBtn.style.color = '#F59E0B';
+            backBtn.style.borderColor = '#D97706';
         }
     }
 }
@@ -70,11 +70,11 @@ window.addEventListener('scroll', () => {
 // 4. Academic Program Tabs Switcher
 function switchTab(tabName) {
     document.querySelectorAll('.tab-btn').forEach(btn => {
-        btn.className = 'tab-btn px-5 py-2.5 rounded-xl font-bold text-xs bg-white dark:bg-white/5 text-slate-700 dark:text-slate-300 hover:bg-red-50 dark:hover:bg-white/10 transition border border-slate-200 dark:border-white/10';
+        btn.className = 'tab-btn px-5 py-2.5 rounded-xl font-bold text-xs bg-white dark:bg-white/5 text-slate-700 dark:text-slate-300 hover:bg-amber-50 dark:hover:bg-white/10 transition border border-slate-200 dark:border-white/10';
     });
     const activeTab = document.getElementById('tab-' + tabName);
     if (activeTab) {
-        activeTab.className = 'tab-btn px-5 py-2.5 rounded-xl font-bold text-xs bg-red-600 text-white shadow-md transition';
+        activeTab.className = 'tab-btn px-5 py-2.5 rounded-xl font-bold text-xs bg-brand-navy text-white shadow-md transition border border-brand-gold';
     }
 
     document.querySelectorAll('.tab-content').forEach(content => {
@@ -126,32 +126,32 @@ document.querySelectorAll('.mobile-nav-link').forEach(link => {
     link.addEventListener('click', closeMobileDrawer);
 });
 
-// 7. Interactive Student Portal & Roll Number Authentication
+// 7. Interactive Student Portal (Western Names Database)
 const studentDatabase = {
     "101": {
-        name: "Muhammad Ali",
-        grade: "Grade 8 - Section A",
+        name: "Oliver Smith",
+        grade: "Grade 8 - Honors Section",
         rollNo: "101",
-        attendance: "96.4%",
+        attendance: "96.8%",
         feeStatus: "Paid (October)",
         grades: [
-            { subject: "English Literature", marks: "92/100", grade: "A+" },
-            { subject: "Mathematics", marks: "88/100", grade: "A" },
-            { subject: "General Science", marks: "95/100", grade: "A+" },
-            { subject: "Computer Studies", marks: "98/100", grade: "A+" }
+            { subject: "English Literature", marks: "94/100", grade: "A+" },
+            { subject: "Advanced Mathematics", marks: "91/100", grade: "A+" },
+            { subject: "Physical Science", marks: "96/100", grade: "A+" },
+            { subject: "Computer Science", marks: "98/100", grade: "A+" }
         ]
     },
     "102": {
-        name: "Sarah Ahmed",
-        grade: "Grade 10 - Science",
+        name: "Emma Davis",
+        grade: "Grade 10 - STEM Honors",
         rollNo: "102",
-        attendance: "98.2%",
+        attendance: "98.4%",
         feeStatus: "Paid (October)",
         grades: [
-            { subject: "Physics", marks: "94/100", grade: "A+" },
-            { subject: "Chemistry", marks: "91/100", grade: "A+" },
-            { subject: "Biology", marks: "89/100", grade: "A" },
-            { subject: "Mathematics", marks: "96/100", grade: "A+" }
+            { subject: "Physics", marks: "95/100", grade: "A+" },
+            { subject: "Chemistry", marks: "92/100", grade: "A+" },
+            { subject: "Biology", marks: "90/100", grade: "A" },
+            { subject: "Calculus", marks: "97/100", grade: "A+" }
         ]
     }
 };
@@ -183,12 +183,12 @@ function handlePortalLogin(e) {
         name: "Demo Student (" + rollInput + ")",
         grade: "Grade 7 - General",
         rollNo: rollInput,
-        attendance: "94.0%",
+        attendance: "95.0%",
         feeStatus: "Verified & Cleared",
         grades: [
-            { subject: "English", marks: "85/100", grade: "A" },
-            { subject: "Mathematics", marks: "82/100", grade: "B+" },
-            { subject: "Science", marks: "90/100", grade: "A+" }
+            { subject: "English", marks: "88/100", grade: "A" },
+            { subject: "Mathematics", marks: "85/100", grade: "A" },
+            { subject: "Science", marks: "92/100", grade: "A+" }
         ]
     };
 
@@ -196,7 +196,7 @@ function handlePortalLogin(e) {
 
     document.getElementById('dashStudentName').textContent = student.name;
     document.getElementById('dashStudentGrade').textContent = student.grade;
-    document.getElementById('dashStudentRoll').textContent = "Roll No: " + student.rollNo;
+    document.getElementById('dashStudentRoll').textContent = "Student ID: " + student.rollNo;
     document.getElementById('dashAttendance').textContent = student.attendance;
     document.getElementById('dashFeeStatus').textContent = student.feeStatus;
 
@@ -205,7 +205,7 @@ function handlePortalLogin(e) {
     student.grades.forEach(item => {
         const row = document.createElement('div');
         row.className = "flex justify-between items-center py-2 border-b border-slate-100 dark:border-white/5 text-xs";
-        row.innerHTML = `<span class="font-medium text-slate-700 dark:text-slate-300">${item.subject}</span><div class="flex items-center gap-2"><span class="text-slate-500">${item.marks}</span><span class="font-extrabold text-red-600 bg-red-100 dark:bg-red-950/60 px-1.5 py-0.5 rounded text-[10px]">${item.grade}</span></div>`;
+        row.innerHTML = `<span class="font-medium text-slate-700 dark:text-slate-300">${item.subject}</span><div class="flex items-center gap-2"><span class="text-slate-500">${item.marks}</span><span class="font-extrabold text-brand-gold bg-amber-50 dark:bg-amber-950/60 px-2 py-0.5 rounded text-[10px] border border-amber-300/40">${item.grade}</span></div>`;
         gradesList.appendChild(row);
     });
 
@@ -253,17 +253,16 @@ function calculateTuition() {
 
     if (!gradeSelect || !transportSelect || !displayTotal) return;
 
-    let baseTuition = parseInt(gradeSelect.value) || 3500;
+    let baseTuition = parseInt(gradeSelect.value) || 350;
     let transportFee = parseInt(transportSelect.value) || 0;
     let discount = siblingCheck && siblingCheck.checked ? (baseTuition * 0.10) : 0;
 
     let total = (baseTuition - discount) + transportFee;
-    displayTotal.textContent = "Rs. " + total.toLocaleString() + " / month";
+    displayTotal.textContent = "$" + total.toLocaleString() + " / month";
 }
 
-// 10. Live Event Countdown Timer (Sports Gala)
+// 10. Live Event Countdown Timer (14 Days)
 function startEventCountdown() {
-    // 14 days dynamic target date
     const targetDate = new Date();
     targetDate.setDate(targetDate.getDate() + 14);
 
@@ -305,12 +304,12 @@ function toggleWhatsAppCard() {
 function filterGallery(category) {
     const buttons = document.querySelectorAll('.gallery-filter-btn');
     buttons.forEach(btn => {
-        btn.className = "gallery-filter-btn px-4 py-2 rounded-xl text-xs font-bold bg-white dark:bg-white/5 text-slate-700 dark:text-slate-300 hover:bg-red-50 dark:hover:bg-white/10 transition border border-slate-200 dark:border-white/10";
+        btn.className = "gallery-filter-btn px-4 py-2 rounded-xl text-xs font-bold bg-white dark:bg-white/5 text-slate-700 dark:text-slate-300 hover:bg-amber-50 dark:hover:bg-white/10 transition border border-slate-200 dark:border-white/10";
     });
 
     const activeBtn = document.getElementById('gallery-filter-' + category);
     if (activeBtn) {
-        activeBtn.className = "gallery-filter-btn px-4 py-2 rounded-xl text-xs font-bold bg-red-600 text-white shadow-md transition";
+        activeBtn.className = "gallery-filter-btn px-4 py-2 rounded-xl text-xs font-bold bg-brand-navy text-white border border-brand-gold shadow-md transition";
     }
 
     const items = document.querySelectorAll('.gallery-item');
